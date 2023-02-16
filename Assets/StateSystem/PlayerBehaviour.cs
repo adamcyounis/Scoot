@@ -2,17 +2,16 @@ using UnityEngine;
 using System;
 public class PlayerBehaviour : Character {
 
-
+    [Header("States")]
     public GroundControl groundControl;
     public AirControl airControl;
+
+    private void Start() {
+        Set(initState);
+    }
+
     private void Update() {
-
-
         SetInputStates();
-
-        if (state.complete) {
-            //set a new state
-        }
 
         if (!state.complete) {
             state.Do();
@@ -20,6 +19,25 @@ public class PlayerBehaviour : Character {
     }
     void SetInputStates() {
 
+        if (selfAwareness.grounded) {
+            if (airControl.jump.inputtingJump) {
+                Set(airControl);
+                airControl.Jump();
+                return;
+            }
+        }
+
+        if (state.complete) {
+            if (state == groundControl) {
+                if (!selfAwareness.grounded) {
+                    Set(airControl);
+                }
+            } else if (state == airControl) {
+                if (selfAwareness.grounded) {
+                    Set(groundControl);
+                }
+            }
+        }
     }
 
     private void FixedUpdate() {
@@ -46,6 +64,4 @@ public class GroundControl : State {
 
 }
 */
-
-
 

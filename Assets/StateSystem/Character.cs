@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Character : StateMachine {
@@ -7,8 +8,29 @@ public class Character : StateMachine {
     public InputController input;
 
     public Vector2 position => transform.position;
-    public Rigidbody2D body;
+    public Rigidbody2D body => animator.rigidBody;
     public State initState;
+    public Retro.RetroAnimator animator;
+    public SelfAwareness selfAwareness;
+
+    public float velX {
+        get {
+            return body.velocity.x;
+        }
+        set {
+            body.velocity = new Vector2(value, body.velocity.y);
+        }
+    }
+
+    public float velY {
+        get {
+            return body.velocity.y;
+        }
+        set {
+            body.velocity = new Vector2(body.velocity.x, value);
+        }
+    }
+
     private void Awake() {
         State[] states = GetComponentsInChildren<State>();
         foreach (State s in states) {
@@ -16,16 +38,8 @@ public class Character : StateMachine {
 
         }
     }
-}
 
-
-public class InputController : MonoBehaviour {
-    public bool GetInputDown(string key) {
-        return Input.GetButtonDown(key);
+    public void FaceDirection(Vector2 vector2) {
+        transform.localScale = new Vector3(Mathf.Sign(vector2.x), 1);
     }
-
-    public bool GetInput(string key) {
-        return Input.GetButton(key);
-    }
-
 }

@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class State : StateMachine {
-    Character core;
+    public string title;
+    protected Character core;
+    protected Retro.RetroAnimator animator => core.animator;
+    protected Rigidbody2D body => core.body;
     StateMachine parent;
-    float time => Time.time - startTime;
+    protected float time => Time.time - startTime;
     float startTime;
     Vector2 startPos;
-    public string endReason;
+    string endReason;
+
     public bool complete { get; private set; }
 
     public void Setup(StateMachine _parent) {
@@ -24,10 +28,17 @@ public class State : StateMachine {
     }
 
     public virtual void Do() {
+        if (state != null) {
+            state.Do();
+        }
 
     }
 
     public virtual void FixedDo() {
+        if (state != null) {
+            state.FixedDo();
+        }
+
     }
 
     public virtual void Exit() {
@@ -38,7 +49,7 @@ public class State : StateMachine {
     public void SetCore(Character newCore) {
         core = newCore;
     }
-    void Complete(string reason = default) {
+    protected void Complete(string reason = default) {
         endReason = reason;
         complete = true;
     }
