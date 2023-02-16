@@ -4,9 +4,11 @@ using UnityEngine;
 public class AirControl : State {
     public Jump jump;
     public State fall;
+
     [Range(0, 1f)]
     public float force;
     public float terminalX;
+
     public override void Enter() {
         Set(fall);
     }

@@ -6,6 +6,7 @@ public class PlayerBehaviour : Character {
     public GroundControl groundControl;
     public AirControl airControl;
 
+    public AirDodge dodge;
     private void Start() {
         Set(initState);
     }
@@ -18,9 +19,13 @@ public class PlayerBehaviour : Character {
         }
     }
     void SetInputStates() {
-
-        if (selfAwareness.grounded) {
-            if (airControl.jump.inputtingJump) {
+        if (state == airControl) {
+            if (Input.GetButtonDown("Dodge") && dodge.CanAirDodge()) {
+                Set(dodge);
+                return;
+            }
+        } else {
+            if (airControl.jump.inputtingJump && !(state == dodge && dodge.locked)) {
                 Set(airControl);
                 airControl.Jump();
                 return;
@@ -32,7 +37,7 @@ public class PlayerBehaviour : Character {
                 if (!selfAwareness.grounded) {
                     Set(airControl);
                 }
-            } else if (state == airControl) {
+            } else {
                 if (selfAwareness.grounded) {
                     Set(groundControl);
                 }

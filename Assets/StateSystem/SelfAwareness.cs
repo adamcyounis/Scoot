@@ -4,6 +4,7 @@ public class SelfAwareness : MonoBehaviour {
     public Character core;
     public float footDepth;
     public float footWidth;
+    public float groundDepth = 0.04f;
     Vector2 footPoint => core.position + (Vector2.down * footDepth);
 
     public bool grounded;
@@ -18,10 +19,13 @@ public class SelfAwareness : MonoBehaviour {
 
     void FixedUpdate() {
         grounded = IsGrounded();
+
     }
 
+
+
     private bool IsGrounded() {
-        RaycastHit2D ray = Physics2D.Raycast(footPoint, Vector2.down, 0.08f, groundMask);
+        RaycastHit2D ray = Physics2D.Raycast(footPoint, Vector2.down, groundDepth, groundMask);
         return ray.collider != null;
     }
 
