@@ -6,6 +6,15 @@ public class ActionCamera : MonoBehaviour {
     public List<Transform> subjects;
     public Camera cam;
     public float scaleFactor;
+
+    [Range(1f, 1.8f)]
+    public float minSize;
+
+    [Range(1.8f, 3.6f)]
+    public float maxSize;
+    [Range(0.2f, 0.5f)]
+    public float animTime = 0.2f;
+
     // Start is called before the first frame update
     void Start() {
 
@@ -17,7 +26,7 @@ public class ActionCamera : MonoBehaviour {
         Bounds bounds = GetSubjectBounds();
         float targetSize = Mathf.Max(bounds.size.x, bounds.size.y) * scaleFactor;
 
-        targetSize = Mathf.Clamp(targetSize, 1.8f, 3.6f);
+        targetSize = Mathf.Clamp(targetSize, minSize, maxSize);
         cam.orthographicSize = Mathf.SmoothDamp(cam.orthographicSize, targetSize, ref sizeVel, 0.4f);
         Vector2 targetPos = (Vector2)bounds.center + (Vector2.down * bounds.size.y * 0.25f);
         Vector2 newPos = Vector2.SmoothDamp(transform.position, targetPos, ref posVel, 0.4f);
