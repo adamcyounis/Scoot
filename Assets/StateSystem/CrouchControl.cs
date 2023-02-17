@@ -41,7 +41,6 @@ public class CrouchControl : State {
             core.velX += h * force;
             core.FaceDirection(Vector2.right * h);
         } else {
-            Debug.Log("decaying");
             core.velX *= drag;
         }
 

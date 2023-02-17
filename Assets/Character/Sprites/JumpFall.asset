@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a74690695c846e4ea0fb1e707b9f4d6, type: 3}
+  m_Name: JumpFall
+  m_EditorClassIdentifier: 
+  version: 1.0
+  spriteList:
+  - {fileID: -594849172, guid: c3a6e3416fc011a45b97968f9083248a, type: 3}
+  - {fileID: -780817014, guid: c3a6e3416fc011a45b97968f9083248a, type: 3}
+  - {fileID: -1826223692, guid: c3a6e3416fc011a45b97968f9083248a, type: 3}
+  - {fileID: -1947613898, guid: c3a6e3416fc011a45b97968f9083248a, type: 3}
+  - {fileID: 428247632, guid: c3a6e3416fc011a45b97968f9083248a, type: 3}
+  - {fileID: 648182872, guid: c3a6e3416fc011a45b97968f9083248a, type: 3}
+  - {fileID: -1889723085, guid: c3a6e3416fc011a45b97968f9083248a, type: 3}
+  - {fileID: 940039720, guid: c3a6e3416fc011a45b97968f9083248a, type: 3}
+  propertiesList:
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  groups:
+  - myBoxType: Physics
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 17670932-5b2b-4849-ada4-843a24f8316f
+        kind: 0
+        dataId: b4604711-9408-4a03-83d8-63243b484f9e
+      - guid: d07f746d-b9f0-45dd-9f17-ade0d61ce74d
+        kind: 1
+        dataId: b4604711-9408-4a03-83d8-63243b484f9e
+      - guid: 909eebc5-fad2-4539-9f92-8642d9f95799
+        kind: 1
+        dataId: b4604711-9408-4a03-83d8-63243b484f9e
+      - guid: cdb7f3d5-df96-4611-91f6-e9402352daef
+        kind: 1
+        dataId: b4604711-9408-4a03-83d8-63243b484f9e
+      - guid: a7cceb3a-de08-4a0b-969c-c31143f0a065
+        kind: 1
+        dataId: b4604711-9408-4a03-83d8-63243b484f9e
+      - guid: 9d244414-da5b-4058-95da-01eca1ac3a40
+        kind: 1
+        dataId: b4604711-9408-4a03-83d8-63243b484f9e
+      - guid: 4ab63535-a326-4bc8-b455-62b0cf5df4c4
+        kind: 1
+        dataId: b4604711-9408-4a03-83d8-63243b484f9e
+      - guid: 970c55c2-6154-4b51-aa67-838317a8b01d
+        kind: 1
+        dataId: b4604711-9408-4a03-83d8-63243b484f9e
+      frameDataById:
+        m_keys:
+        - b4604711-9408-4a03-83d8-63243b484f9e
+        m_values:
+        - keyFrameId: 17670932-5b2b-4849-ada4-843a24f8316f
+          position: {x: 56, y: 56}
+          size: {x: 16, y: 23}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - b4604711-9408-4a03-83d8-63243b484f9e
+    collisionType: 0
+    expanded: 1
+    visible: 1

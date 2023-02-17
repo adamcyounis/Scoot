@@ -27,6 +27,11 @@ public class Jump : State {
         core.velY = jumpSpeed;
         base.Enter();
         remainingJumps--;
+
+        float h = Input.GetAxis("Horizontal");
+        if (Mathf.Abs(h) > 0.1f) {
+            core.velX = Mathf.Sign(h);
+        }
     }
 
     public override void Do() {

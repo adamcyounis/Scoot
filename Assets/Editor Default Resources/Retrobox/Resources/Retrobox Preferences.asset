@@ -21,7 +21,7 @@ MonoBehaviour:
     - colour: {r: 0.109375, g: 0.85546875, b: 0.58203125, a: 1}
       boxTypeName: Physics
       shape: 0
-      physicsLayer: 0
+      physicsLayer: 6
       isRounded: 1
       material: {fileID: 0}
     - colour: {r: 0.9453125, g: 0.8046875, b: 0.015625, a: 1}

@@ -6,6 +6,8 @@ public class SelfAwareness : MonoBehaviour {
     public Character core;
     public float footDepth;
     public float footWidth;
+    float halfFootWidth => footWidth / 2f;
+
     public float groundDepth = 0.04f;
     Vector2 footPoint => core.position + (Vector2.down * footDepth);
 
@@ -31,18 +33,27 @@ public class SelfAwareness : MonoBehaviour {
 
 
     private bool IsGrounded() {
-        RaycastHit2D ray = Physics2D.Raycast(footPoint, Vector2.down, groundDepth, groundMask);
-        return ray.collider != null;
+        Vector2 bottomLeft = footPoint + (Vector2.left * footWidth) + (Vector2.down * groundDepth);
+        Vector2 topRight = footPoint + (Vector2.right * footWidth) + (Vector2.up * groundDepth);
+        Collider2D[] colliders = Physics2D.OverlapAreaAll(bottomLeft, topRight, groundMask);
+        return colliders.Length != 0;
     }
 
 
     private void OnDrawGizmos() {
         DrawFootline();
+        DrawGroundCheck();
     }
     void DrawFootline() {
-        float halfFootWidth = footWidth / 2f;
         Gizmos.color = Color.green;
         Gizmos.DrawLine(footPoint + Vector2.left * halfFootWidth, footPoint + Vector2.right * halfFootWidth);
 
+    }
+
+    void DrawGroundCheck() {
+        Vector2 bottomLeft = footPoint + Vector2.left * halfFootWidth + Vector2.down * groundDepth;
+        Vector2 topRight = footPoint + Vector2.right * halfFootWidth + Vector2.up * groundDepth;
+
+        Helpers.DrawRect(new Rect(bottomLeft, topRight - bottomLeft));
     }
 }
