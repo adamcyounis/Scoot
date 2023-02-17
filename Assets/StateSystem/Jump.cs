@@ -1,21 +1,37 @@
 using UnityEngine;
 using System;
 public class Jump : State {
-    public bool inputtingJump => Input.GetButton("Jump");
+    public bool holdingJump => Input.GetButton("Jump");
+
+    public bool inputtingJump => Input.GetButtonDown("Jump");
     public float fullJumpTime = 0.2f;
     public float releaseDecay = 0.75f;
 
     public float shortHopTime = 0.1f;
     public float jumpSpeed;
+    public int remainingJumps = 2;
+
     bool released;
+
+    void Start() {
+        core.selfAwareness.gotGrounded.AddListener(GetGrounded);
+
+    }
+
+    void GetGrounded() {
+        remainingJumps = 2;
+    }
+
     public override void Enter() {
         released = false;
         core.velY = jumpSpeed;
         base.Enter();
+        remainingJumps--;
     }
+
     public override void Do() {
         if (time > shortHopTime && time < fullJumpTime) {
-            if (inputtingJump && !released) {
+            if (holdingJump && !released) {
                 core.velY = jumpSpeed;
             } else {
                 released = true;
@@ -29,6 +45,10 @@ public class Jump : State {
 
         base.Do();
     }
+    public bool ShouldJump() {
+        return (inputtingJump && remainingJumps > 0);
+    }
+
 
     public override void FixedDo() {
         base.FixedDo();

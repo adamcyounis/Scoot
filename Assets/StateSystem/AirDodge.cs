@@ -1,19 +1,25 @@
 using UnityEngine;
 
-public class AirDodge : State {
+public class AirDodge : State, AirState {
     public bool locked => time < 0.2f;
     Vector2 direction;
     public AnimationCurve curve;
     public float speed = 3;
     bool usedDodge;
+    public Retro.Sheet s_airDodge;
 
-    public void FixedUpdate() {
-        if (core.selfAwareness.grounded) {
-            usedDodge = false;
-        }
+    public Retro.Sheet s_crouch;
+    private void Start() {
+        core.selfAwareness.gotGrounded.AddListener(Grounded);
+    }
+
+    void Grounded() {
+        usedDodge = false;
     }
 
     public override void Enter() {
+        animator.Play(s_airDodge, 10, true, true);
+
         base.Enter();
         usedDodge = true;
         SetDirection();
@@ -32,6 +38,10 @@ public class AirDodge : State {
         base.Do();
         if (time < 0.08f && direction == Vector2.zero) {
             SetDirection();
+        }
+
+        if (direction.y < 0 && core.selfAwareness.grounded) {
+            animator.Play(s_crouch, 10, true, true);
         }
     }
 

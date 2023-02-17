@@ -54,3 +54,8 @@ public class State : StateMachine {
         complete = true;
     }
 }
+
+
+public interface AirState {
+
+}

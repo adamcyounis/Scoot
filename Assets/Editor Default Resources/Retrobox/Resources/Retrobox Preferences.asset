@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: cf531f630c75bdf4d90fce8cad32c649, type: 3}
   m_Name: Retrobox Preferences
-  m_EditorClassIdentifier: Assembly-CSharp:Retro:RetroboxPrefs
+  m_EditorClassIdentifier: 
   boxDictionary:
     m_keys:
     - Physics

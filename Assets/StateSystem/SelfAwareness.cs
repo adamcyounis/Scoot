@@ -1,6 +1,8 @@
 using UnityEngine;
-
+using UnityEngine.Events;
 public class SelfAwareness : MonoBehaviour {
+
+    public UnityEvent gotGrounded = new UnityEvent();
     public Character core;
     public float footDepth;
     public float footWidth;
@@ -18,8 +20,12 @@ public class SelfAwareness : MonoBehaviour {
     }
 
     void FixedUpdate() {
+        bool wasGrounded = grounded;
         grounded = IsGrounded();
 
+        if (grounded && !wasGrounded) {
+            gotGrounded.Invoke();
+        }
     }
 
 

@@ -1,9 +1,10 @@
 using UnityEngine;
 using System;
-public class PlayerBehaviour : Character {
+public class Coots : Character {
+
 
     [Header("States")]
-    public GroundControl groundControl;
+    public GroundManager groundManager;
     public AirControl airControl;
 
     public AirDodge dodge;
@@ -24,23 +25,24 @@ public class PlayerBehaviour : Character {
                 Set(dodge);
                 return;
             }
-        } else {
-            if (airControl.jump.inputtingJump && !(state == dodge && dodge.locked)) {
-                Set(airControl);
-                airControl.Jump();
-                return;
-            }
+        }
+
+        if (airControl.jump.ShouldJump() && !(state == dodge && dodge.locked)) {
+            Set(airControl, true);
+            airControl.Jump();
+            return;
         }
 
         if (state.complete) {
-            if (state == groundControl) {
+            if (!(state is AirState)) {
                 if (!selfAwareness.grounded) {
                     Set(airControl);
+                    return;
                 }
-            } else {
-                if (selfAwareness.grounded) {
-                    Set(groundControl);
-                }
+            }
+
+            if (selfAwareness.grounded) {
+                Set(groundManager);
             }
         }
     }
@@ -51,6 +53,8 @@ public class PlayerBehaviour : Character {
         }
     }
 }
+
+
 /*
 public class GroundControl : State {
     public override void Enter() {

@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a74690695c846e4ea0fb1e707b9f4d6, type: 3}
+  m_Name: Coots Sprint
+  m_EditorClassIdentifier: 
+  version: 1.0
+  spriteList:
+  - {fileID: -1755288682, guid: 4036eb93b6d0540419ad054460104bff, type: 3}
+  - {fileID: -1222688627, guid: 4036eb93b6d0540419ad054460104bff, type: 3}
+  - {fileID: 566789861, guid: 4036eb93b6d0540419ad054460104bff, type: 3}
+  - {fileID: -488335881, guid: 4036eb93b6d0540419ad054460104bff, type: 3}
+  - {fileID: -997627847, guid: 4036eb93b6d0540419ad054460104bff, type: 3}
+  - {fileID: -86007033, guid: 4036eb93b6d0540419ad054460104bff, type: 3}
+  propertiesList:
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  groups:
+  - myBoxType: Physics
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: dde2a38f-0b0d-4e67-9c86-7f23ae3459b3
+        kind: 0
+        dataId: 809b4685-8202-4a58-bf5d-cc30985a80fa
+      - guid: 5c965f96-d654-46b1-8ea5-b1c89e1d0709
+        kind: 1
+        dataId: 809b4685-8202-4a58-bf5d-cc30985a80fa
+      - guid: f17e6c1f-7b8c-4b34-a922-9947db6cd5e8
+        kind: 1
+        dataId: 809b4685-8202-4a58-bf5d-cc30985a80fa
+      - guid: 55bbfc06-32eb-4de5-9631-29b327b1ca1e
+        kind: 1
+        dataId: 809b4685-8202-4a58-bf5d-cc30985a80fa
+      - guid: 9bfc4545-4036-4199-89b0-376f3c560b28
+        kind: 1
+        dataId: 809b4685-8202-4a58-bf5d-cc30985a80fa
+      - guid: 3acda8b5-3aa1-410a-8763-81b8456a466d
+        kind: 1
+        dataId: 809b4685-8202-4a58-bf5d-cc30985a80fa
+      frameDataById:
+        m_keys:
+        - 809b4685-8202-4a58-bf5d-cc30985a80fa
+        m_values:
+        - keyFrameId: dde2a38f-0b0d-4e67-9c86-7f23ae3459b3
+          position: {x: 56, y: 53}
+          size: {x: 16, y: 27}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - 809b4685-8202-4a58-bf5d-cc30985a80fa
+    collisionType: 0
+    expanded: 1
+    visible: 1

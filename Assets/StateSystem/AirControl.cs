@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class AirControl : State {
+public class AirControl : State, AirState {
     public Jump jump;
     public State fall;
 
@@ -37,6 +37,7 @@ public class AirControl : State {
         Set(jump, true);
     }
 
+
     public override void FixedDo() {
         HandleMovement();
 
@@ -46,3 +47,5 @@ public class AirControl : State {
         base.Exit();
     }
 }
+
+
