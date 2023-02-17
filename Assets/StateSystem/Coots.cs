@@ -33,7 +33,10 @@ public class Coots : Character {
             return;
         }
 
+
         if (state.complete) {
+
+
             if (!(state is AirState)) {
                 if (!selfAwareness.grounded) {
                     Set(airControl);
@@ -43,8 +46,10 @@ public class Coots : Character {
 
             if (selfAwareness.grounded) {
                 Set(groundManager);
+                return;
             }
         }
+
     }
 
     private void FixedUpdate() {

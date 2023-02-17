@@ -14,4 +14,12 @@ public class StateMachine : MonoBehaviour {
             state.Enter();
         }
     }
+
+    public State GetDeepState() {
+        if (state != null) {
+            return state.GetDeepState();
+        } else {
+            return state;
+        }
+    }
 }

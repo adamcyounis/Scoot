@@ -13,6 +13,8 @@ public class SelfAwareness : MonoBehaviour {
 
     public bool grounded;
     public LayerMask groundMask;
+
+    public string groundLayer;
     void Start() {
 
     }
@@ -36,6 +38,11 @@ public class SelfAwareness : MonoBehaviour {
         Vector2 bottomLeft = footPoint + (Vector2.left * halfFootWidth) + (Vector2.down * groundDepth);
         Vector2 topRight = footPoint + (Vector2.right * halfFootWidth) + (Vector2.up * groundDepth);
         Collider2D[] colliders = Physics2D.OverlapAreaAll(bottomLeft, topRight, groundMask);
+
+        if (colliders.Length > 0) {
+            groundLayer = LayerMask.LayerToName(colliders[0].gameObject.layer);
+        }
+
         return colliders.Length != 0;
     }
 

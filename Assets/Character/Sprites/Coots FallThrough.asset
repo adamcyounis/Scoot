@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a74690695c846e4ea0fb1e707b9f4d6, type: 3}
+  m_Name: Coots FallThrough
+  m_EditorClassIdentifier: 
+  version: 1.0
+  spriteList:
+  - {fileID: -1889723085, guid: c3a6e3416fc011a45b97968f9083248a, type: 3}
+  propertiesList:
+  - frameProperties: []
+  groups:
+  - myBoxType: PhysicsFall
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 54556119-9275-4316-93af-fbd61f8fe20b
+        kind: 0
+        dataId: 9e6d5062-5416-4e24-a08c-31ec977f2614
+      frameDataById:
+        m_keys:
+        - 9e6d5062-5416-4e24-a08c-31ec977f2614
+        m_values:
+        - keyFrameId: 54556119-9275-4316-93af-fbd61f8fe20b
+          position: {x: 55, y: 54}
+          size: {x: 18, y: 25}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - 9e6d5062-5416-4e24-a08c-31ec977f2614
+    collisionType: 0
+    expanded: 1
+    visible: 1
