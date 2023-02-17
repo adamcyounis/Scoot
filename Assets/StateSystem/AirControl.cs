@@ -34,6 +34,12 @@ public class AirControl : State, AirState {
         }
 
         core.velX = Mathf.Clamp(core.velX, -terminalX, terminalX);
+
+        if (core.velY <= 0) {
+            if (Input.GetAxis("Vertical") < -0.1f) {
+                core.velY = -4;
+            }
+        }
     }
 
     void SetAirSprite() {

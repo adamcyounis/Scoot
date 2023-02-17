@@ -43,9 +43,10 @@ public class Jump : State {
                 core.velY *= releaseDecay;
 
             }
-        } else {
-            Complete("jump finished");
+        }
 
+        if (time > fullJumpTime || released) {
+            Complete("jump finished");
         }
 
         base.Do();

@@ -228,7 +228,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -401,7 +401,7 @@ MonoBehaviour:
       m_Calls: []
   core: {fileID: 114048883}
   footDepth: 0.16
-  footWidth: 0.23
+  footWidth: 0.18
   groundDepth: 0.02
   grounded: 0
   groundMask:
@@ -495,7 +495,7 @@ MonoBehaviour:
   fullJumpTime: 0.06
   releaseDecay: 0.9
   shortHopTime: 0.05
-  jumpSpeed: 3.5
+  jumpSpeed: 4.25
   remainingJumps: 2
 --- !u!114 &495063623
 MonoBehaviour:
@@ -518,24 +518,24 @@ MonoBehaviour:
       time: 0
       value: 1
       inSlope: -2.0211272
-      outSlope: -4.8124547
+      outSlope: -25.879217
       tangentMode: 1
       weightedMode: 3
       inWeight: 0
-      outWeight: 0.1125806
+      outWeight: 0.024241958
     - serializedVersion: 3
-      time: 0.45479566
+      time: 0.4388382
       value: 0.00890553
-      inSlope: -0.19451629
+      inSlope: -0.031160135
       outSlope: -0.009019893
       tangentMode: 1
       weightedMode: 3
-      inWeight: 0.21054094
+      inWeight: 0.38789052
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  speed: 4
+  speed: 5.14
   s_airDodge: {fileID: 11400000, guid: f890c867d6268b849910ec082f56373d, type: 2}
   s_crouch: {fileID: 11400000, guid: 643cced496f01ba4ab098f57ce32fd5b, type: 2}
 --- !u!1 &519420028
@@ -711,7 +711,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 0000000071be1764
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -906,8 +906,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1679277681
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 323c64f901c1a2044a541d89eff162fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1129,7 +1129,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

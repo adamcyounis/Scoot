@@ -32,7 +32,6 @@ public class CrouchControl : State {
         } else {
             animator.Play(idle, 10, true, false);
         }
-
     }
 
     void HandleMovement() {

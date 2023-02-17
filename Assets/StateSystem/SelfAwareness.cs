@@ -33,8 +33,8 @@ public class SelfAwareness : MonoBehaviour {
 
 
     private bool IsGrounded() {
-        Vector2 bottomLeft = footPoint + (Vector2.left * footWidth) + (Vector2.down * groundDepth);
-        Vector2 topRight = footPoint + (Vector2.right * footWidth) + (Vector2.up * groundDepth);
+        Vector2 bottomLeft = footPoint + (Vector2.left * halfFootWidth) + (Vector2.down * groundDepth);
+        Vector2 topRight = footPoint + (Vector2.right * halfFootWidth) + (Vector2.up * groundDepth);
         Collider2D[] colliders = Physics2D.OverlapAreaAll(bottomLeft, topRight, groundMask);
         return colliders.Length != 0;
     }
