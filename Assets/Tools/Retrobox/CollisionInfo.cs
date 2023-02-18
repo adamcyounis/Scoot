@@ -27,7 +27,7 @@ public class CollisionInfo {
         collision = collision_;
         collideeProps = new ProcessedColliderProperties(collision.collidee);
         colliderProps = new ProcessedColliderProperties(collision.collider);
-        float collideePoise = collideeLife.poise + collideeProps.poise;
+        float collideePoise = collideeProps.poise;
         float colliderPoise = colliderProps.damage + colliderProps.poise;
         poise = collideePoise - colliderPoise;
         handlers = new List<MonoBehaviour>();
@@ -65,7 +65,7 @@ public struct ProcessedColliderProperties {
     void ProcessProperty(Retro.BoxProperty p) {
 
         switch (p.name) {
-            case "damage":
+            case "Damage":
                 damage = (int)p.floatVal;
                 break;
 
@@ -78,7 +78,7 @@ public struct ProcessedColliderProperties {
 
                 break;
 
-            case "effectVector":
+            case "Direction":
                 damageVector = (p.vectorVal).normalized * collider.transform.lossyScale;
                 break;
 
@@ -87,7 +87,7 @@ public struct ProcessedColliderProperties {
                 //SendMessage(p.stringVal, col, SendMessageOptions.DontRequireReceiver); //call function
                 break;
 
-            case "knockback":
+            case "Knockback":
                 knockback = p.floatVal;
                 break;
 

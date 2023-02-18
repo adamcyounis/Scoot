@@ -69,9 +69,15 @@ MonoBehaviour:
     m_values: []
     o_keys: []
   propsDictionary:
-    m_keys: []
-    m_values: 
-    o_keys: []
+    m_keys:
+    - Damage
+    - Direction
+    - Knockback
+    m_values: 030000000400000003000000
+    o_keys:
+    - Damage
+    - Direction
+    - Knockback
   framePropsDictionary:
     m_keys: []
     m_values: 

@@ -48,6 +48,8 @@ MonoBehaviour:
           props:
             m_keys:
             - Damage
+            - Direction
+            - Knockback
             m_values:
             - name: Damage
               dataType: 3
@@ -62,8 +64,36 @@ MonoBehaviour:
                 - {x: 0.25, y: 0.25}
                 - {x: 0.75, y: 0.75}
                 - {x: 1, y: 1}
+            - name: Direction
+              dataType: 4
+              intVal: 0
+              floatVal: 0
+              boolVal: 0
+              stringVal: 
+              vectorVal: {x: 1, y: 0.1}
+              curveVal:
+                points:
+                - {x: 0, y: 0}
+                - {x: 0.25, y: 0.25}
+                - {x: 0.75, y: 0.75}
+                - {x: 1, y: 1}
+            - name: Knockback
+              dataType: 3
+              intVal: 0
+              floatVal: 10
+              boolVal: 0
+              stringVal: 
+              vectorVal: {x: 0, y: 0}
+              curveVal:
+                points:
+                - {x: 0, y: 0}
+                - {x: 0.25, y: 0.25}
+                - {x: 0.75, y: 0.75}
+                - {x: 1, y: 1}
             o_keys:
             - Damage
+            - Direction
+            - Knockback
         o_keys:
         - c0b08e80-9b96-45e6-ab97-a13189cad178
     collisionType: 1

@@ -12,11 +12,11 @@ public class Character : StateMachine {
     public State initState;
     public Retro.RetroAnimator animator;
     public SelfAwareness selfAwareness;
-
-
+    [HideInInspector]
+    public Life life;
     public int stocksRemaining = 9;
     public string characterName;
-    public float percent;
+    public float percent => life.percent;
 
     public float velX {
         get {

@@ -32,7 +32,6 @@ public class Life : MonoBehaviour {
     [HideInInspector]
     public float invulnerableDuration = 0.0f;
 
-    [HideInInspector]
     public float percent; //the amount of HP we have right now
 
     [HideInInspector]
@@ -44,7 +43,7 @@ public class Life : MonoBehaviour {
     public Vector3 initLocalScale;
     [HideInInspector]
     public Quaternion initRotation;
-
+    [HideInInspector]
     public Retro.RetroAnimator animator;
 
     bool hitThisFrame = false;
@@ -60,6 +59,8 @@ public class Life : MonoBehaviour {
         if (GetComponent<Character>() is Character c) {
             character = c;
             animator = c.animator;
+            c.life = this;
+
         }
 
         if (animator == null) {
@@ -67,12 +68,13 @@ public class Life : MonoBehaviour {
         }
 
         collisions = new List<CollisionInfo>();
-        character.animator.boxManager.collisionEvent.AddListener(HandleCollisionEvent);
 
     }
     void Start() {
         percent = 0;
         invulnerableStartTime = 0;
+        character.animator.boxManager.collisionEvent.AddListener(HandleCollisionEvent);
+
     }
 
 
@@ -118,11 +120,14 @@ public class Life : MonoBehaviour {
 
             ApplyDamage(col);
             ApplyHitstop(col);
-            ApplyAttackVector(col);
+            ApplyKnockback(col);
 
             if (!col.ignoreHurt) {
                 hurtConfirmEvent.Invoke(col);
             }
+
+
+
 
             //ban the collider
             col.collision.collider.Ban(animator);
@@ -165,8 +170,9 @@ public class Life : MonoBehaviour {
     }
 
     void ApplyDamage(CollisionInfo info) {
+        Debug.Log("damage is " + info.damage);
         float prev = percent;
-        percent -= info.damage;
+        percent += info.damage;
         healthEvent.Invoke(prev, percent);
 
     }
@@ -174,7 +180,7 @@ public class Life : MonoBehaviour {
     void ApplyHitstop(CollisionInfo info) {
     }
 
-    void ApplyAttackVector(CollisionInfo info) {
+    void ApplyKnockback(CollisionInfo info) {
         Retro.ColliderInfo collidee = info.collision.collidee;
         Retro.ColliderInfo collider = info.collision.collider;
 
@@ -186,9 +192,8 @@ public class Life : MonoBehaviour {
 
         //Add velocity to our rigidbody equal to the damagevector * knockback;
         //this happens only when we aren't resolving this with Stun Behaviour
-        if (character == null) {
-            animator.rigidBody.velocity = damageVector * info.knockback;
-        }
+        animator.rigidBody.velocity = damageVector * info.knockback * (percent * 0.025f);
+
     }
 
 
