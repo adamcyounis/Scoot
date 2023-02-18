@@ -16,9 +16,6 @@ public class Life : MonoBehaviour {
     public LifeEvent checkDeferredCollisionEvent = new LifeEvent();
     [HideInInspector]
 
-    public UnityEvent<float, float> energyEvent = new UnityEvent<float, float>();
-    [HideInInspector]
-
     public UnityEvent<float, float> healthEvent = new UnityEvent<float, float>();
     public UnityEvent dieEvent = new UnityEvent();
 
@@ -26,15 +23,8 @@ public class Life : MonoBehaviour {
     public Character character;
 
     public bool targetable = true;
-    [HideInInspector] public bool dying = false;
     public bool armoured = false;
     public bool invincible = false;
-
-    [HideInInspector]
-    public float armour = 0.5f;
-
-    [HideInInspector]
-    public float resist = 0;
 
     [HideInInspector]
     public float invulnerableStartTime;
@@ -43,37 +33,10 @@ public class Life : MonoBehaviour {
     public float invulnerableDuration = 0.0f;
 
     [HideInInspector]
-    public int health; //the amount of HP we have right now
+    public float percent; //the amount of HP we have right now
 
     [HideInInspector]
-    public int prevHealth; //the amount of HP we had last frame
-
-    [FormerlySerializedAs("maxHealth")]
-    [SerializeField]
-    public int baseHealth; //the total amount of HP we have without modifiers
-    public int extraHealth; //"additional" health provided by modifiers
-    [HideInInspector]
-    public float multHealth; //"multiplier" on base + extra health
-    public int maxHealth; //total health after all calculations
-
-    public float energy;
-    [HideInInspector]
-    public float prevEnergy; //the amount of HP we had last frame
-
-    [FormerlySerializedAs("maxEnergy")]
-    [SerializeField]
-    public int baseEnergy; //the total amount of EN we have without modifiers
-    public int extraEnergy; //"additional" energy provided by modifiers
-    [HideInInspector]
-    public float multEnergy; //"multiplier" on base + extra health
-    public int maxEnergy; //total energy after all calculations
-
-    [HideInInspector]
-    public bool gainedEnergy;
-    public readonly float energyRecoveryDelay = 1;
-    public float poise;
-    private Vector2 damageVector;
-
+    public float prevPercent; //the amount of HP we had last frame
 
     [HideInInspector]
     public Vector3 spawnPos;
@@ -85,11 +48,6 @@ public class Life : MonoBehaviour {
     public Retro.RetroAnimator animator;
 
     bool hitThisFrame = false;
-
-    public static float deathStun = 0.4f;
-    public float normalHP {
-        get { return (float)health / (float)maxHealth; }
-    }
 
     public List<CollisionInfo> collisions;
     public float timeAtLastSpentEnergy;
@@ -109,15 +67,12 @@ public class Life : MonoBehaviour {
         }
 
         collisions = new List<CollisionInfo>();
-
+        character.animator.boxManager.collisionEvent.AddListener(HandleCollisionEvent);
 
     }
     void Start() {
-        CalculateStats(extraHealth, multHealth, extraEnergy, multEnergy);
-        health = baseHealth;
-        energy = maxEnergy;
+        percent = 0;
         invulnerableStartTime = 0;
-
     }
 
 
@@ -128,30 +83,13 @@ public class Life : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (IsReadyToDie() && !dying && !animator.IsInHitStop()) {
-            if (health < 0) health = 0;
-            dying = true;
-            SendMessage("PrepareToDie", SendMessageOptions.DontRequireReceiver);
-            dieEvent.Invoke();
-        }
+
     }
 
-
-    public void CalculateStats(int extraHP, float multHP, int extraEn, float multEn) {
-        extraHealth = extraHP;
-        multHealth = multHP;
-        maxHealth = (int)((baseHealth + extraHealth) * (1 + multHealth));
-
-        extraEnergy = extraEn;
-        multEnergy = multEn;
-        maxEnergy = (int)((baseEnergy + extraEnergy) * (1 + multEnergy));
-    }
 
     public void LateUpdate() {
         hitThisFrame = false;
-        gainedEnergy = false;
-        prevHealth = health;
-        prevEnergy = energy;
+        prevPercent = percent;
     }
 
     public void RegisterCollision(Retro.Collision c) {
@@ -188,7 +126,7 @@ public class Life : MonoBehaviour {
 
             //ban the collider
             col.collision.collider.Ban(animator);
-            if (health < 0) health = 0;
+            if (percent < 0) percent = 0;
 
         }
     }
@@ -227,9 +165,9 @@ public class Life : MonoBehaviour {
     }
 
     void ApplyDamage(CollisionInfo info) {
-        float prev = health;
-        health -= info.damage;
-        healthEvent.Invoke(prev, health);
+        float prev = percent;
+        percent -= info.damage;
+        healthEvent.Invoke(prev, percent);
 
     }
 
@@ -242,8 +180,6 @@ public class Life : MonoBehaviour {
 
         //get angle if we don't have one already
         Vector2 damageVector = info.damageVector != Vector2.zero ? info.damageVector : (Vector2)Helpers.GetCollisionVector(collidee.col, collider.col);
-
-        this.damageVector = damageVector;
 
         //add velocities to camera
         //Engine.engine.ExplodeParticles(animator.spriteRenderer.sprite, transform.position, damageVector, 0);
@@ -274,44 +210,35 @@ public class Life : MonoBehaviour {
         armoured = v;
     }
 
-    public void SetArmoured(bool v, float a) {
-        armoured = v;
-        armour = a;
-    }
-
-    public void GiveHealth(float amount) {
-        float prev = health;
-
-        health += (int)amount;
-        if (health > maxHealth) health = maxHealth;
-
-        healthEvent.Invoke(prev, health);
-    }
-
-
     public void StartRespawn() {
         transform.position = spawnPos;
         transform.localScale = initLocalScale;
         transform.rotation = initRotation;
+        healthEvent.Invoke(percent, 0);
 
-        healthEvent.Invoke(health, maxHealth);
-
-        health = maxHealth;
-        energy = maxEnergy;
-
-        dying = false;
     }
 
     public bool IsReadyToDie() {
-        return (health <= 0 && !invincible);
+        return (percent <= 0 && !invincible);
     }
 
     public bool IsVulnerable() {
         return (Time.time - invulnerableStartTime > invulnerableDuration) ? true : false;
     }
 
-    public Vector2 GetDamageVector() {
-        return (hitThisFrame) ? damageVector : Vector2.zero;
-    }
 
+    void HandleCollisionEvent(Retro.Collision c) {
+        string ce = LayerMask.LayerToName(c.collidee.GetPhysicsLayer());
+        string cr = LayerMask.LayerToName(c.collider.GetPhysicsLayer());
+        bool enemyHitPlayer = ce.Equals("Player") && cr.Equals("EnemyHit");
+        bool playerHitEnemy = ce.Equals("PlayerHit") && cr.Equals("Enemy");
+        string myName = LayerMask.LayerToName(gameObject.layer);
+
+        bool compatableCollision = (enemyHitPlayer && myName.Equals("Player")) ||
+                                    (playerHitEnemy && myName.Equals("Enemy"));
+
+        if (compatableCollision) {
+            RegisterCollision(c);
+        }
+    }
 }

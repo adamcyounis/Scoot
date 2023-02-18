@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a74690695c846e4ea0fb1e707b9f4d6, type: 3}
+  m_Name: Dummy Attack
+  m_EditorClassIdentifier: 
+  version: 1.0
+  spriteList:
+  - {fileID: 476924424, guid: 1d8d18285c848784e8ebb68686d37719, type: 3}
+  - {fileID: 1821841019, guid: 1d8d18285c848784e8ebb68686d37719, type: 3}
+  - {fileID: -729800354, guid: 1d8d18285c848784e8ebb68686d37719, type: 3}
+  propertiesList:
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  groups:
+  - myBoxType: Enemy Hit
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: bc1c414f-0a8b-4848-87d2-c03defe7f418
+        kind: 1
+        dataId: 00000000-0000-0000-0000-000000000000
+      - guid: b3e08fea-d4dc-40fd-ab20-b9b82715fdb5
+        kind: 0
+        dataId: c0b08e80-9b96-45e6-ab97-a13189cad178
+      - guid: e343fdb7-3994-47a6-a20f-6d2a60c6e5cb
+        kind: 2
+        dataId: 00000000-0000-0000-0000-000000000000
+      frameDataById:
+        m_keys:
+        - c0b08e80-9b96-45e6-ab97-a13189cad178
+        m_values:
+        - keyFrameId: b3e08fea-d4dc-40fd-ab20-b9b82715fdb5
+          position: {x: 25, y: 52}
+          size: {x: 97, y: 44}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys:
+            - Damage
+            m_values:
+            - name: Damage
+              dataType: 3
+              intVal: 0
+              floatVal: 10
+              boolVal: 0
+              stringVal: 
+              vectorVal: {x: 0, y: 0}
+              curveVal:
+                points:
+                - {x: 0, y: 0}
+                - {x: 0.25, y: 0.25}
+                - {x: 0.75, y: 0.75}
+                - {x: 1, y: 1}
+            o_keys:
+            - Damage
+        o_keys:
+        - c0b08e80-9b96-45e6-ab97-a13189cad178
+    collisionType: 1
+    expanded: 1
+    visible: 1

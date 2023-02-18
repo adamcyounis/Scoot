@@ -13,6 +13,11 @@ public class Character : StateMachine {
     public Retro.RetroAnimator animator;
     public SelfAwareness selfAwareness;
 
+
+    public int stocksRemaining = 9;
+    public string characterName;
+    public float percent;
+
     public float velX {
         get {
             return body.velocity.x;

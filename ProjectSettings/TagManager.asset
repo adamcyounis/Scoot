@@ -15,9 +15,9 @@ TagManager:
   - PlayerFall
   - Ground
   - GroundFall
-  - 
-  - 
-  - 
+  - Enemy
+  - EnemyHit
+  - PlayerHit
   - 
   - 
   - 
@@ -43,4 +43,7 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 1679277681
+    locked: 0
+  - name: UI
+    uniqueID: 1528970495
     locked: 0

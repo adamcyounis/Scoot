@@ -88,9 +88,6 @@ namespace Retro {
                     if (otherCol.animator != null) {
                         otherCol.animator.boxManager.collisionEvent.Invoke(c);
                     }
-                    animator.SendMessageUpwards("OnBoxCollision", c, SendMessageOptions.DontRequireReceiver);
-                } else {
-                    SendMessageUpwards("OnBoxCollision", c, SendMessageOptions.DontRequireReceiver);
                 }
             }
         }

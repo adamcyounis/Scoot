@@ -379,7 +379,6 @@ namespace Retro {
             return Helpers.Map(time, 0, duration, 0, clip.length);
         }
         public float MapAnimationClipTime(AnimationClip clip, float boxTime) {
-
             return Helpers.Map(boxTime, 0, duration, 0, clip.length);
         }
     }
