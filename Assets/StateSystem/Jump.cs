@@ -1,6 +1,6 @@
 using UnityEngine;
 using System;
-public class Jump : State {
+public class Jump : State, AirState {
     public bool holdingJump => Input.GetButton("Jump");
 
     public bool inputtingJump => Input.GetButtonDown("Jump");

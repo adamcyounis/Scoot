@@ -17,6 +17,7 @@ public class Character : StateMachine {
     public int stocksRemaining = 9;
     public string characterName;
     public float percent => life.percent;
+    public Shaker shaker;
 
     public float velX {
         get {

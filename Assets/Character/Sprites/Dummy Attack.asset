@@ -70,7 +70,7 @@ MonoBehaviour:
               floatVal: 0
               boolVal: 0
               stringVal: 
-              vectorVal: {x: 1, y: 0.1}
+              vectorVal: {x: 1, y: 0.2}
               curveVal:
                 points:
                 - {x: 0, y: 0}

@@ -22,8 +22,8 @@ public class CharacterUI : MonoBehaviour {
     }
 
     void UpdateStocks() {
-        for (int i = 0; i < stockImages.Count - 1; i++) {
-            stockImages[i].SetActive(character.stocksRemaining >= i);
+        for (int i = 0; i < stockImages.Count; i++) {
+            stockImages[i].SetActive(character.stocksRemaining > i);
         }
 
     }

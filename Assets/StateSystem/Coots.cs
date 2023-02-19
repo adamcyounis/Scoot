@@ -10,6 +10,8 @@ public class Coots : Character {
     public AirDodge dodge;
     private void Start() {
         Set(initState);
+        GameManager.coots = this;
+
     }
 
     private void Update() {

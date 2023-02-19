@@ -22,16 +22,27 @@ public class ActionCamera : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        Vector2 targetPos = default;
+        float targetSize = default;
 
-        Bounds bounds = GetSubjectBounds();
-        float targetSize = Mathf.Max(bounds.size.x, bounds.size.y) * scaleFactor;
+        if (subjects.Count > 1) {
+            Bounds bounds = GetSubjectBounds();
+            targetSize = Mathf.Max(bounds.size.x, bounds.size.y) * scaleFactor;
 
-        targetSize = Mathf.Clamp(targetSize, minSize, maxSize);
-        cam.orthographicSize = Mathf.SmoothDamp(cam.orthographicSize, targetSize, ref sizeVel, 0.4f);
-        Vector2 targetPos = (Vector2)bounds.center + (Vector2.down * bounds.size.y * 0.25f);
+            targetSize = Mathf.Clamp(targetSize, minSize, maxSize);
+            targetPos = (Vector2)bounds.center + (Vector2.down * bounds.size.y * 0.25f);
+
+        } else {
+            targetSize = 2.2f;
+            targetPos = subjects[0].position;
+        }
+
+
         Vector2 newPos = Vector2.SmoothDamp(transform.position, targetPos, ref posVel, 0.4f);
+        cam.orthographicSize = Mathf.SmoothDamp(cam.orthographicSize, targetSize, ref sizeVel, 0.4f);
         transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
     }
+
     Vector2 posVel;
     float sizeVel;
 
