@@ -18,7 +18,12 @@ public class BoardingPlatform : MonoBehaviour {
 
     }
     private void OnCollisionStay2D(Collision2D other) {
-        if (GameManager.IsCoots(other.collider) && !(GameManager.coots.state is AirState) && !boarded) {
+        if (
+            GameManager.IsCoots(other.collider) &&
+            !(GameManager.coots.state is AirControl) &&
+            !boarded && GameManager.coots.velY <= 0 &&
+            GameManager.coots.selfAwareness.grounded
+        ) {
             Board();
         }
     }
