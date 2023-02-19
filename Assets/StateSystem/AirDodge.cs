@@ -50,7 +50,7 @@ public class AirDodge : State, AirState {
         if (time < curve.keys[curve.keys.Length - 1].time) {
             body.velocity = direction * curve.Evaluate(time) * speed;
 
-            if (core.selfAwareness.grounded) {//align to ground to create wavedash
+            if (core.selfAwareness.grounded && body.velocity.y < 0) {//align to ground to create wavedash
                 core.body.velocity = Vector2.right * Mathf.Sign(core.velX) * body.velocity.magnitude * 1.5f;
             }
         } else {

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     public static GameManager gm;
@@ -24,6 +24,11 @@ public class GameManager : MonoBehaviour {
     void Update() {
         if (hitStopping) {
             HandleHitStop();
+        }
+
+        if (Input.GetButtonDown("Select")) {
+            Debug.Log("reload!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
