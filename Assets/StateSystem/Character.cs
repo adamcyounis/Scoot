@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class Character : StateMachine {
     public Vector2 facingDirection => transform.localScale.x > 0 ? Vector2.right : Vector2.left;
-    public bool canMove;
-    public bool canAttack;
+    public bool canMove = true;
+    public bool canAttack = true;
     public InputController input;
 
     public Vector2 position => transform.position;

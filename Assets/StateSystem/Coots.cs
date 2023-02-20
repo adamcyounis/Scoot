@@ -6,21 +6,26 @@ public class Coots : Character {
     [Header("States")]
     public GroundManager groundManager;
     public AirControl airControl;
-
     public AirDodge dodge;
+    public Stun stun;
     private void Start() {
         Set(initState);
         GameManager.coots = this;
 
+        life.hurtConfirmEvent.AddListener(GetHurt);
     }
 
     private void Update() {
-        SetInputStates();
+        Debug.Log(canMove + " can move");
+        if (canMove || state.complete) {
+            SetInputStates();
+        }
 
         if (!state.complete) {
             state.Do();
         }
     }
+
     void SetInputStates() {
         if (state == airControl) {
             if (Input.GetButtonDown("Dodge") && dodge.CanAirDodge()) {
@@ -28,7 +33,7 @@ public class Coots : Character {
                 return;
             }
         }
-
+        Debug.Log(airControl.jump.ShouldJump());
         if (airControl.jump.ShouldJump() && !(state == dodge && dodge.locked)) {
             Set(airControl, true);
             airControl.Jump();
@@ -37,8 +42,6 @@ public class Coots : Character {
 
 
         if (state.complete) {
-
-
             if (!(state is AirState)) {
                 if (!selfAwareness.grounded) {
                     Set(airControl);
@@ -58,6 +61,10 @@ public class Coots : Character {
         if (!state.complete) {
             state.FixedDo();
         }
+    }
+
+    void GetHurt(CollisionInfo info) {
+        Set(stun);
     }
 }
 

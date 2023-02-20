@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a74690695c846e4ea0fb1e707b9f4d6, type: 3}
+  m_Name: Coots Hurt
+  m_EditorClassIdentifier: 
+  version: 1.0
+  spriteList:
+  - {fileID: 21300000, guid: 6ca6c02acd0086947924325bc54a62bc, type: 3}
+  propertiesList:
+  - frameProperties: []
+  groups:
+  - myBoxType: Physics
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 4e1ce46f-6c47-4627-84b6-954668c131e1
+        kind: 0
+        dataId: fddcd4b7-8d8f-4272-b48f-76a9804a596e
+      frameDataById:
+        m_keys:
+        - fddcd4b7-8d8f-4272-b48f-76a9804a596e
+        m_values:
+        - keyFrameId: 4e1ce46f-6c47-4627-84b6-954668c131e1
+          position: {x: 55, y: 54}
+          size: {x: 18, y: 26}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - fddcd4b7-8d8f-4272-b48f-76a9804a596e
+    collisionType: 0
+    expanded: 1
+    visible: 1
+  - myBoxType: Hurt
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 2e92543f-808b-4901-b158-ff287ebed7ac
+        kind: 0
+        dataId: daa1e2c3-4f76-4ddb-93b4-6b071e010e85
+      frameDataById:
+        m_keys:
+        - daa1e2c3-4f76-4ddb-93b4-6b071e010e85
+        m_values:
+        - keyFrameId: 2e92543f-808b-4901-b158-ff287ebed7ac
+          position: {x: 50, y: 49}
+          size: {x: 28, y: 31}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - daa1e2c3-4f76-4ddb-93b4-6b071e010e85
+    collisionType: 1
+    expanded: 1
+    visible: 1

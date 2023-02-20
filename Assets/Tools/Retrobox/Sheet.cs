@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -22,12 +21,6 @@ namespace Retro {
             if (o.GetType().Equals("RetroboxEditor")) version = v;
         }
     }
-
-    [System.Serializable]
-    public class FrameDataById : SerializableDictionary<string, FrameData> { }
-
-    [Serializable]
-    public class BoxProps : SerializableDictionary<string, BoxProperty> { }
 
     public enum PDataType { Bool, String, Int, Float, Vector2, Curve }
 

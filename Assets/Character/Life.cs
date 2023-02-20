@@ -50,6 +50,8 @@ public class Life : MonoBehaviour {
 
     public List<CollisionInfo> collisions;
     public float timeAtLastSpentEnergy;
+
+    public static float knockbackFloor = 70;
     // Use this for initialization
     void Awake() {
         spawnPos = transform.position;
@@ -119,8 +121,8 @@ public class Life : MonoBehaviour {
         if (IsVulnerable() && !banned) {
 
             ApplyDamage(col);
-            ApplyHitstop(col);
             ApplyKnockback(col);
+            ApplyHitstop(col);
 
             if (!col.ignoreHurt) {
                 hurtConfirmEvent.Invoke(col);
@@ -180,7 +182,7 @@ public class Life : MonoBehaviour {
     void ApplyHitstop(CollisionInfo info) {
         //GameManager.gm.HitStop();
         animator.HitStop(0.12f);
-        character.shaker.Shake(0.2f, 0.12f);
+        character.shaker.Shake(0.1f, 0.12f);
     }
 
     void ApplyKnockback(CollisionInfo info) {
@@ -188,14 +190,15 @@ public class Life : MonoBehaviour {
         Retro.ColliderInfo collider = info.collision.collider;
 
         //get angle if we don't have one already
-        Vector2 damageVector = info.damageVector != Vector2.zero ? info.damageVector : (Vector2)Helpers.GetCollisionVector(collidee.col, collider.col);
+        Vector2 direction = info.damageVector != Vector2.zero ? info.damageVector : (Vector2)Helpers.GetCollisionVector(collidee.col, collider.col);
 
         //add velocities to camera
         //Engine.engine.ExplodeParticles(animator.spriteRenderer.sprite, transform.position, damageVector, 0);
 
         //Add velocity to our rigidbody equal to the damagevector * knockback;
         //this happens only when we aren't resolving this with Stun Behaviour
-        animator.rigidBody.velocity = damageVector * info.knockback * (percent * 0.025f);
+        animator.rigidBody.velocity = (direction * info.knockback * ((knockbackFloor + percent) * 0.002f));
+        animator.rigidBody.velocity += Vector2.up * ((knockbackFloor + percent) * 0.006f);
 
     }
 

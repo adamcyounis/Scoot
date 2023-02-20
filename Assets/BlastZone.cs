@@ -35,7 +35,7 @@ public class BlastZone : MonoBehaviour {
     public IEnumerator RespawnWithDelay(Character ch) {
         yield return new WaitForSeconds(1f);
         ch.life.percent = 0;
-        ch.transform.position = Vector2.zero;
+        ch.transform.position = transform.parent.position;
         ch.body.velocity = Vector2.zero;
         ch.gameObject.SetActive(true);
 
