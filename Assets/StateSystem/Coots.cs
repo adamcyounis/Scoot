@@ -16,7 +16,6 @@ public class Coots : Character {
     }
 
     private void Update() {
-        Debug.Log(canMove + " can move");
         if (canMove || state.complete) {
             SetInputStates();
         }
@@ -33,7 +32,6 @@ public class Coots : Character {
                 return;
             }
         }
-        Debug.Log(airControl.jump.ShouldJump());
         if (airControl.jump.ShouldJump() && !(state == dodge && dodge.locked)) {
             Set(airControl, true);
             airControl.Jump();

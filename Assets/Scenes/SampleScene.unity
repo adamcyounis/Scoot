@@ -1113,6 +1113,7 @@ MonoBehaviour:
   finished:
     m_PersistentCalls:
       m_Calls: []
+  life: {fileID: 114048888}
 --- !u!50 &114048885
 Rigidbody2D:
   serializedVersion: 4
@@ -1207,6 +1208,7 @@ MonoBehaviour:
   initRotation: {x: 0, y: 0, z: 0, w: 0}
   animator: {fileID: 0}
   timeAtLastSpentEnergy: 0
+  team: 0
 --- !u!1 &117475917
 GameObject:
   m_ObjectHideFlags: 0
@@ -2738,7 +2740,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   speed: 5.14
-  s_airDodge: {fileID: 11400000, guid: f890c867d6268b849910ec082f56373d, type: 2}
+  s_airDodge: {fileID: 11400000, guid: 122f83b48eeeb354298712940bd9379e, type: 2}
   s_crouch: {fileID: 11400000, guid: 643cced496f01ba4ab098f57ce32fd5b, type: 2}
 --- !u!1 &509150027
 GameObject:
@@ -4953,6 +4955,8 @@ GameObject:
   - component: {fileID: 925715179}
   - component: {fileID: 925715178}
   - component: {fileID: 925715177}
+  - component: {fileID: 925715180}
+  - component: {fileID: 925715181}
   m_Layer: 0
   m_Name: Hurt Machine
   m_TagString: Untagged
@@ -5018,6 +5022,7 @@ MonoBehaviour:
   finished:
     m_PersistentCalls:
       m_Calls: []
+  life: {fileID: 925715180}
 --- !u!4 &925715179
 Transform:
   m_ObjectHideFlags: 0
@@ -5034,6 +5039,61 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &925715180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925715176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb8231765b1ecb42913be216916222a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dieEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  character: {fileID: 0}
+  targetable: 1
+  armoured: 0
+  invincible: 0
+  invulnerableStartTime: 0
+  invulnerableDuration: 0
+  percent: 0
+  prevPercent: 0
+  spawnPos: {x: 0, y: 0, z: 0}
+  initLocalScale: {x: 0, y: 0, z: 0}
+  initRotation: {x: 0, y: 0, z: 0, w: 0}
+  animator: {fileID: 0}
+  timeAtLastSpentEnergy: 0
+  team: 1
+--- !u!114 &925715181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925715176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b9a38f1523d5b428423fd8ef1eafc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: {fileID: 0}
+  canMove: 1
+  canAttack: 1
+  input: {fileID: 0}
+  initState: {fileID: 0}
+  animator: {fileID: 925715178}
+  selfAwareness: {fileID: 0}
+  life: {fileID: 0}
+  stocksRemaining: 9
+  characterName: 
+  shaker: {fileID: 0}
 --- !u!1 &931948607
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a74690695c846e4ea0fb1e707b9f4d6, type: 3}
+  m_Name: Coots Dodge
+  m_EditorClassIdentifier: 
+  version: 1.0
+  spriteList:
+  - {fileID: 21300000, guid: 8aa9c67da2468c848a87b4bef620b2bc, type: 3}
+  - {fileID: 21300000, guid: 8aa9c67da2468c848a87b4bef620b2bc, type: 3}
+  - {fileID: 21300000, guid: 8aa9c67da2468c848a87b4bef620b2bc, type: 3}
+  - {fileID: 21300000, guid: 8aa9c67da2468c848a87b4bef620b2bc, type: 3}
+  - {fileID: 21300000, guid: 8aa9c67da2468c848a87b4bef620b2bc, type: 3}
+  propertiesList:
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  groups:
+  - myBoxType: Physics
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 53f518ad-2d28-4c59-913d-73bd79dd8faa
+        kind: 0
+        dataId: 281d3594-830e-4ba9-aa68-f5f3304773ae
+      - guid: 24e36bb8-6619-445d-896c-5228322a6a3c
+        kind: 1
+        dataId: 281d3594-830e-4ba9-aa68-f5f3304773ae
+      - guid: 987ff144-ef80-4fd1-a042-bceb4b5bdcca
+        kind: 1
+        dataId: 281d3594-830e-4ba9-aa68-f5f3304773ae
+      - guid: 5a416b4e-5ef8-4019-87f4-38d4cf714627
+        kind: 1
+        dataId: 281d3594-830e-4ba9-aa68-f5f3304773ae
+      - guid: a9de8bfa-2323-45e7-af68-40cc9e89064f
+        kind: 1
+        dataId: 281d3594-830e-4ba9-aa68-f5f3304773ae
+      frameDataById:
+        m_keys:
+        - 281d3594-830e-4ba9-aa68-f5f3304773ae
+        m_values:
+        - keyFrameId: 53f518ad-2d28-4c59-913d-73bd79dd8faa
+          position: {x: 55, y: 53}
+          size: {x: 18, y: 26}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - 281d3594-830e-4ba9-aa68-f5f3304773ae
+    collisionType: 0
+    expanded: 1
+    visible: 1
+  - myBoxType: Hurt
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 11e28ec0-6ae3-4e5a-a563-997b9f3ef829
+        kind: 1
+        dataId: 00000000-0000-0000-0000-000000000000
+      - guid: c1091ead-657a-47cf-a476-8cd9207a4b87
+        kind: 1
+        dataId: 00000000-0000-0000-0000-000000000000
+      - guid: a5004580-1ae5-40a1-9237-d4fc9a3d617b
+        kind: 1
+        dataId: 00000000-0000-0000-0000-000000000000
+      - guid: fbb812d4-ade6-4147-9dd7-a255d0174e14
+        kind: 1
+        dataId: 00000000-0000-0000-0000-000000000000
+      - guid: 48cea031-48d1-48b3-a951-88fa2fa7f44e
+        kind: 1
+        dataId: 00000000-0000-0000-0000-000000000000
+      frameDataById:
+        m_keys: []
+        m_values: []
+        o_keys: []
+    collisionType: 1
+    expanded: 1
+    visible: 1

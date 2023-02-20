@@ -30,13 +30,13 @@ MonoBehaviour:
     - colour: {r: 0.9453125, g: 0.8046875, b: 0.015625, a: 1}
       boxTypeName: Hurt
       shape: 0
-      physicsLayer: 6
+      physicsLayer: 11
       isRounded: 0
       material: {fileID: 0}
     - colour: {r: 0.99609375, g: 0.2265625, b: 0.1875, a: 1}
       boxTypeName: Hit
       shape: 0
-      physicsLayer: 12
+      physicsLayer: 10
       isRounded: 0
       material: {fileID: 0}
     - colour: {r: 0.28507835, g: 0.7238493, b: 0.38098055, a: 1}

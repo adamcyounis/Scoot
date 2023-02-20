@@ -25,7 +25,7 @@ public class SelfAwareness : MonoBehaviour {
 
     void FixedUpdate() {
         bool wasGrounded = grounded;
-        grounded = IsGrounded();
+        grounded = IsGrounded() && core.body.velocity.y <= 0;
 
         if (grounded && !wasGrounded) {
             gotGrounded.Invoke();

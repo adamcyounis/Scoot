@@ -15,9 +15,9 @@ TagManager:
   - PlayerFall
   - Ground
   - GroundFall
-  - Enemy
-  - EnemyHit
-  - PlayerHit
+  - Hit
+  - Hurt
+  - 
   - 
   - 
   - 

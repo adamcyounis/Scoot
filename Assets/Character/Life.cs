@@ -22,7 +22,6 @@ public class Life : MonoBehaviour {
     [HideInInspector]
     public Character character;
 
-    public bool targetable = true;
     public bool armoured = false;
     public bool invincible = false;
 
@@ -52,6 +51,7 @@ public class Life : MonoBehaviour {
     public float timeAtLastSpentEnergy;
 
     public static float knockbackFloor = 70;
+    public int team;
     // Use this for initialization
     void Awake() {
         spawnPos = transform.position;
@@ -237,18 +237,17 @@ public class Life : MonoBehaviour {
         return (Time.time - invulnerableStartTime > invulnerableDuration) ? true : false;
     }
 
-
     void HandleCollisionEvent(Retro.Collision c) {
+
         string ce = LayerMask.LayerToName(c.collidee.GetPhysicsLayer());
         string cr = LayerMask.LayerToName(c.collider.GetPhysicsLayer());
-        bool enemyHitPlayer = ce.Equals("Player") && cr.Equals("EnemyHit");
-        bool playerHitEnemy = ce.Equals("PlayerHit") && cr.Equals("Enemy");
-        string myName = LayerMask.LayerToName(gameObject.layer);
+        bool oneHitTwo = ce.Equals("Hit") && cr.Equals("Hurt");
+        bool twoHitOne = ce.Equals("Hurt") && cr.Equals("Hit");
 
-        bool compatableCollision = (enemyHitPlayer && myName.Equals("Player")) ||
-                                    (playerHitEnemy && myName.Equals("Enemy"));
-
-        if (compatableCollision) {
+        bool hitMe = oneHitTwo && c.collider.GetAnimator().life == this ||
+         twoHitOne && c.collidee.GetAnimator().life == this;
+        bool differentTeams = c.collidee.GetAnimator().life.team != c.collider.GetAnimator().life.team;
+        if (hitMe && differentTeams) {
             RegisterCollision(c);
         }
     }

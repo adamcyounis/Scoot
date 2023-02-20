@@ -69,3 +69,44 @@ MonoBehaviour:
     collisionType: 0
     expanded: 1
     visible: 1
+  - myBoxType: Hurt
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: f7f2282a-1aba-47db-9cbe-48c25d44960b
+        kind: 0
+        dataId: 6af877af-0432-4a8a-9bd8-78f4cae00c04
+      - guid: d1ab8940-4ac6-4bc6-83a9-a3bc64211ace
+        kind: 1
+        dataId: 6af877af-0432-4a8a-9bd8-78f4cae00c04
+      - guid: cb3cdbf5-378f-48c3-b6b6-9c8f452564c9
+        kind: 1
+        dataId: 6af877af-0432-4a8a-9bd8-78f4cae00c04
+      - guid: c3b9c7e4-448c-43bd-adbc-e7dd205c6a06
+        kind: 1
+        dataId: 6af877af-0432-4a8a-9bd8-78f4cae00c04
+      - guid: 5e29a974-1c17-4a75-91c2-e397f8d094f0
+        kind: 1
+        dataId: 6af877af-0432-4a8a-9bd8-78f4cae00c04
+      - guid: 473863f6-a548-467c-af13-3c729eebc365
+        kind: 1
+        dataId: 6af877af-0432-4a8a-9bd8-78f4cae00c04
+      frameDataById:
+        m_keys:
+        - 6af877af-0432-4a8a-9bd8-78f4cae00c04
+        m_values:
+        - keyFrameId: f7f2282a-1aba-47db-9cbe-48c25d44960b
+          position: {x: 46, y: 45}
+          size: {x: 43, y: 32}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - 6af877af-0432-4a8a-9bd8-78f4cae00c04
+    collisionType: 1
+    expanded: 1
+    visible: 1

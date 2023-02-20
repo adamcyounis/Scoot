@@ -23,6 +23,10 @@ public class Jump : State, AirState {
     }
 
     public override void Enter() {
+        if (!core.selfAwareness.grounded) {
+            remainingJumps--;
+        }
+
         released = false;
         core.velY = jumpSpeed;
         base.Enter();

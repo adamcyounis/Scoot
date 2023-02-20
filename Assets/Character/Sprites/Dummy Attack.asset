@@ -22,7 +22,7 @@ MonoBehaviour:
   - frameProperties: []
   - frameProperties: []
   groups:
-  - myBoxType: Enemy Hit
+  - myBoxType: Hit
     layerKind: 0
     layers:
     - kind: 0

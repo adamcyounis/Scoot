@@ -44,3 +44,29 @@ MonoBehaviour:
     collisionType: 0
     expanded: 1
     visible: 1
+  - myBoxType: Hurt
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 0cdcd6da-8d1a-401e-8b60-319e54816b2a
+        kind: 0
+        dataId: 75f08503-9e38-47bc-bb51-684ed3c857b1
+      frameDataById:
+        m_keys:
+        - 75f08503-9e38-47bc-bb51-684ed3c857b1
+        m_values:
+        - keyFrameId: 0cdcd6da-8d1a-401e-8b60-319e54816b2a
+          position: {x: 50, y: 43}
+          size: {x: 30, y: 36}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - 75f08503-9e38-47bc-bb51-684ed3c857b1
+    collisionType: 1
+    expanded: 1
+    visible: 1

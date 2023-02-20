@@ -60,6 +60,7 @@ namespace Retro {
         public Vector2 spatialOffset;
 
         public UnityEvent<Retro.Sheet> finished = new UnityEvent<Retro.Sheet>();
+        public Life life;
         // Use this for initialization
         void Awake() {
             preferences = (RetroboxPrefs)(Resources.Load("Retrobox Preferences"));
@@ -330,7 +331,6 @@ namespace Retro {
             if (rigidBody != null) {
                 rigidBody.gravityScale = oldGravityScale;
                 rigidBody.velocity = oldVelocity;
-                Debug.Log(rigidBody.velocity);
             }
 
             startTime += ((globalTime - timeAtHitStop)); //make up for the lost time paused so we resume where we left off.

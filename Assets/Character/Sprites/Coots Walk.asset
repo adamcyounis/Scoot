@@ -79,3 +79,50 @@ MonoBehaviour:
     collisionType: 0
     expanded: 1
     visible: 1
+  - myBoxType: Hurt
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 3b8364aa-1417-4b0b-8666-e8e4ef15d115
+        kind: 0
+        dataId: fd86fa49-b712-4af2-aea8-25c31f5950ea
+      - guid: 48c654c3-d111-43ce-b402-b9102e68a300
+        kind: 1
+        dataId: fd86fa49-b712-4af2-aea8-25c31f5950ea
+      - guid: c217c5a8-562e-4abd-9af5-cc474dd1a4d4
+        kind: 1
+        dataId: fd86fa49-b712-4af2-aea8-25c31f5950ea
+      - guid: aeb776d2-d667-49e2-aa33-ff4373bd5d6f
+        kind: 1
+        dataId: fd86fa49-b712-4af2-aea8-25c31f5950ea
+      - guid: 969e4982-3025-48a7-8539-54520b5890c0
+        kind: 1
+        dataId: fd86fa49-b712-4af2-aea8-25c31f5950ea
+      - guid: f98a07e6-1522-4019-8f4e-943b1f10edde
+        kind: 1
+        dataId: fd86fa49-b712-4af2-aea8-25c31f5950ea
+      - guid: 6ecbd0b5-3787-4571-bb71-5c4ec35ef734
+        kind: 1
+        dataId: fd86fa49-b712-4af2-aea8-25c31f5950ea
+      - guid: 7fa1a1e3-1afe-448d-96c4-44964a71779c
+        kind: 1
+        dataId: fd86fa49-b712-4af2-aea8-25c31f5950ea
+      frameDataById:
+        m_keys:
+        - fd86fa49-b712-4af2-aea8-25c31f5950ea
+        m_values:
+        - keyFrameId: 3b8364aa-1417-4b0b-8666-e8e4ef15d115
+          position: {x: 50, y: 49}
+          size: {x: 35, y: 31}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - fd86fa49-b712-4af2-aea8-25c31f5950ea
+    collisionType: 1
+    expanded: 1
+    visible: 1
