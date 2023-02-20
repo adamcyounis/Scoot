@@ -197,8 +197,8 @@ public class Life : MonoBehaviour {
 
         //Add velocity to our rigidbody equal to the damagevector * knockback;
         //this happens only when we aren't resolving this with Stun Behaviour
-        animator.rigidBody.velocity = (direction * info.knockback * ((knockbackFloor + percent) * 0.002f));
-        animator.rigidBody.velocity += Vector2.up * ((knockbackFloor + percent) * 0.006f);
+        animator.rigidBody.velocity = (direction * info.knockback * ((knockbackFloor + percent) * 0.003f));
+        animator.rigidBody.velocity += Vector2.up * ((knockbackFloor + percent) * 0.007f);
 
     }
 
