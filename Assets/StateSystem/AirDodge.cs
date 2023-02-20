@@ -9,6 +9,8 @@ public class AirDodge : State, AirState {
     public Retro.Sheet s_airDodge;
 
     public Retro.Sheet s_crouch;
+
+    public bool startGrounded;
     private void Start() {
         core.selfAwareness.gotGrounded.AddListener(Grounded);
     }
@@ -19,7 +21,6 @@ public class AirDodge : State, AirState {
 
     public override void Enter() {
         animator.Play(s_airDodge, 10, true, true);
-
         base.Enter();
         usedDodge = true;
         SetDirection();
@@ -47,11 +48,17 @@ public class AirDodge : State, AirState {
 
     public override void FixedDo() {
         base.FixedDo();
-        if (time < curve.keys[curve.keys.Length - 1].time) {
-            body.velocity = direction * curve.Evaluate(time) * speed;
 
-            if (core.selfAwareness.grounded && body.velocity.y < 0) {//align to ground to create wavedash
-                core.body.velocity = Vector2.right * Mathf.Sign(core.velX) * body.velocity.magnitude * 1.5f;
+        if (time < curve.keys[curve.keys.Length - 1].time) {
+            if (!startGrounded) {
+                body.velocity = direction * curve.Evaluate(time) * speed;
+                if (core.selfAwareness.grounded && body.velocity.y < 0) {//align to ground to create wavedash
+                    core.body.velocity = Vector2.right * Mathf.Sign(core.velX) * body.velocity.magnitude * 1.5f;
+                }
+
+            } else {
+                core.body.velocity = Vector2.zero;
+
             }
         } else {
             Complete("finished time");
@@ -60,6 +67,7 @@ public class AirDodge : State, AirState {
 
     public override void Exit() {
         base.Exit();
+        startGrounded = false;
     }
 
     public bool CanAirDodge() {

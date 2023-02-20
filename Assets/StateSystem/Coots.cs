@@ -28,8 +28,15 @@ public class Coots : Character {
 
     void SetInputStates() {
 
+
+        if (state == shield && Input.GetAxis("Vertical") < -0.5f) {
+            dodge.startGrounded = true;
+            Set(dodge);
+            return;
+        }
+
         if (state == airControl) {
-            if (Input.GetButtonDown("Dodge") && dodge.CanAirDodge()) {
+            if (Input.GetButtonDown("Shield") && dodge.CanAirDodge()) {
                 Set(dodge);
                 return;
             }

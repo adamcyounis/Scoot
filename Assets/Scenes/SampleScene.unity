@@ -2827,6 +2827,7 @@ MonoBehaviour:
   speed: 5.14
   s_airDodge: {fileID: 11400000, guid: 122f83b48eeeb354298712940bd9379e, type: 2}
   s_crouch: {fileID: 11400000, guid: 643cced496f01ba4ab098f57ce32fd5b, type: 2}
+  startGrounded: 0
 --- !u!1 &509150027
 GameObject:
   m_ObjectHideFlags: 0
