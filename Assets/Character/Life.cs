@@ -119,17 +119,16 @@ public class Life : MonoBehaviour {
         bool banned = col.collision.collider.IsBanned(animator); //make sure there's actually a valid collider 
 
         if (IsVulnerable() && !banned) {
-
-            ApplyDamage(col);
-            ApplyKnockback(col);
-            ApplyHitstop(col);
-
-            if (!col.ignoreHurt) {
-                hurtConfirmEvent.Invoke(col);
+            if (character.state is ShieldState s) {
+                s.Hit(col.damage);
+            } else {
+                ApplyDamage(col);
+                ApplyKnockback(col);
+                if (!col.ignoreHurt) {
+                    hurtConfirmEvent.Invoke(col);
+                }
             }
-
-
-
+            ApplyHitstop(col);
 
             //ban the collider
             col.collision.collider.Ban(animator);
@@ -172,11 +171,9 @@ public class Life : MonoBehaviour {
     }
 
     void ApplyDamage(CollisionInfo info) {
-        Debug.Log("damage is " + info.damage);
         float prev = percent;
         percent += info.damage;
         healthEvent.Invoke(prev, percent);
-
     }
 
     void ApplyHitstop(CollisionInfo info) {

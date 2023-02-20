@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a74690695c846e4ea0fb1e707b9f4d6, type: 3}
+  m_Name: Coots Guard
+  m_EditorClassIdentifier: 
+  version: 1.0
+  spriteList:
+  - {fileID: 21300000, guid: e7f9bc681fa0681409927a2c23b8a1bc, type: 3}
+  propertiesList:
+  - frameProperties: []
+  groups:
+  - myBoxType: Physics
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 3a3a6dfa-08fa-444a-a635-4c5e83a8aedb
+        kind: 0
+        dataId: dd463ea3-7a1b-4461-88bd-387129943075
+      frameDataById:
+        m_keys:
+        - dd463ea3-7a1b-4461-88bd-387129943075
+        m_values:
+        - keyFrameId: 3a3a6dfa-08fa-444a-a635-4c5e83a8aedb
+          position: {x: 55, y: 56}
+          size: {x: 18, y: 24}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - dd463ea3-7a1b-4461-88bd-387129943075
+    collisionType: 0
+    expanded: 1
+    visible: 1
+  - myBoxType: Hurt
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 31685f6d-9d42-4a30-8b7e-d01c8d9d0a78
+        kind: 0
+        dataId: 0c2995b8-2ebc-4ea9-a1ce-37985c094388
+      frameDataById:
+        m_keys:
+        - 0c2995b8-2ebc-4ea9-a1ce-37985c094388
+        m_values:
+        - keyFrameId: 31685f6d-9d42-4a30-8b7e-d01c8d9d0a78
+          position: {x: 44, y: 45}
+          size: {x: 42, y: 45}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - 0c2995b8-2ebc-4ea9-a1ce-37985c094388
+    collisionType: 1
+    expanded: 1
+    visible: 1

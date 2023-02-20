@@ -8,10 +8,11 @@ public class Coots : Character {
     public AirControl airControl;
     public AirDodge dodge;
     public Stun stun;
+    public ShieldState shield;
+
     private void Start() {
         Set(initState);
         GameManager.coots = this;
-
         life.hurtConfirmEvent.AddListener(GetHurt);
     }
 
@@ -26,16 +27,26 @@ public class Coots : Character {
     }
 
     void SetInputStates() {
+
         if (state == airControl) {
             if (Input.GetButtonDown("Dodge") && dodge.CanAirDodge()) {
                 Set(dodge);
                 return;
             }
         }
-        if (airControl.jump.ShouldJump() && !(state == dodge && dodge.locked)) {
-            Set(airControl, true);
-            airControl.Jump();
-            return;
+
+        if (!(state == dodge && dodge.locked)) {
+            if (shield.ShouldShield()) {
+                Set(shield);
+            }
+
+
+            if (airControl.jump.ShouldJump()) {
+                Set(airControl, true);
+                airControl.Jump();
+                return;
+            }
+
         }
 
 
