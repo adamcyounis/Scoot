@@ -1,0 +1,218 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a74690695c846e4ea0fb1e707b9f4d6, type: 3}
+  m_Name: Salute
+  m_EditorClassIdentifier: 
+  version: 1.0
+  spriteList:
+  - {fileID: 21300000, guid: d52152cb566a0a748ac0941dbf55a8e3, type: 3}
+  - {fileID: 21300000, guid: 3ff2b2a9eeb59be4c8a0d7fff814ee84, type: 3}
+  - {fileID: 21300000, guid: d52152cb566a0a748ac0941dbf55a8e3, type: 3}
+  propertiesList:
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  groups:
+  - myBoxType: Hit
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 10d07079-8161-4224-8ee8-59a3f7ad4ef0
+        kind: 1
+        dataId: 00000000-0000-0000-0000-000000000000
+      - guid: ba6b8338-4483-459e-813c-dd9673484a50
+        kind: 0
+        dataId: a71b8a91-7c9d-4d8f-bfdd-2638c22714c3
+      - guid: ad9e30c2-d5ce-4bc9-81c1-b104b21bc893
+        kind: 2
+        dataId: 00000000-0000-0000-0000-000000000000
+      frameDataById:
+        m_keys:
+        - a71b8a91-7c9d-4d8f-bfdd-2638c22714c3
+        m_values:
+        - keyFrameId: ba6b8338-4483-459e-813c-dd9673484a50
+          position: {x: 30, y: 47}
+          size: {x: 87, y: 90}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys:
+            - Damage
+            - Direction
+            - Knockback
+            m_values:
+            - name: Damage
+              dataType: 3
+              intVal: 0
+              floatVal: 20
+              boolVal: 0
+              stringVal: 
+              vectorVal: {x: 0, y: 0}
+              curveVal:
+                points:
+                - {x: 0, y: 0}
+                - {x: 0.25, y: 0.25}
+                - {x: 0.75, y: 0.75}
+                - {x: 1, y: 1}
+            - name: Direction
+              dataType: 4
+              intVal: 0
+              floatVal: 0
+              boolVal: 0
+              stringVal: 
+              vectorVal: {x: -1, y: 1}
+              curveVal:
+                points:
+                - {x: 0, y: 0}
+                - {x: 0.25, y: 0.25}
+                - {x: 0.75, y: 0.75}
+                - {x: 1, y: 1}
+            - name: Knockback
+              dataType: 3
+              intVal: 0
+              floatVal: 40
+              boolVal: 0
+              stringVal: 
+              vectorVal: {x: 0, y: 0}
+              curveVal:
+                points:
+                - {x: 0, y: 0}
+                - {x: 0.25, y: 0.25}
+                - {x: 0.75, y: 0.75}
+                - {x: 1, y: 1}
+            o_keys:
+            - Damage
+            - Direction
+            - Knockback
+        o_keys:
+        - a71b8a91-7c9d-4d8f-bfdd-2638c22714c3
+    collisionType: 1
+    expanded: 1
+    visible: 1
+  - myBoxType: Hurt
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 7ce77e41-a8dc-4e76-bf93-cb11451a6ba4
+        kind: 0
+        dataId: ec9c86c4-eaa1-4e1c-a1a3-02094a648367
+      - guid: 6bea7790-70fb-4315-88ab-af019d9f8552
+        kind: 0
+        dataId: 8e393cda-94ee-4df0-9fe0-9871488fd17c
+      - guid: 6cd2296d-b067-40ca-aee4-34fbe42cb879
+        kind: 0
+        dataId: ec9c86c4-eaa1-4e1c-a1a3-02094a648367
+      frameDataById:
+        m_keys:
+        - ec9c86c4-eaa1-4e1c-a1a3-02094a648367
+        - 8e393cda-94ee-4df0-9fe0-9871488fd17c
+        m_values:
+        - keyFrameId: 7ce77e41-a8dc-4e76-bf93-cb11451a6ba4
+          position: {x: 51, y: 53}
+          size: {x: 94, y: 85}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        - keyFrameId: 6bea7790-70fb-4315-88ab-af019d9f8552
+          position: {x: 51, y: 53}
+          size: {x: 94, y: 85}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - ec9c86c4-eaa1-4e1c-a1a3-02094a648367
+        - 8e393cda-94ee-4df0-9fe0-9871488fd17c
+    - kind: 0
+      frames:
+      - guid: 23a86290-d09f-468e-9642-c3f21b093818
+        kind: 0
+        dataId: 107172e1-6d08-4ec9-b47d-9c993f127753
+      - guid: 9198e0a9-bb6d-4150-b173-9f77b7e1e665
+        kind: 0
+        dataId: f47370d3-f8e5-4993-95c1-cd9a289300b9
+      - guid: 92c64731-5198-4783-89b4-18a637207676
+        kind: 2
+        dataId: 00000000-0000-0000-0000-000000000000
+      frameDataById:
+        m_keys:
+        - 107172e1-6d08-4ec9-b47d-9c993f127753
+        - f47370d3-f8e5-4993-95c1-cd9a289300b9
+        m_values:
+        - keyFrameId: 23a86290-d09f-468e-9642-c3f21b093818
+          position: {x: 98, y: 78}
+          size: {x: 60, y: 79}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        - keyFrameId: 9198e0a9-bb6d-4150-b173-9f77b7e1e665
+          position: {x: 98, y: 78}
+          size: {x: 60, y: 79}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - 107172e1-6d08-4ec9-b47d-9c993f127753
+        - f47370d3-f8e5-4993-95c1-cd9a289300b9
+    - kind: 0
+      frames:
+      - guid: 8ba1f022-d872-429c-9aa5-f313d50236fa
+        kind: 0
+        dataId: 56e631fb-1483-4fe1-afa5-5868a8fcc07f
+      - guid: 7ccc3ac5-c3de-44c0-a686-d1760005edc2
+        kind: 0
+        dataId: fa759d23-f102-444c-b977-b5baa8f1e386
+      - guid: 9c11bc08-3f38-4de0-b650-434ea1008405
+        kind: 2
+        dataId: 00000000-0000-0000-0000-000000000000
+      frameDataById:
+        m_keys:
+        - 56e631fb-1483-4fe1-afa5-5868a8fcc07f
+        - fa759d23-f102-444c-b977-b5baa8f1e386
+        m_values:
+        - keyFrameId: 8ba1f022-d872-429c-9aa5-f313d50236fa
+          position: {x: 61, y: 104}
+          size: {x: 39, y: 47}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        - keyFrameId: 7ccc3ac5-c3de-44c0-a686-d1760005edc2
+          position: {x: 61, y: 104}
+          size: {x: 39, y: 47}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - 56e631fb-1483-4fe1-afa5-5868a8fcc07f
+        - fa759d23-f102-444c-b977-b5baa8f1e386
+    collisionType: 1
+    expanded: 1
+    visible: 1

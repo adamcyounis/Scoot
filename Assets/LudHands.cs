@@ -22,6 +22,9 @@ public class LudHands : Character {
 
     public LudIdle idle;
     public LudSlam slam;
+    public LudSweep sweep;
+    public LudSalute salute;
+
     public Retro.RetroAnimator leftHandAnimator;
     public Retro.RetroAnimator rightHandAnimator;
     public Retro.RetroAnimator faceAnimator;
@@ -49,7 +52,17 @@ public class LudHands : Character {
             state.Do();
         } else {
             if (state == idle) {
-                Set(slam);
+                float random = Random.value;
+                if (random > 0.33f) {
+                    if (random > 0.66f) {
+                        Set(salute);
+                    } else {
+                        Set(sweep);
+                    }
+                } else {
+                    Set(slam);
+
+                }
             } else {
                 Set(idle);
             }
