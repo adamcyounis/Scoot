@@ -1936,6 +1936,17 @@ MonoBehaviour:
   sheet: {fileID: 11400000, guid: 754343704425e8d43b82da43b88ff063, type: 2}
   fps: 10
   loop: 1
+--- !u!114 &1293015695 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 108468282855142003, guid: a147195ed05cfe245ac0616b82493923, type: 3}
+  m_PrefabInstance: {fileID: 1368874882}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8cf2e71c03aaf48b03d7ad5f97d86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1311211954
 GameObject:
   m_ObjectHideFlags: 0
@@ -2023,7 +2034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 108468282855142002, guid: a147195ed05cfe245ac0616b82493923, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 108468282855142002, guid: a147195ed05cfe245ac0616b82493923, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3069,5 +3080,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeb63269627e9af4d9d50b1d929efc1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  shaker: {fileID: 0}
+  cam: {fileID: 1293015695}
+  shaker: {fileID: 2147290851}
+--- !u!114 &2147290851 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 108468283673200347, guid: a147195ed05cfe245ac0616b82493923, type: 3}
+  m_PrefabInstance: {fileID: 1368874882}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3fdcbd7d5612ea458fd704c54c8b52c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -61,4 +61,8 @@ public class LudHands : Character {
         }
     }
 
+    public void Shake() {
+        GameManager.gm.shaker.Shake();
+    }
+
 }
