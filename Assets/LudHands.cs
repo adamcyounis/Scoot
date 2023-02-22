@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-
+using UnityEngine;
 //LudHands
 //Boss Character
 /*
@@ -22,6 +22,21 @@ public class LudHands : Character {
 
     public LudIdle idle;
     public LudSlam slam;
+    public Retro.RetroAnimator leftHandAnimator;
+    public Retro.RetroAnimator rightHandAnimator;
+    public Retro.RetroAnimator faceAnimator;
+    public Animator anim;
+
+    public override void Awake() {
+        base.Awake();
+        LudState[] ludStates = GetComponentsInChildren<LudState>();
+        foreach (LudState l in ludStates) {
+            l.leftHandAnimator = leftHandAnimator;
+            l.rightHandAnimator = rightHandAnimator;
+            l.faceAnimator = faceAnimator;
+            l.anim = anim;
+        }
+    }
 
     // Start is called before the first frame update
     void Start() {

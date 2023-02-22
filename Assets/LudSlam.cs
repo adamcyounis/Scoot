@@ -1,17 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-public class LudSlam : State {
+public class LudSlam : LudState {
 
+    public Retro.Sheet s_slamHand;
     public override void Enter() {
-        core.unityAnim.Play("Slam");
+        anim.Play("Slam");
+        leftHandAnimator.Play(s_slamHand);
+        leftHandAnimator.Stop();
+
+        rightHandAnimator.Play(s_slamHand);
+        rightHandAnimator.Stop();
+
     }
 
 
     public override void Do() {
 
         base.Do();
-        if (core.unityAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1) {
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1) {
             Complete("done!");
         }
     }

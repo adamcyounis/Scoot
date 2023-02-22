@@ -38,7 +38,7 @@ public class Character : StateMachine {
         }
     }
 
-    private void Awake() {
+    public virtual void Awake() {
         State[] states = GetComponentsInChildren<State>();
         foreach (State s in states) {
             s.SetCore(this);
