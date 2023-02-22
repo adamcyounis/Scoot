@@ -9,6 +9,7 @@ public class Character : StateMachine {
 
     public Vector2 position => transform.position;
     public Rigidbody2D body => animator.rigidBody;
+    public Animator unityAnim;
     public State initState;
     public Retro.RetroAnimator animator;
     public SelfAwareness selfAwareness;

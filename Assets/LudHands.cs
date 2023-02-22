@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 //LudHands
 //Boss Character
@@ -20,13 +19,31 @@ using UnityEngine;
 */
 
 public class LudHands : Character {
+
+    public LudIdle idle;
+    public LudSlam slam;
+
     // Start is called before the first frame update
     void Start() {
-
+        Set(idle);
     }
 
     // Update is called once per frame
-    void Update() {
-
+    public void Update() {
+        if (!state.complete) {
+            state.Do();
+        } else {
+            if (state == idle) {
+                Set(slam);
+            } else {
+                Set(idle);
+            }
+        }
     }
+    public void FixedUpdate() {
+        if (!state.complete) {
+            state.FixedDo();
+        }
+    }
+
 }
