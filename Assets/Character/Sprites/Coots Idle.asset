@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 5a74690695c846e4ea0fb1e707b9f4d6, type: 3}
   m_Name: Coots Idle
-  m_EditorClassIdentifier: Assembly-CSharp:Retro:Sheet
+  m_EditorClassIdentifier: 
   version: 1.0
   spriteList:
   - {fileID: 21300000, guid: 323c64f901c1a2044a541d89eff162fd, type: 3}
@@ -23,16 +23,16 @@ MonoBehaviour:
     layers:
     - kind: 0
       frames:
-      - guid: 7fa59eb7-4269-4624-8acd-fe901937c239
+      - guid: a6a460ed-08c1-43d2-8045-c0ad7db8ab2f
         kind: 0
-        dataId: ab348373-cd83-45d7-8f7a-8dfed56c7805
+        dataId: 759bdb5e-3db0-46a9-8fe1-14dea68de542
       frameDataById:
         m_keys:
-        - ab348373-cd83-45d7-8f7a-8dfed56c7805
+        - 759bdb5e-3db0-46a9-8fe1-14dea68de542
         m_values:
-        - keyFrameId: 7fa59eb7-4269-4624-8acd-fe901937c239
-          position: {x: 55, y: 46}
-          size: {x: 18, y: 33}
+        - keyFrameId: a6a460ed-08c1-43d2-8045-c0ad7db8ab2f
+          position: {x: 55, y: 53}
+          size: {x: 18, y: 26}
           forwardHandle: {x: 10, y: 10}
           backHandle: {x: -10, y: -10}
           props:
@@ -40,7 +40,7 @@ MonoBehaviour:
             m_values: []
             o_keys: []
         o_keys:
-        - ab348373-cd83-45d7-8f7a-8dfed56c7805
+        - 759bdb5e-3db0-46a9-8fe1-14dea68de542
     collisionType: 0
     expanded: 1
     visible: 1
@@ -49,16 +49,16 @@ MonoBehaviour:
     layers:
     - kind: 0
       frames:
-      - guid: 0cdcd6da-8d1a-401e-8b60-319e54816b2a
+      - guid: 2cfb89b5-3206-4514-b687-d0a04b996566
         kind: 0
-        dataId: 75f08503-9e38-47bc-bb51-684ed3c857b1
+        dataId: 9e19fce6-b4a3-4c2e-899d-27ce525de284
       frameDataById:
         m_keys:
-        - 75f08503-9e38-47bc-bb51-684ed3c857b1
+        - 9e19fce6-b4a3-4c2e-899d-27ce525de284
         m_values:
-        - keyFrameId: 0cdcd6da-8d1a-401e-8b60-319e54816b2a
-          position: {x: 50, y: 43}
-          size: {x: 30, y: 36}
+        - keyFrameId: 2cfb89b5-3206-4514-b687-d0a04b996566
+          position: {x: 52, y: 42}
+          size: {x: 26, y: 39}
           forwardHandle: {x: 10, y: 10}
           backHandle: {x: -10, y: -10}
           props:
@@ -66,7 +66,7 @@ MonoBehaviour:
             m_values: []
             o_keys: []
         o_keys:
-        - 75f08503-9e38-47bc-bb51-684ed3c857b1
+        - 9e19fce6-b4a3-4c2e-899d-27ce525de284
     collisionType: 1
     expanded: 1
     visible: 1

@@ -196,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: {fileID: 0}
   title: 
-  idle: {fileID: 11400000, guid: f890c867d6268b849910ec082f56373d, type: 2}
+  idle: {fileID: 11400000, guid: 93a38d0e70a52754c8bb7121646fd08a, type: 2}
   walk: {fileID: 11400000, guid: 1ed5e35251eb9b1428db9c12642daa56, type: 2}
   run: {fileID: 11400000, guid: 437ce0e14a8819140bf0213e94ff7179, type: 2}
   force: 0.8
@@ -250,8 +250,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: {fileID: 0}
   title: 
-  idle: {fileID: 11400000, guid: 643cced496f01ba4ab098f57ce32fd5b, type: 2}
-  walk: {fileID: 11400000, guid: 643cced496f01ba4ab098f57ce32fd5b, type: 2}
+  idle: {fileID: 11400000, guid: 05b3abbd4e448714785e738c5258fe49, type: 2}
+  walk: {fileID: 11400000, guid: 05b3abbd4e448714785e738c5258fe49, type: 2}
   force: 0.4
   terminalX: 1.25
   drag: 0.85
@@ -373,7 +373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: {fileID: 0}
   title: Fall
-  sheet: {fileID: 11400000, guid: f890c867d6268b849910ec082f56373d, type: 2}
+  sheet: {fileID: 11400000, guid: d4d2164af545b0a4780f4ac3eefcf79a, type: 2}
   fps: 10
   loop: 1
 --- !u!114 &4664217564466435322
@@ -435,7 +435,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   speed: 5.14
   s_airDodge: {fileID: 11400000, guid: 122f83b48eeeb354298712940bd9379e, type: 2}
-  s_crouch: {fileID: 11400000, guid: 643cced496f01ba4ab098f57ce32fd5b, type: 2}
+  s_crouch: {fileID: 11400000, guid: 05b3abbd4e448714785e738c5258fe49, type: 2}
   startGrounded: 0
 --- !u!1 &4664217564479287778
 GameObject:

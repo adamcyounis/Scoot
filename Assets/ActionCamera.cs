@@ -17,9 +17,18 @@ public class ActionCamera : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+        GameSystem.system.newPlayer.AddListener(AddNewPlayer);
         foreach (Character c in FindObjectsOfType<Character>()) {
             subjects.Add(c.transform);
         }
+    }
+
+    private void OnDestroy() {
+        GameSystem.system.newPlayer.RemoveListener(AddNewPlayer);
+    }
+
+    void AddNewPlayer(Transform t) {
+        subjects.Add(t);
     }
 
     // Update is called once per frame

@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: Coots Crouch
-  m_EditorClassIdentifier: Assembly-CSharp:Retro:Sheet
+  m_Script: {fileID: 11500000, guid: 5a74690695c846e4ea0fb1e707b9f4d6, type: 3}
+  m_Name: Coots Crouching
+  m_EditorClassIdentifier: 
   version: 1.0
   spriteList:
   - {fileID: 21300000, guid: e7f9bc681fa0681409927a2c23b8a1bc, type: 3}
@@ -23,16 +23,16 @@ MonoBehaviour:
     layers:
     - kind: 0
       frames:
-      - guid: 7fa59eb7-4269-4624-8acd-fe901937c239
+      - guid: 3317a5f5-88e3-498c-a2dd-b080814d7f35
         kind: 0
-        dataId: ab348373-cd83-45d7-8f7a-8dfed56c7805
+        dataId: 700c7990-639e-4d1b-8f41-4028e655deec
       frameDataById:
         m_keys:
-        - ab348373-cd83-45d7-8f7a-8dfed56c7805
+        - 700c7990-639e-4d1b-8f41-4028e655deec
         m_values:
-        - keyFrameId: 7fa59eb7-4269-4624-8acd-fe901937c239
-          position: {x: 59, y: 61}
-          size: {x: 16, y: 18}
+        - keyFrameId: 3317a5f5-88e3-498c-a2dd-b080814d7f35
+          position: {x: 56, y: 58}
+          size: {x: 18, y: 22}
           forwardHandle: {x: 10, y: 10}
           backHandle: {x: -10, y: -10}
           props:
@@ -40,7 +40,7 @@ MonoBehaviour:
             m_values: []
             o_keys: []
         o_keys:
-        - ab348373-cd83-45d7-8f7a-8dfed56c7805
+        - 700c7990-639e-4d1b-8f41-4028e655deec
     collisionType: 0
     expanded: 1
     visible: 1
@@ -49,16 +49,16 @@ MonoBehaviour:
     layers:
     - kind: 0
       frames:
-      - guid: a2cc02f2-3615-4b50-b0df-9c8ec099b84c
+      - guid: cafb2472-f8e0-4b34-a39b-b7875390e24a
         kind: 0
-        dataId: 4e594afc-1ba5-4842-9a6d-0c6addc0ca71
+        dataId: 02c9f29b-76f8-4fb5-9d62-e68868ede708
       frameDataById:
         m_keys:
-        - 4e594afc-1ba5-4842-9a6d-0c6addc0ca71
+        - 02c9f29b-76f8-4fb5-9d62-e68868ede708
         m_values:
-        - keyFrameId: a2cc02f2-3615-4b50-b0df-9c8ec099b84c
-          position: {x: 41, y: 58}
-          size: {x: 43, y: 22}
+        - keyFrameId: cafb2472-f8e0-4b34-a39b-b7875390e24a
+          position: {x: 44, y: 62}
+          size: {x: 40, y: 18}
           forwardHandle: {x: 10, y: 10}
           backHandle: {x: -10, y: -10}
           props:
@@ -66,7 +66,7 @@ MonoBehaviour:
             m_values: []
             o_keys: []
         o_keys:
-        - 4e594afc-1ba5-4842-9a6d-0c6addc0ca71
+        - 02c9f29b-76f8-4fb5-9d62-e68868ede708
     collisionType: 1
     expanded: 1
     visible: 1

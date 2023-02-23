@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 public class GameSystem : MonoBehaviour {
 
     public static GameSystem system;
@@ -11,6 +12,7 @@ public class GameSystem : MonoBehaviour {
     public Transform nameplateWrapper;
     public GameObject namePlatePrefab;
     public List<PlayerInput> inputModules;
+    public UnityEvent<Transform> newPlayer = new UnityEvent<Transform>();
     private void Awake() {
         if (system == null) {
             system = this;
@@ -34,7 +36,9 @@ public class GameSystem : MonoBehaviour {
 
     public void OnPlayerJoined(PlayerInput p) {
         AddInputModule(p);
-        AddCoots(p, inputModules.Count);
+        Coots c = AddCoots(p, inputModules.Count);
+        newPlayer.Invoke(c.transform);
+
     }
 
     void AddInputModule(PlayerInput p) {
@@ -42,7 +46,7 @@ public class GameSystem : MonoBehaviour {
         inputModules.Add(p);
     }
 
-    void AddCoots(PlayerInput p, int index) {
+    Coots AddCoots(PlayerInput p, int index) {
         Coots newCoots = GameObject.Instantiate(cootsPrefab).GetComponent<Coots>();
         newCoots.transform.position = Vector2.up * 1f;
         newCoots.input = p.GetComponent<InputController>();
@@ -53,6 +57,7 @@ public class GameSystem : MonoBehaviour {
         CharacterUI nameplateScript = newNameplate.GetComponent<CharacterUI>();
         nameplateScript.character = newCoots;
         newNameplate.transform.SetParent(nameplateWrapper);
+        return newCoots;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) {

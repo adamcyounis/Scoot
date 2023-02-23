@@ -50,7 +50,10 @@ MonoBehaviour:
   cootsPrefab: {fileID: 4664217564621502925, guid: 35e033b771a839c4a920934924a8bef7, type: 3}
   nameplateWrapper: {fileID: 7345006732141485463}
   namePlatePrefab: {fileID: 4226490939860136807, guid: 324a9cec5b170d14a884ef8177e24ed6, type: 3}
-  players: 0
+  inputModules: []
+  newPlayer:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3362849507383869400
 MonoBehaviour:
   m_ObjectHideFlags: 0

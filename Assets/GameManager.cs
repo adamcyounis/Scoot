@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour {
             HandleHitStop();
         }
 
-        if (Input.GetButtonDown("Select")) {
+        if (Input.GetKeyDown(KeyCode.Home)) {
             Debug.Log("reload!");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
