@@ -18,7 +18,12 @@ public class Coots : Character {
 
     private void Update() {
         if (canMove || state.complete) {
+            State prevState = state;
+            //SetAttackStates();
             SetInputStates();
+            //if (state != prevState) {
+
+            //}
         }
 
         if (!state.complete) {
@@ -26,17 +31,20 @@ public class Coots : Character {
         }
     }
 
+    void SetAttackStates() {
+
+    }
+
     void SetInputStates() {
-
-
-        if (state == shield && Input.GetAxis("Vertical") < -0.5f) {
+        //&& inputRef.action.ReadValue<Vector2>("Move").y < -0.5f
+        if (state == shield) {// &&Input.GetAxis("Vertical") < -0.5f
             dodge.startGrounded = true;
             Set(dodge);
             return;
         }
 
         if (state == airControl) {
-            if (Input.GetButtonDown("Shield") && dodge.CanAirDodge()) {
+            if (input.shieldHeld && dodge.CanAirDodge()) {
                 Set(dodge);
                 return;
             }
@@ -53,7 +61,6 @@ public class Coots : Character {
                 airControl.Jump();
                 return;
             }
-
         }
 
 
@@ -100,7 +107,6 @@ public class GroundControl : State {
     public override void Exit() {
         base.Exit();
     }
-
 }
 */
 

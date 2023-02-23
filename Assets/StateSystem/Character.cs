@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class Character : StateMachine {
     public Vector2 facingDirection => transform.localScale.x > 0 ? Vector2.right : Vector2.left;
     public bool canMove = true;
@@ -19,6 +19,8 @@ public class Character : StateMachine {
     public string characterName;
     public float percent => life.percent;
     public Shaker shaker;
+
+    public int controllerIndex;
 
     public float velX {
         get {

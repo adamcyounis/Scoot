@@ -56,6 +56,6 @@ public class ShieldState : State {
     }
 
     public bool ShouldShield() {
-        return Input.GetButton("Shield") && core.selfAwareness.grounded;
+        return core.input.shieldHeld && core.selfAwareness.grounded;
     }
 }

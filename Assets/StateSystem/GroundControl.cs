@@ -24,7 +24,7 @@ public class GroundControl : State {
     }
 
     void HandleAnimation() {
-        float h = Input.GetAxis("Horizontal");
+        float h = core.input.movement.x;
         float g = Mathf.Abs(h);
 
         if (g > 0.01f && g < 0.4f) {
@@ -37,7 +37,7 @@ public class GroundControl : State {
     }
 
     void HandleMovement() {
-        float h = Input.GetAxis("Horizontal");
+        float h = core.input.movement.x;
         float g = Mathf.Abs(h);
 
         if (g > 0.01f && g < 0.5f) {

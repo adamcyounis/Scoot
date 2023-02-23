@@ -27,7 +27,7 @@ public class AirDodge : State, AirState {
     }
 
     void SetDirection() {
-        Vector2 inputDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        Vector2 inputDirection = core.input.movement;
 
         if (inputDirection.magnitude > 0.1f) {
             direction = inputDirection.normalized;

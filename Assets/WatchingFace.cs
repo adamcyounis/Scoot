@@ -11,15 +11,20 @@ public class WatchingFace : MonoBehaviour {
     public Transform target;
     // Start is called before the first frame update
     void Start() {
-
+        if (target == null && FindObjectOfType<Coots>() is Coots c) {
+            target = c.transform;
+        }
     }
 
     // Update is called once per frame
     void Update() {
-        Vector2 delta = (target.transform.position - transform.position).normalized;
-        float x = Helpers.Map(delta.x, -targetRange.x, targetRange.x, -eyeRange.x, eyeRange.x, true);
-        float y = Helpers.Map(delta.y, -targetRange.y, targetRange.y, -eyeRange.y, eyeRange.y, true);
+        if (target != null) {
+            Vector2 delta = (target.transform.position - transform.position).normalized;
+            float x = Helpers.Map(delta.x, -targetRange.x, targetRange.x, -eyeRange.x, eyeRange.x, true);
+            float y = Helpers.Map(delta.y, -targetRange.y, targetRange.y, -eyeRange.y, eyeRange.y, true);
 
-        darks.transform.localPosition = new Vector2(x, y);
+            darks.transform.localPosition = new Vector2(x, y);
+        }
+
     }
 }

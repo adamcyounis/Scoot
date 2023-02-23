@@ -19,14 +19,14 @@ public class CrouchControl : State {
         HandleAnimation();
 
 
-        if (Input.GetAxis("Vertical") >= 0) {
+        if (core.input.movement.y >= 0) {
             Complete("released crouch");
         }
 
     }
 
     void HandleAnimation() {
-        float h = Input.GetAxis("Horizontal");
+        float h = core.input.movement.x;
         if (Mathf.Abs(h) > 0) {
             animator.Play(walk, 10, true, false);
         } else {
@@ -35,7 +35,7 @@ public class CrouchControl : State {
     }
 
     void HandleMovement() {
-        float h = Input.GetAxis("Horizontal");
+        float h = core.input.movement.x;
         if (Mathf.Abs(h) > 0.01f) {
             core.velX += h * force;
             core.FaceDirection(Vector2.right * h);

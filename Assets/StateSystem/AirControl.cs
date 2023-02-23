@@ -27,7 +27,7 @@ public class AirControl : State, AirState {
     }
 
     void HandleMovement() {
-        float h = Input.GetAxis("Horizontal");
+        float h = core.input.movement.x;
         if (Mathf.Abs(h) > 0.01f) {
             core.velX += h * force;
             core.FaceDirection(Vector2.right * h);
@@ -36,7 +36,7 @@ public class AirControl : State, AirState {
         core.velX = Mathf.Clamp(core.velX, -terminalX, terminalX);
 
         if (core.velY <= 0) {
-            if (Input.GetAxis("Vertical") < -0.1f) {
+            if (core.input.movement.y < -0.1f) {
                 core.velY = -4;
             }
         }

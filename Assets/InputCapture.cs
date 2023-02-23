@@ -1,6 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-public class InputController : MonoBehaviour {
+public class InputCapture : MonoBehaviour {
 
     public PlayerInput input;
     public bool jumpHeld;
@@ -28,6 +30,7 @@ public class InputController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        //jump = input.actions["Move"].ReadValue<Vector2>();
 
         shieldHeld = input.actions["Shield"].IsPressed();
         shieldPressed = input.actions["Shield"].WasPressedThisFrame();
@@ -44,7 +47,7 @@ public class InputController : MonoBehaviour {
         startPressed = input.actions["Start"].WasPressedThisFrame();
         selectPressed = input.actions["Select"].WasPressedThisFrame();
 
-        movement = input.actions["Move"].ReadValue<Vector2>();
+        movement = input.actions["Movement"].ReadValue<Vector2>();
 
     }
 }

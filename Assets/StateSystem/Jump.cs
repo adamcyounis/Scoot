@@ -1,9 +1,9 @@
 using UnityEngine;
 using System;
 public class Jump : State, AirState {
-    public bool holdingJump => Input.GetButton("Jump");
+    public bool holdingJump => core.input.jumpHeld;
 
-    public bool inputtingJump => Input.GetButtonDown("Jump");
+    public bool inputtingJump => core.input.jumpPressed;
     public float fullJumpTime = 0.2f;
     public float releaseDecay = 0.75f;
 
@@ -32,7 +32,7 @@ public class Jump : State, AirState {
         base.Enter();
         remainingJumps--;
 
-        float h = Input.GetAxis("Horizontal");
+        float h = core.input.movement.x;
         if (Mathf.Abs(h) > 0.1f) {
             core.velX = Mathf.Sign(h);
         }

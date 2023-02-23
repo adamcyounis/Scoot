@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a74690695c846e4ea0fb1e707b9f4d6, type: 3}
+  m_Name: Coots Side-B
+  m_EditorClassIdentifier: 
+  version: 1.0
+  spriteList:
+  - {fileID: -619216758, guid: 206bb992cf1ed154fb7ed1bcc60a195a, type: 3}
+  - {fileID: 1753009513, guid: 206bb992cf1ed154fb7ed1bcc60a195a, type: 3}
+  propertiesList:
+  - frameProperties: []
+  - frameProperties: []
+  groups:
+  - myBoxType: Physics
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 8a7732f4-6625-490d-bc9a-c24f69b28ab4
+        kind: 0
+        dataId: a094ecd5-c061-44ab-b70b-eae0e68764e2
+      - guid: 3b64c344-5e13-4813-985c-03830cc4fb9e
+        kind: 1
+        dataId: 
+      frameDataById:
+        m_keys:
+        - a094ecd5-c061-44ab-b70b-eae0e68764e2
+        m_values:
+        - keyFrameId: 8a7732f4-6625-490d-bc9a-c24f69b28ab4
+          position: {x: 55, y: 51}
+          size: {x: 18, y: 29}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - a094ecd5-c061-44ab-b70b-eae0e68764e2
+    collisionType: 0
+    expanded: 1
+    visible: 1
+  - myBoxType: Hurt
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 3ec2e1ac-d86d-4d44-893c-192d5dacb4ea
+        kind: 0
+        dataId: 3f77f86f-b1cb-4eb1-a49f-ccc272151c7b
+      - guid: c5a03ae9-47d9-47dc-bf4d-07e9a244a4a8
+        kind: 0
+        dataId: 9df52cb2-b92a-4c8b-af02-0a7527f414ea
+      frameDataById:
+        m_keys:
+        - 3f77f86f-b1cb-4eb1-a49f-ccc272151c7b
+        - 9df52cb2-b92a-4c8b-af02-0a7527f414ea
+        m_values:
+        - keyFrameId: 3ec2e1ac-d86d-4d44-893c-192d5dacb4ea
+          position: {x: 50, y: 43}
+          size: {x: 24, y: 41}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        - keyFrameId: c5a03ae9-47d9-47dc-bf4d-07e9a244a4a8
+          position: {x: 55, y: 49}
+          size: {x: 26, y: 32}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - 3f77f86f-b1cb-4eb1-a49f-ccc272151c7b
+        - 9df52cb2-b92a-4c8b-af02-0a7527f414ea
+    collisionType: 1
+    expanded: 1
+    visible: 1
+  - myBoxType: Hit
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: d49b07db-7385-4e6c-acb5-213292824099
+        kind: 1
+        dataId: 00000000-0000-0000-0000-000000000000
+      - guid: 19b9756d-2c39-45d9-a84b-7d7ac61e9334
+        kind: 0
+        dataId: d0beba07-6ee7-4278-a1f4-cdb6b5a092b3
+      frameDataById:
+        m_keys:
+        - d0beba07-6ee7-4278-a1f4-cdb6b5a092b3
+        m_values:
+        - keyFrameId: 19b9756d-2c39-45d9-a84b-7d7ac61e9334
+          position: {x: 49, y: 42}
+          size: {x: 43, y: 40}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys:
+            - Damage
+            - Direction
+            - Knockback
+            m_values:
+            - name: Damage
+              dataType: 3
+              intVal: 0
+              floatVal: 25
+              boolVal: 0
+              stringVal: 
+              vectorVal: {x: 0, y: 0}
+              curveVal:
+                points:
+                - {x: 0, y: 0}
+                - {x: 0.25, y: 0.25}
+                - {x: 0.75, y: 0.75}
+                - {x: 1, y: 1}
+            - name: Direction
+              dataType: 4
+              intVal: 0
+              floatVal: 0
+              boolVal: 0
+              stringVal: 
+              vectorVal: {x: 1, y: 0.2}
+              curveVal:
+                points:
+                - {x: 0, y: 0}
+                - {x: 0.25, y: 0.25}
+                - {x: 0.75, y: 0.75}
+                - {x: 1, y: 1}
+            - name: Knockback
+              dataType: 3
+              intVal: 0
+              floatVal: 30
+              boolVal: 0
+              stringVal: 
+              vectorVal: {x: 0, y: 0}
+              curveVal:
+                points:
+                - {x: 0, y: 0}
+                - {x: 0.25, y: 0.25}
+                - {x: 0.75, y: 0.75}
+                - {x: 1, y: 1}
+            o_keys:
+            - Damage
+            - Direction
+            - Knockback
+        o_keys:
+        - d0beba07-6ee7-4278-a1f4-cdb6b5a092b3
+    collisionType: 1
+    expanded: 1
+    visible: 1
