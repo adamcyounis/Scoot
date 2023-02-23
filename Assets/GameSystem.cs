@@ -16,6 +16,7 @@ public class GameSystem : MonoBehaviour {
             system = this;
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
+
         } else {
             Destroy(gameObject);
         }
@@ -59,6 +60,10 @@ public class GameSystem : MonoBehaviour {
     }
 
     void LoadPlayers() {
+        foreach (Transform child in nameplateWrapper.transform) {
+            GameObject.Destroy(child.gameObject);
+        }
+
         for (int i = 0; i < inputModules.Count; i++) {
             AddCoots(inputModules[i], i);
         }
