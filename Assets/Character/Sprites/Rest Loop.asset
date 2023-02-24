@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a74690695c846e4ea0fb1e707b9f4d6, type: 3}
+  m_Name: Rest Loop
+  m_EditorClassIdentifier: 
+  version: 1.0
+  spriteList:
+  - {fileID: -1298230764, guid: 58fd4d0d077d36d4e9773f7236d18ebd, type: 3}
+  - {fileID: 1933243671, guid: 58fd4d0d077d36d4e9773f7236d18ebd, type: 3}
+  - {fileID: 1872760862, guid: 58fd4d0d077d36d4e9773f7236d18ebd, type: 3}
+  - {fileID: -1095170796, guid: 58fd4d0d077d36d4e9773f7236d18ebd, type: 3}
+  - {fileID: -1882891419, guid: 58fd4d0d077d36d4e9773f7236d18ebd, type: 3}
+  - {fileID: -458420074, guid: 58fd4d0d077d36d4e9773f7236d18ebd, type: 3}
+  - {fileID: -1280959726, guid: 58fd4d0d077d36d4e9773f7236d18ebd, type: 3}
+  - {fileID: 1118610712, guid: 58fd4d0d077d36d4e9773f7236d18ebd, type: 3}
+  propertiesList:
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  - frameProperties: []
+  groups:
+  - myBoxType: Physics
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 0c4e3054-4608-4254-aadd-fb3f847b3bc5
+        kind: 0
+        dataId: 84c0761c-ab54-439f-b203-b70428d027e6
+      - guid: ba6eab37-1a77-4361-8fda-804a7fe6dd57
+        kind: 1
+        dataId: 84c0761c-ab54-439f-b203-b70428d027e6
+      - guid: 1bbb3457-25f0-4fb0-94da-f4bbc9cf9caa
+        kind: 1
+        dataId: 84c0761c-ab54-439f-b203-b70428d027e6
+      - guid: fdf11dff-01f4-4a73-9a18-c8b7150eaff4
+        kind: 1
+        dataId: 84c0761c-ab54-439f-b203-b70428d027e6
+      - guid: 67b159e1-28d4-4703-8204-a6faa9a4a52d
+        kind: 1
+        dataId: 84c0761c-ab54-439f-b203-b70428d027e6
+      - guid: 96399306-5fd0-44db-861b-0871b3ff9118
+        kind: 1
+        dataId: 84c0761c-ab54-439f-b203-b70428d027e6
+      - guid: 3694d661-6f7f-4df9-ae99-bc179b7e6c2d
+        kind: 1
+        dataId: 84c0761c-ab54-439f-b203-b70428d027e6
+      - guid: 20c08970-d2ea-4800-92c3-41b22cf3ba8f
+        kind: 1
+        dataId: 84c0761c-ab54-439f-b203-b70428d027e6
+      frameDataById:
+        m_keys:
+        - 84c0761c-ab54-439f-b203-b70428d027e6
+        m_values:
+        - keyFrameId: 0c4e3054-4608-4254-aadd-fb3f847b3bc5
+          position: {x: 55, y: 59}
+          size: {x: 18, y: 20}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - 84c0761c-ab54-439f-b203-b70428d027e6
+    collisionType: 0
+    expanded: 1
+    visible: 1
+  - myBoxType: Hurt
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: efa0ef17-819c-4c88-9120-574fc64ecfcf
+        kind: 0
+        dataId: f664cded-4ed4-4c99-a0ed-83ed61df1ac1
+      - guid: 1b384d77-3d40-4455-b342-f2a15c14e7b7
+        kind: 1
+        dataId: f664cded-4ed4-4c99-a0ed-83ed61df1ac1
+      - guid: aceae5a6-b587-4efe-9db5-61ed35b8b628
+        kind: 1
+        dataId: f664cded-4ed4-4c99-a0ed-83ed61df1ac1
+      - guid: 7e361007-8b63-4623-a0c8-c92279e9c1c5
+        kind: 1
+        dataId: f664cded-4ed4-4c99-a0ed-83ed61df1ac1
+      - guid: 13168976-cec1-4e5f-9955-2b118a8045fc
+        kind: 1
+        dataId: f664cded-4ed4-4c99-a0ed-83ed61df1ac1
+      - guid: 2b33b318-b410-49d8-ba37-ed8778b56de9
+        kind: 1
+        dataId: f664cded-4ed4-4c99-a0ed-83ed61df1ac1
+      - guid: 3b349476-9c74-4a77-a9cf-f735e0659d7f
+        kind: 1
+        dataId: f664cded-4ed4-4c99-a0ed-83ed61df1ac1
+      - guid: c1fd493e-f2d7-41af-aa08-da13f652cc0e
+        kind: 1
+        dataId: f664cded-4ed4-4c99-a0ed-83ed61df1ac1
+      frameDataById:
+        m_keys:
+        - f664cded-4ed4-4c99-a0ed-83ed61df1ac1
+        m_values:
+        - keyFrameId: efa0ef17-819c-4c88-9120-574fc64ecfcf
+          position: {x: 49, y: 46}
+          size: {x: 34, y: 34}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - f664cded-4ed4-4c99-a0ed-83ed61df1ac1
+    collisionType: 1
+    expanded: 1
+    visible: 1

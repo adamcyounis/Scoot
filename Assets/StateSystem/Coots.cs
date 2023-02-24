@@ -27,7 +27,7 @@ public class Coots : Character {
                 SetAttackStates();
             }
 
-            if (state == prevState) { //haven't done an attack..
+            if (state == prevState && canMove) { //haven't done an attack..
                 SetInputStates();
             }
             //if (state != prevState) {

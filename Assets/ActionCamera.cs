@@ -14,6 +14,7 @@ public class ActionCamera : MonoBehaviour {
     public float maxSize;
     [Range(0.2f, 0.5f)]
     public float animTime = 0.2f;
+    public float targetTolerance;
 
     // Start is called before the first frame update
     void Start() {
@@ -69,21 +70,26 @@ public class ActionCamera : MonoBehaviour {
         max = subjects[0].position;
 
         foreach (Transform t in subjects) {
-            if (t.position.x < min.x) {
-                min.x = t.position.x;
+
+            if (Vector2.Distance(t.position, transform.position) < targetTolerance) {
+
+                if (t.position.x < min.x) {
+                    min.x = t.position.x;
+                }
+
+                if (t.position.y < min.y) {
+                    min.y = t.position.y;
+                }
+
+                if (t.position.x > max.x) {
+                    max.x = t.position.x;
+                }
+
+                if (t.position.y > max.y) {
+                    max.y = t.position.y;
+                }
             }
 
-            if (t.position.y < min.y) {
-                min.y = t.position.y;
-            }
-
-            if (t.position.x > max.x) {
-                max.x = t.position.x;
-            }
-
-            if (t.position.y > max.y) {
-                max.y = t.position.y;
-            }
         }
         return new Bounds((max + min) / 2f, max - min);
     }

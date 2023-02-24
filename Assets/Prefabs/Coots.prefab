@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 8843013226440285005}
   - component: {fileID: 8426785506466970186}
   - component: {fileID: 5827839757629512424}
+  - component: {fileID: 9098593482350234073}
+  - component: {fileID: 4299952032268642972}
+  - component: {fileID: 4571902421600986172}
   m_Layer: 6
   m_Name: Specials
   m_TagString: Untagged
@@ -48,6 +51,7 @@ MonoBehaviour:
   state: {fileID: 0}
   title: 
   sideB: {fileID: 5827839757629512424}
+  rest: {fileID: 9098593482350234073}
 --- !u!114 &5827839757629512424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,6 +69,59 @@ MonoBehaviour:
   sheet: {fileID: 11400000, guid: 2ac64fc9e86aceb4cae344ed170a2703, type: 2}
   fps: 4
   loop: 0
+  duration: 0
+--- !u!114 &9098593482350234073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3341788037486407286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01bc0a434477faf48b14ae1a4ac9a448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: {fileID: 0}
+  title: 
+  restAttack: {fileID: 4299952032268642972}
+  restLoop: {fileID: 4571902421600986172}
+--- !u!114 &4299952032268642972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3341788037486407286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb8a59793f0ed54b8c2d531b2b66f0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: {fileID: 0}
+  title: Rest Attack
+  sheet: {fileID: 11400000, guid: b84e3ed83472db74b8bae246f7857477, type: 2}
+  fps: 10
+  loop: 0
+  duration: 0
+--- !u!114 &4571902421600986172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3341788037486407286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb8a59793f0ed54b8c2d531b2b66f0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: {fileID: 0}
+  title: Rest Loop
+  sheet: {fileID: 11400000, guid: 0c2e3fcbd8ebe1942a3348faaf557520, type: 2}
+  fps: 10
+  loop: 1
+  duration: 3
 --- !u!1 &4664217563720548697
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,6 +498,7 @@ MonoBehaviour:
   sheet: {fileID: 11400000, guid: d4d2164af545b0a4780f4ac3eefcf79a, type: 2}
   fps: 10
   loop: 1
+  duration: 0
 --- !u!114 &4664217564466435322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -931,6 +989,7 @@ MonoBehaviour:
   sheet: {fileID: 11400000, guid: c4285aa050b07814aa34e240c16df072, type: 2}
   fps: 6
   loop: 0
+  duration: 0
 --- !u!1 &4664217565597038147
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,6 +1039,7 @@ MonoBehaviour:
   sheet: {fileID: 11400000, guid: 754343704425e8d43b82da43b88ff063, type: 2}
   fps: 10
   loop: 1
+  duration: 0
 --- !u!1 &4664217565831972622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,6 +1089,7 @@ MonoBehaviour:
   sheet: {fileID: 11400000, guid: 754343704425e8d43b82da43b88ff063, type: 2}
   fps: 10
   loop: 1
+  duration: 0
 --- !u!1 &6252602138726265118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,6 +1160,7 @@ MonoBehaviour:
   sheet: {fileID: 11400000, guid: b5c2778d91723d141a37f41247f94a2a, type: 2}
   fps: 10
   loop: 0
+  duration: 0
 --- !u!114 &1230382536071851943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1134,6 +1196,7 @@ MonoBehaviour:
   sheet: {fileID: 11400000, guid: 2964e65daa827e74e9beb92d9a3b1c14, type: 2}
   fps: 10
   loop: 0
+  duration: 0
 --- !u!114 &3966278473620826304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1151,6 +1214,7 @@ MonoBehaviour:
   sheet: {fileID: 11400000, guid: a58562221f58e264eb90c112fbfe0108, type: 2}
   fps: 10
   loop: 0
+  duration: 0
 --- !u!114 &1537927672166206334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1168,6 +1232,7 @@ MonoBehaviour:
   sheet: {fileID: 11400000, guid: 16465b596a50de04fa2ea87357475690, type: 2}
   fps: 10
   loop: 0
+  duration: 0
 --- !u!1 &8107610697190313047
 GameObject:
   m_ObjectHideFlags: 0

@@ -107,7 +107,6 @@ public class Character : StateMachine {
             if (!x) vel.x = body.velocity.x;
             if (!y) vel.y = body.velocity.y;
             body.velocity = vel;
-            Debug.Log(body.velocity);
         }
     }
 }

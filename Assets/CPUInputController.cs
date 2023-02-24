@@ -78,7 +78,6 @@ public class CPUInputController : InputController {
 
     Vector2 VectorToCentreStage() {
         return (Vector2)(centreStage.position - character.transform.position);
-
     }
 
     void ManageTargets() {
