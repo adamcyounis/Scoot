@@ -6,8 +6,8 @@ public class Shaker : MonoBehaviour {
     float startTime = 0;
     float time => Time.unscaledTime - startTime;
     public float duration = 0.3f;
-    bool animating;
-    float amount;
+    public bool animating;
+    public float amount;
 
     // Start is called before the first frame update
     void Start() {
