@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a74690695c846e4ea0fb1e707b9f4d6, type: 3}
-  m_Name: Dummy Attack
+  m_Name: Down Attack
   m_EditorClassIdentifier: 
   version: 1.0
   spriteList:
-  - {fileID: 476924424, guid: 1d8d18285c848784e8ebb68686d37719, type: 3}
-  - {fileID: 1821841019, guid: 1d8d18285c848784e8ebb68686d37719, type: 3}
-  - {fileID: -729800354, guid: 1d8d18285c848784e8ebb68686d37719, type: 3}
+  - {fileID: 222579657, guid: 1d8d18285c848784e8ebb68686d37719, type: 3}
+  - {fileID: -1100278252, guid: 1d8d18285c848784e8ebb68686d37719, type: 3}
+  - {fileID: 1664329972, guid: 1d8d18285c848784e8ebb68686d37719, type: 3}
   propertiesList:
   - frameProperties: []
   - frameProperties: []
@@ -96,6 +96,70 @@ MonoBehaviour:
             - Knockback
         o_keys:
         - c0b08e80-9b96-45e6-ab97-a13189cad178
+    collisionType: 1
+    expanded: 1
+    visible: 1
+  - myBoxType: Physics
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 6393d38f-1fe3-41c1-81a0-82f7ae82868b
+        kind: 0
+        dataId: 9c83e84c-68fe-4a6d-8c28-d285e9535f5b
+      - guid: f3d59c59-401c-4cd3-a9d3-136628e0c020
+        kind: 1
+        dataId: 9c83e84c-68fe-4a6d-8c28-d285e9535f5b
+      - guid: 2da5e86c-f99f-4001-ab9e-62f26377ce99
+        kind: 1
+        dataId: 9c83e84c-68fe-4a6d-8c28-d285e9535f5b
+      frameDataById:
+        m_keys:
+        - 9c83e84c-68fe-4a6d-8c28-d285e9535f5b
+        m_values:
+        - keyFrameId: 6393d38f-1fe3-41c1-81a0-82f7ae82868b
+          position: {x: 55, y: 57}
+          size: {x: 18, y: 23}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - 9c83e84c-68fe-4a6d-8c28-d285e9535f5b
+    collisionType: 0
+    expanded: 1
+    visible: 1
+  - myBoxType: Hurt
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 32054a8b-4881-4de3-bfae-552220a06bb4
+        kind: 0
+        dataId: 60568441-775e-49bc-9841-b7d54de8d2ff
+      - guid: 7810fa2c-0dda-4f4c-aa99-df4129f65a31
+        kind: 1
+        dataId: 60568441-775e-49bc-9841-b7d54de8d2ff
+      - guid: de46d2e1-c7f4-4b7c-9311-0dbbcf5c6974
+        kind: 1
+        dataId: 60568441-775e-49bc-9841-b7d54de8d2ff
+      frameDataById:
+        m_keys:
+        - 60568441-775e-49bc-9841-b7d54de8d2ff
+        m_values:
+        - keyFrameId: 32054a8b-4881-4de3-bfae-552220a06bb4
+          position: {x: 41, y: 60}
+          size: {x: 43, y: 20}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - 60568441-775e-49bc-9841-b7d54de8d2ff
     collisionType: 1
     expanded: 1
     visible: 1

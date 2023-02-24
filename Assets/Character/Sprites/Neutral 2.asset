@@ -1,0 +1,215 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a74690695c846e4ea0fb1e707b9f4d6, type: 3}
+  m_Name: Neutral 2
+  m_EditorClassIdentifier: 
+  version: 1.0
+  spriteList:
+  - {fileID: -1399209118, guid: e3031e75a2a6de742a6293072de88a63, type: 3}
+  - {fileID: -985719722, guid: e3031e75a2a6de742a6293072de88a63, type: 3}
+  - {fileID: -1119119585, guid: e3031e75a2a6de742a6293072de88a63, type: 3}
+  - {fileID: 1987663358, guid: e3031e75a2a6de742a6293072de88a63, type: 3}
+  propertiesList:
+  - frameProperties: []
+  - frameProperties:
+    - name: velX
+      dataType: 0
+      intVal: 0
+      floatVal: 0
+      boolVal: 1
+      stringVal: 
+      vectorVal: {x: 0, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
+    - name: Velocity
+      dataType: 4
+      intVal: 0
+      floatVal: 0
+      boolVal: 0
+      stringVal: 
+      vectorVal: {x: 2, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
+  - frameProperties:
+    - name: CanAttack
+      dataType: 0
+      intVal: 0
+      floatVal: 0
+      boolVal: 1
+      stringVal: 
+      vectorVal: {x: 0, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
+  - frameProperties: []
+  groups:
+  - myBoxType: Physics
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: c11e00b4-dd16-4937-946f-c116f7991b9a
+        kind: 0
+        dataId: 3d6fd6dd-36ba-4821-b044-b816a94b974d
+      - guid: 28d715eb-9462-4938-8bba-4883983cbadd
+        kind: 1
+        dataId: 3d6fd6dd-36ba-4821-b044-b816a94b974d
+      - guid: ed201ef8-4eeb-4d8c-8250-5c796e438c00
+        kind: 1
+        dataId: 3d6fd6dd-36ba-4821-b044-b816a94b974d
+      - guid: 0ae13583-c2b5-46b0-8647-f0503af7c27a
+        kind: 1
+        dataId: 3d6fd6dd-36ba-4821-b044-b816a94b974d
+      frameDataById:
+        m_keys:
+        - 3d6fd6dd-36ba-4821-b044-b816a94b974d
+        m_values:
+        - keyFrameId: c11e00b4-dd16-4937-946f-c116f7991b9a
+          position: {x: 55, y: 55}
+          size: {x: 18, y: 25}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - 3d6fd6dd-36ba-4821-b044-b816a94b974d
+    collisionType: 0
+    expanded: 1
+    visible: 1
+  - myBoxType: Hurt
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: b65c27ea-373c-4fba-995c-3e4cc08a9841
+        kind: 0
+        dataId: 21f2eb4c-fb0b-4b17-a403-76266e6fe3d0
+      - guid: bd0a7ced-fa7b-4547-88e7-0aae77797731
+        kind: 1
+        dataId: 21f2eb4c-fb0b-4b17-a403-76266e6fe3d0
+      - guid: 0e925845-59a4-409a-966b-8697876f3237
+        kind: 1
+        dataId: 21f2eb4c-fb0b-4b17-a403-76266e6fe3d0
+      - guid: b2fd3bc5-ec95-4f69-b367-4789f203a513
+        kind: 1
+        dataId: 21f2eb4c-fb0b-4b17-a403-76266e6fe3d0
+      frameDataById:
+        m_keys:
+        - 21f2eb4c-fb0b-4b17-a403-76266e6fe3d0
+        m_values:
+        - keyFrameId: b65c27ea-373c-4fba-995c-3e4cc08a9841
+          position: {x: 54, y: 42}
+          size: {x: 24, y: 38}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - 21f2eb4c-fb0b-4b17-a403-76266e6fe3d0
+    collisionType: 1
+    expanded: 1
+    visible: 1
+  - myBoxType: Hit
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 5bbf6543-68fd-4ece-a9f5-d0c58681c8b7
+        kind: 1
+        dataId: 00000000-0000-0000-0000-000000000000
+      - guid: 3a3fd802-e99f-4281-b149-523c6e4aef8c
+        kind: 0
+        dataId: 1e52df93-cfce-461e-9681-bd10dcff0235
+      - guid: a7d732e8-109a-4ce9-b2da-619dc0fb1538
+        kind: 2
+        dataId: 00000000-0000-0000-0000-000000000000
+      - guid: f1439337-986d-40f9-a2be-eecfc085c327
+        kind: 1
+        dataId: 00000000-0000-0000-0000-000000000000
+      frameDataById:
+        m_keys:
+        - 1e52df93-cfce-461e-9681-bd10dcff0235
+        m_values:
+        - keyFrameId: 3a3fd802-e99f-4281-b149-523c6e4aef8c
+          position: {x: 76, y: 39}
+          size: {x: 38, y: 39}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys:
+            - Damage
+            - Direction
+            - Knockback
+            m_values:
+            - name: Damage
+              dataType: 3
+              intVal: 0
+              floatVal: 10
+              boolVal: 0
+              stringVal: 
+              vectorVal: {x: 0, y: 0}
+              curveVal:
+                points:
+                - {x: 0, y: 0}
+                - {x: 0.25, y: 0.25}
+                - {x: 0.75, y: 0.75}
+                - {x: 1, y: 1}
+            - name: Direction
+              dataType: 4
+              intVal: 0
+              floatVal: 0
+              boolVal: 0
+              stringVal: 
+              vectorVal: {x: 1, y: 0}
+              curveVal:
+                points:
+                - {x: 0, y: 0}
+                - {x: 0.25, y: 0.25}
+                - {x: 0.75, y: 0.75}
+                - {x: 1, y: 1}
+            - name: Knockback
+              dataType: 3
+              intVal: 0
+              floatVal: 5
+              boolVal: 0
+              stringVal: 
+              vectorVal: {x: 0, y: 0}
+              curveVal:
+                points:
+                - {x: 0, y: 0}
+                - {x: 0.25, y: 0.25}
+                - {x: 0.75, y: 0.75}
+                - {x: 1, y: 1}
+            o_keys:
+            - Damage
+            - Direction
+            - Knockback
+        o_keys:
+        - 1e52df93-cfce-461e-9681-bd10dcff0235
+    collisionType: 1
+    expanded: 1
+    visible: 1

@@ -29,6 +29,7 @@ public class LudHands : Character {
     public Retro.RetroAnimator rightHandAnimator;
     public Retro.RetroAnimator faceAnimator;
     public Animator anim;
+    State previousAttack;
 
     public override void Awake() {
         base.Awake();
@@ -51,18 +52,14 @@ public class LudHands : Character {
         if (!state.complete) {
             state.Do();
         } else {
-            if (state == idle) {
-                float random = Random.value;
-                if (random > 0.33f) {
-                    if (random > 0.66f) {
-                        Set(salute);
-                    } else {
-                        Set(sweep);
-                    }
-                } else {
-                    Set(slam);
 
-                }
+            if (state == idle) {
+                List<State> attacks = new List<State>() { salute, sweep, slam };
+                attacks.Remove(previousAttack);
+                int r = Random.Range(0, attacks.Count);
+                Set(attacks[r]);
+                previousAttack = state;
+
             } else {
                 Set(idle);
             }

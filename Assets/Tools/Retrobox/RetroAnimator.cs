@@ -6,7 +6,6 @@ using UnityEngine.Events;
 namespace Retro {
     public class BoxCollisionEvent : UnityEvent<Collision> { }
     public class HitConfirmEvent : UnityEvent<CollisionInfo> { }
-
     public class RetroAnimator : MonoBehaviour {
 
         string version = "1.0";
@@ -60,6 +59,7 @@ namespace Retro {
         public Vector2 spatialOffset;
 
         public UnityEvent<Retro.Sheet> finished = new UnityEvent<Retro.Sheet>();
+        public UnityEvent<Retro.Sheet, int> frameSet = new UnityEvent<Sheet, int>();
         public Life life;
         // Use this for initialization
         void Awake() {
@@ -257,7 +257,8 @@ namespace Retro {
             if (spriteRenderer != null) {
                 spriteRenderer.sprite = mySheet.spriteList[playingFrame];
             }
-            ApplyProperties();
+
+            frameSet.Invoke(mySheet, frame);
         }
 
         public void Stop() {
@@ -356,12 +357,6 @@ namespace Retro {
         public Vector2 PixelPerfect() {
             float ppu = spriteRenderer.sprite.pixelsPerUnit;
             return new Vector2(Mathf.Round(transform.position.x * ppu) / ppu, Mathf.Round(transform.position.y * ppu) / ppu);
-        }
-
-        //TODO: FIX THIS entire thing. apply the frame properties here in the animator, instead of in some random static scipt.
-        void ApplyProperties() { //applies any effects, frame properties and hitbox properties which occur on this frame.
-                                 //SendMessageUpwards("ApplyFrameProperties", mySheet.propertiesList[GetCurrentFrame()], SendMessageOptions.DontRequireReceiver);
-            SendMessageUpwards("ApplyFrameProperties", this, SendMessageOptions.DontRequireReceiver);
         }
 
         public void CheckCompatability(Sheet sheet) {//Checks for version parity between this Retro.BoxAnimator and the Retro.Sheet being played.

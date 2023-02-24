@@ -21,6 +21,7 @@ public class Character : StateMachine {
     public Shaker shaker;
 
     public int controllerIndex;
+    public BodyProps defaultBodyProps;
 
     public float velX {
         get {
@@ -41,6 +42,11 @@ public class Character : StateMachine {
     }
 
     public virtual void Awake() {
+        if (body != null) {
+            defaultBodyProps = new BodyProps(body.gravityScale);
+
+        }
+        animator.frameSet.AddListener(HandleFrameProperty);
         State[] states = GetComponentsInChildren<State>();
         foreach (State s in states) {
             s.SetCore(this);
@@ -51,4 +57,62 @@ public class Character : StateMachine {
     public void FaceDirection(Vector2 vector2) {
         transform.localScale = new Vector3(Mathf.Sign(vector2.x), 1);
     }
+
+    public void ReturnToDefaultBodyProps() {
+
+        body.gravityScale = defaultBodyProps.gravityScale;
+    }
+
+    void HandleFrameProperty(Retro.Sheet sheet, int frame) {
+
+        Retro.Properties props = sheet.propertiesList[frame];
+        //AnimationEffectPool.current.ApplyEffects(anim);
+
+        bool x = false;
+        bool y = false;
+        Vector2 vel = new Vector2();
+
+        foreach (Retro.BoxProperty b in props.frameProperties) {
+
+            switch (b.name) {
+                case "Event":
+                    if (animator.boxManager.frameEvents.ContainsEvent(b.stringVal)) {
+                        animator.boxManager.frameEvents.Invoke(b.stringVal);
+                    }
+                    break;
+                case "Velocity":
+                    vel = new Vector3(b.vectorVal.x, b.vectorVal.y);
+                    break;
+                case "velX":
+                    x = true;
+                    break;
+                case "velY":
+                    y = true;
+                    break;
+                case "Gravity":
+                    body.gravityScale = b.floatVal;
+                    break;
+                case "CanAttack":
+                    canAttack = b.boolVal;
+                    break;
+            }
+        }
+
+        if ((x || y)) {
+            if (facingDirection == Vector2.left) vel.x = -vel.x;
+
+            if (!x) vel.x = body.velocity.x;
+            if (!y) vel.y = body.velocity.y;
+            body.velocity = vel;
+            Debug.Log(body.velocity);
+        }
+    }
+}
+
+public struct BodyProps {
+    public BodyProps(float gravityScale_) {
+        gravityScale = gravityScale_;
+    }
+    public readonly float gravityScale;
+
 }

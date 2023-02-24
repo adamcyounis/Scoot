@@ -10,6 +10,10 @@ public class Coots : Character {
     public Stun stun;
     public ShieldState shield;
 
+    public AttackStates attacks;
+    public SpecialStates specials;
+
+
     private void Start() {
         Set(initState);
         GameManager.coots = this;
@@ -19,19 +23,33 @@ public class Coots : Character {
     private void Update() {
         if (canMove || state.complete) {
             State prevState = state;
-            //SetAttackStates();
-            SetInputStates();
+            if (canAttack) {
+                SetAttackStates();
+            }
+
+            if (state == prevState) { //haven't done an attack..
+                SetInputStates();
+            }
             //if (state != prevState) {
 
             //}
+
         }
 
         if (!state.complete) {
             state.Do();
+        } else {
+            canAttack = true;
+            canMove = true;
         }
     }
 
     void SetAttackStates() {
+        if (input.attackPressed) {
+            Set(attacks, true);
+        } else if (input.specialPressed) {
+            Set(specials);
+        }
 
     }
 
@@ -90,8 +108,6 @@ public class Coots : Character {
         Set(stun);
     }
 }
-
-
 /*
 public class GroundControl : State {
     public override void Enter() {

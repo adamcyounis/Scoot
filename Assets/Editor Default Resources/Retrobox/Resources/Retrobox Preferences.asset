@@ -79,8 +79,16 @@ MonoBehaviour:
     - Direction
     - Knockback
   framePropsDictionary:
-    m_keys: []
-    m_values: 
-    o_keys: []
+    m_keys:
+    - Velocity
+    - velX
+    - velY
+    - Gravity
+    m_values: 04000000000000000000000003000000
+    o_keys:
+    - Velocity
+    - velX
+    - velY
+    - Gravity
   cachedZoomSetting: 0
   cachedGridSetting: 1

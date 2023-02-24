@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 206bb992cf1ed154fb7ed1bcc60a195a
+guid: 1d8d18285c848784e8ebb68686d37719
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -103,11 +103,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Coots Sprite-Side-B_0
+      name: Coots Sprite-Down Attack_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,14 +133,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8b98e4733e0dfe4a850912910b38017
-      internalID: -619216758
+      spriteID: 9a151cc7beac55d4e9410fee1d7314c8
+      internalID: 222579657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coots Sprite-Side-B_1
+      name: Coots Sprite-Down Attack_1
       rect:
         serializedVersion: 2
         x: 128
@@ -142,8 +154,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53caf3e61075cba45ac4fa0783c38628
-      internalID: 1753009513
+      spriteID: 552e2f4a8c5338f4ab788dce7ef6ab39
+      internalID: -1100278252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coots Sprite-Down Attack_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451865bdd427d7647974e665e0c6bdd7
+      internalID: 1664329972
       vertices: []
       indices: 
       edges: []
@@ -159,8 +192,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Coots Sprite-Side-B_0: -619216758
-      Coots Sprite-Side-B_1: 1753009513
+      Coots Sprite-Down Attack_2: 1664329972
+      Coots Sprite-Down Attack_0: 222579657
+      Coots Sprite-Down Attack_1: -1100278252
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

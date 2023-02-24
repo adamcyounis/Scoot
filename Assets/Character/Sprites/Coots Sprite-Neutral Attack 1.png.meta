@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1d8d18285c848784e8ebb68686d37719
+guid: ed9c3de4228e01c4cb69dca6065a4895
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -103,11 +103,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Coots Sprite-Dummy Attack_0
+      name: Coots Sprite-Neutral Attack 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,14 +133,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b96846f336644c34c9e9c4858548f40c
-      internalID: 476924424
+      spriteID: 625cb76dc063cd440a8fbb97bdca11e8
+      internalID: 457337289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coots Sprite-Dummy Attack_1
+      name: Coots Sprite-Neutral Attack 1_1
       rect:
         serializedVersion: 2
         x: 128
@@ -142,14 +154,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51f42bf3b8b0cae4cb2a824cd6d466b8
-      internalID: 1821841019
+      spriteID: 178bd5c6a7596d343ae47006e8275299
+      internalID: 932497878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coots Sprite-Dummy Attack_2
+      name: Coots Sprite-Neutral Attack 1_2
       rect:
         serializedVersion: 2
         x: 256
@@ -163,8 +175,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4c595527774a8548b0688ea87b3ac1e
-      internalID: -729800354
+      spriteID: f385fd3930620364eac57b228452d34b
+      internalID: 1502298510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coots Sprite-Neutral Attack 1_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a1c4bd0814c0441b2915b8f2e0c85b
+      internalID: -1408510994
       vertices: []
       indices: 
       edges: []
@@ -180,9 +213,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Coots Sprite-Dummy Attack_2: -729800354
-      Coots Sprite-Dummy Attack_1: 1821841019
-      Coots Sprite-Dummy Attack_0: 476924424
+      Coots Sprite-Neutral Attack 1_1: 932497878
+      Coots Sprite-Neutral Attack 1_3: -1408510994
+      Coots Sprite-Neutral Attack 1_0: 457337289
+      Coots Sprite-Neutral Attack 1_2: 1502298510
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

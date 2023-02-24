@@ -1,0 +1,207 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a74690695c846e4ea0fb1e707b9f4d6, type: 3}
+  m_Name: Neutral 3
+  m_EditorClassIdentifier: 
+  version: 1.0
+  spriteList:
+  - {fileID: 536406861, guid: 257ea2b57bae8b143b12d8918fd345d6, type: 3}
+  - {fileID: 1603815475, guid: 257ea2b57bae8b143b12d8918fd345d6, type: 3}
+  - {fileID: 204164725, guid: 257ea2b57bae8b143b12d8918fd345d6, type: 3}
+  - {fileID: 968355248, guid: 257ea2b57bae8b143b12d8918fd345d6, type: 3}
+  - {fileID: 504348010, guid: 257ea2b57bae8b143b12d8918fd345d6, type: 3}
+  propertiesList:
+  - frameProperties: []
+  - frameProperties:
+    - name: velX
+      dataType: 0
+      intVal: 0
+      floatVal: 0
+      boolVal: 1
+      stringVal: 
+      vectorVal: {x: 0, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
+    - name: Velocity
+      dataType: 4
+      intVal: 0
+      floatVal: 0
+      boolVal: 0
+      stringVal: 
+      vectorVal: {x: 1, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
+  - frameProperties:
+    - name: velX
+      dataType: 0
+      intVal: 0
+      floatVal: 0
+      boolVal: 1
+      stringVal: 
+      vectorVal: {x: 0, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
+    - name: Velocity
+      dataType: 4
+      intVal: 0
+      floatVal: 0
+      boolVal: 0
+      stringVal: 
+      vectorVal: {x: 2, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
+  - frameProperties:
+    - name: CanAttack
+      dataType: 0
+      intVal: 0
+      floatVal: 0
+      boolVal: 1
+      stringVal: 
+      vectorVal: {x: 0, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
+  - frameProperties: []
+  groups:
+  - myBoxType: Physics
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 0774ca3c-36b7-497b-9ba4-7f2fdaa8c15f
+        kind: 0
+        dataId: bfce312f-847d-4e7c-a681-35df656fa87d
+      - guid: 0c0775f2-cdec-4e7b-be47-9e44d63a99fc
+        kind: 1
+        dataId: bfce312f-847d-4e7c-a681-35df656fa87d
+      - guid: 2ba056db-57d8-4c30-ad8c-aa9da61527ab
+        kind: 1
+        dataId: bfce312f-847d-4e7c-a681-35df656fa87d
+      - guid: 49d7cbbb-2704-4506-8f2f-31c847a940b0
+        kind: 1
+        dataId: bfce312f-847d-4e7c-a681-35df656fa87d
+      - guid: 5527c022-15b5-4c55-85f5-e08da871b9f0
+        kind: 1
+        dataId: bfce312f-847d-4e7c-a681-35df656fa87d
+      frameDataById:
+        m_keys:
+        - bfce312f-847d-4e7c-a681-35df656fa87d
+        m_values:
+        - keyFrameId: 0774ca3c-36b7-497b-9ba4-7f2fdaa8c15f
+          position: {x: 56, y: 54}
+          size: {x: 16, y: 25}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - bfce312f-847d-4e7c-a681-35df656fa87d
+    collisionType: 0
+    expanded: 1
+    visible: 1
+  - myBoxType: Hurt
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 2ddcd4e4-5843-4683-be0f-90fa59dbf463
+        kind: 0
+        dataId: 14bdcc7d-219c-42b6-a173-75368a98b581
+      - guid: 2dfdb897-dc4e-4a2d-b0e5-0d83b150dc17
+        kind: 1
+        dataId: 14bdcc7d-219c-42b6-a173-75368a98b581
+      - guid: 68d8a28b-45b1-4a18-95eb-20cf439f224d
+        kind: 1
+        dataId: 14bdcc7d-219c-42b6-a173-75368a98b581
+      - guid: 09a7618d-74c4-4364-a717-b0e4732d8b2f
+        kind: 1
+        dataId: 14bdcc7d-219c-42b6-a173-75368a98b581
+      - guid: 6ee704ba-ab40-4b41-b2a0-0cec190309eb
+        kind: 1
+        dataId: 14bdcc7d-219c-42b6-a173-75368a98b581
+      frameDataById:
+        m_keys:
+        - 14bdcc7d-219c-42b6-a173-75368a98b581
+        m_values:
+        - keyFrameId: 2ddcd4e4-5843-4683-be0f-90fa59dbf463
+          position: {x: 53, y: 42}
+          size: {x: 27, y: 38}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - 14bdcc7d-219c-42b6-a173-75368a98b581
+    collisionType: 1
+    expanded: 1
+    visible: 1
+  - myBoxType: Hit
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 178de90f-0dce-4521-9cd0-989be3c874b8
+        kind: 1
+        dataId: 00000000-0000-0000-0000-000000000000
+      - guid: dfa9c561-b082-4c7c-a52f-02d921a231ef
+        kind: 1
+        dataId: 00000000-0000-0000-0000-000000000000
+      - guid: 587d2088-bdd2-4076-b53e-455422f7a457
+        kind: 0
+        dataId: a6974320-be54-4536-8e39-f924dc03121b
+      - guid: 7a1d71f1-4cfa-4876-8143-f2d1ac432119
+        kind: 2
+        dataId: 00000000-0000-0000-0000-000000000000
+      - guid: 713a1b70-7fae-4189-b517-8af0b5528296
+        kind: 1
+        dataId: 00000000-0000-0000-0000-000000000000
+      frameDataById:
+        m_keys:
+        - a6974320-be54-4536-8e39-f924dc03121b
+        m_values:
+        - keyFrameId: 587d2088-bdd2-4076-b53e-455422f7a457
+          position: {x: 76, y: 46}
+          size: {x: 45, y: 32}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - a6974320-be54-4536-8e39-f924dc03121b
+    collisionType: 1
+    expanded: 1
+    visible: 1

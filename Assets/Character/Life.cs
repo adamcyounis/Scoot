@@ -179,7 +179,9 @@ public class Life : MonoBehaviour {
     void ApplyHitstop(CollisionInfo info) {
         //GameManager.gm.HitStop();
         animator.HitStop(0.12f);
+        info.collision.collider.GetAnimator().HitStop(0.08f);
         character.shaker.Shake(0.1f, 0.12f);
+
     }
 
     void ApplyKnockback(CollisionInfo info) {
@@ -249,3 +251,4 @@ public class Life : MonoBehaviour {
         }
     }
 }
+

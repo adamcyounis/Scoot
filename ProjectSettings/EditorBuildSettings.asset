@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
+    path: Assets/Scenes/Player Assign.unity
+    guid: 678dd715440de9e4a86a98420b021499
+  - enabled: 0
     path: Assets/Scenes/Cat Stage.unity
     guid: e5fd92b779ac05d47aa902897733b45b
   m_configObjects:

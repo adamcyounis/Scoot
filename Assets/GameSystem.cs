@@ -52,6 +52,7 @@ public class GameSystem : MonoBehaviour {
         newCoots.input = p.GetComponent<InputController>();
         newCoots.input.input = p;
         newCoots.controllerIndex = index;
+        newCoots.life.team = index;
 
         GameObject newNameplate = GameObject.Instantiate(namePlatePrefab);
         CharacterUI nameplateScript = newNameplate.GetComponent<CharacterUI>();

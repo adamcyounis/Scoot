@@ -42,7 +42,9 @@ public class State : StateMachine {
     }
 
     public virtual void Exit() {
-
+        if (body != null) {
+            core.ReturnToDefaultBodyProps();
+        }
     }
 
 

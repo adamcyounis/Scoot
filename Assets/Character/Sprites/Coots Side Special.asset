@@ -10,15 +10,147 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a74690695c846e4ea0fb1e707b9f4d6, type: 3}
-  m_Name: Coots Side-B
+  m_Name: Coots Side Special
   m_EditorClassIdentifier: 
   version: 1.0
   spriteList:
-  - {fileID: -619216758, guid: 206bb992cf1ed154fb7ed1bcc60a195a, type: 3}
-  - {fileID: 1753009513, guid: 206bb992cf1ed154fb7ed1bcc60a195a, type: 3}
+  - {fileID: -1586215867, guid: 206bb992cf1ed154fb7ed1bcc60a195a, type: 3}
+  - {fileID: -655182891, guid: 206bb992cf1ed154fb7ed1bcc60a195a, type: 3}
+  - {fileID: 1695016919, guid: 206bb992cf1ed154fb7ed1bcc60a195a, type: 3}
   propertiesList:
-  - frameProperties: []
-  - frameProperties: []
+  - frameProperties:
+    - name: Gravity
+      dataType: 3
+      intVal: 0
+      floatVal: 0.1
+      boolVal: 0
+      stringVal: 
+      vectorVal: {x: 0, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
+    - name: Velocity
+      dataType: 4
+      intVal: 0
+      floatVal: 0
+      boolVal: 0
+      stringVal: 
+      vectorVal: {x: 0, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
+    - name: velX
+      dataType: 0
+      intVal: 0
+      floatVal: 0
+      boolVal: 1
+      stringVal: 
+      vectorVal: {x: 0, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
+    - name: velY
+      dataType: 0
+      intVal: 0
+      floatVal: 0
+      boolVal: 1
+      stringVal: 
+      vectorVal: {x: 0, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
+  - frameProperties:
+    - name: Velocity
+      dataType: 4
+      intVal: 0
+      floatVal: 0
+      boolVal: 0
+      stringVal: 
+      vectorVal: {x: 2, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
+    - name: velX
+      dataType: 0
+      intVal: 0
+      floatVal: 0
+      boolVal: 1
+      stringVal: 
+      vectorVal: {x: 0, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
+    - name: velY
+      dataType: 0
+      intVal: 0
+      floatVal: 0
+      boolVal: 1
+      stringVal: 
+      vectorVal: {x: 0, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
+  - frameProperties:
+    - name: Velocity
+      dataType: 4
+      intVal: 0
+      floatVal: 0
+      boolVal: 0
+      stringVal: 
+      vectorVal: {x: 0.5, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
+    - name: velX
+      dataType: 0
+      intVal: 0
+      floatVal: 0
+      boolVal: 1
+      stringVal: 
+      vectorVal: {x: 0, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
+    - name: velY
+      dataType: 0
+      intVal: 0
+      floatVal: 0
+      boolVal: 1
+      stringVal: 
+      vectorVal: {x: 0, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
   groups:
   - myBoxType: Physics
     layerKind: 0
@@ -30,7 +162,10 @@ MonoBehaviour:
         dataId: a094ecd5-c061-44ab-b70b-eae0e68764e2
       - guid: 3b64c344-5e13-4813-985c-03830cc4fb9e
         kind: 1
-        dataId: 
+        dataId: a094ecd5-c061-44ab-b70b-eae0e68764e2
+      - guid: 10ea264a-7d30-4930-bd7d-c03479f42dc0
+        kind: 1
+        dataId: a094ecd5-c061-44ab-b70b-eae0e68764e2
       frameDataById:
         m_keys:
         - a094ecd5-c061-44ab-b70b-eae0e68764e2
@@ -58,6 +193,9 @@ MonoBehaviour:
         kind: 0
         dataId: 3f77f86f-b1cb-4eb1-a49f-ccc272151c7b
       - guid: c5a03ae9-47d9-47dc-bf4d-07e9a244a4a8
+        kind: 0
+        dataId: 9df52cb2-b92a-4c8b-af02-0a7527f414ea
+      - guid: 3f922207-95a4-4fd0-8dd3-3b2bd4c6a3ca
         kind: 0
         dataId: 9df52cb2-b92a-4c8b-af02-0a7527f414ea
       frameDataById:
@@ -100,13 +238,16 @@ MonoBehaviour:
       - guid: 19b9756d-2c39-45d9-a84b-7d7ac61e9334
         kind: 0
         dataId: d0beba07-6ee7-4278-a1f4-cdb6b5a092b3
+      - guid: 8af9458f-4fbd-448d-b262-f7abc8457835
+        kind: 2
+        dataId: 00000000-0000-0000-0000-000000000000
       frameDataById:
         m_keys:
         - d0beba07-6ee7-4278-a1f4-cdb6b5a092b3
         m_values:
         - keyFrameId: 19b9756d-2c39-45d9-a84b-7d7ac61e9334
-          position: {x: 49, y: 42}
-          size: {x: 43, y: 40}
+          position: {x: 49, y: 37}
+          size: {x: 63, y: 45}
           forwardHandle: {x: 10, y: 10}
           backHandle: {x: -10, y: -10}
           props:
@@ -118,7 +259,7 @@ MonoBehaviour:
             - name: Damage
               dataType: 3
               intVal: 0
-              floatVal: 25
+              floatVal: 20
               boolVal: 0
               stringVal: 
               vectorVal: {x: 0, y: 0}
@@ -134,7 +275,7 @@ MonoBehaviour:
               floatVal: 0
               boolVal: 0
               stringVal: 
-              vectorVal: {x: 1, y: 0.2}
+              vectorVal: {x: 1, y: 0.5}
               curveVal:
                 points:
                 - {x: 0, y: 0}
@@ -144,7 +285,7 @@ MonoBehaviour:
             - name: Knockback
               dataType: 3
               intVal: 0
-              floatVal: 30
+              floatVal: 20
               boolVal: 0
               stringVal: 
               vectorVal: {x: 0, y: 0}

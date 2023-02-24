@@ -637,6 +637,9 @@ MonoBehaviour:
   finished:
     m_PersistentCalls:
       m_Calls: []
+  frameSet:
+    m_PersistentCalls:
+      m_Calls: []
   life: {fileID: 1347891108}
 --- !u!1 &149450792
 GameObject:
@@ -847,6 +850,9 @@ MonoBehaviour:
   playingFrame: 0
   spatialOffset: {x: 0, y: 0}
   finished:
+    m_PersistentCalls:
+      m_Calls: []
+  frameSet:
     m_PersistentCalls:
       m_Calls: []
   life: {fileID: 1347891108}
@@ -1430,6 +1436,9 @@ MonoBehaviour:
   finished:
     m_PersistentCalls:
       m_Calls: []
+  frameSet:
+    m_PersistentCalls:
+      m_Calls: []
   life: {fileID: 0}
 --- !u!212 &1123922127
 SpriteRenderer:
@@ -1710,7 +1719,7 @@ MonoBehaviour:
   initRotation: {x: 0, y: 0, z: 0, w: 0}
   animator: {fileID: 0}
   timeAtLastSpentEnergy: 0
-  team: 1
+  team: -1
 --- !u!114 &1347891109
 MonoBehaviour:
   m_ObjectHideFlags: 0
