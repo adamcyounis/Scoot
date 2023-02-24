@@ -83,11 +83,10 @@ public class CPUInputController : InputController {
 
     void ManageTargets() {
         if (target == null) {
-            List<Life> lives = (FindObjectsOfType<Life>()).ToList();
-            lives.Remove(character.life);
+            Life[] lives = FindObjectsOfType<Life>().Where(x => x.team != character.life.team).ToArray();
 
-            if (lives.Count > 0) {
-                target = lives[Random.Range(0, lives.Count)];
+            if (lives.Length > 0) {
+                target = lives[Random.Range(0, lives.Length)];
             }
         }
     }
