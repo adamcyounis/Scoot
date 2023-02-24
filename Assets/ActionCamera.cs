@@ -12,9 +12,8 @@ public class ActionCamera : MonoBehaviour {
 
     [Range(1.8f, 3.6f)]
     public float maxSize;
-    [Range(0.2f, 0.5f)]
+    [Range(0f, 0.5f)]
     public float animTime = 0.2f;
-    public float targetTolerance;
 
     // Start is called before the first frame update
     void Start() {
@@ -43,7 +42,7 @@ public class ActionCamera : MonoBehaviour {
                 targetSize = Mathf.Max(bounds.size.x, bounds.size.y) * scaleFactor;
 
                 targetSize = Mathf.Clamp(targetSize, minSize, maxSize);
-                targetPos = (Vector2)bounds.center + (Vector2.down * bounds.size.y * 0.25f);
+                targetPos = (Vector2)bounds.center /*+ (Vector2.down * bounds.size.y * 0.25f)*/;
 
             } else {
 
@@ -71,24 +70,23 @@ public class ActionCamera : MonoBehaviour {
 
         foreach (Transform t in subjects) {
 
-            if (Vector2.Distance(t.position, transform.position) < targetTolerance) {
 
-                if (t.position.x < min.x) {
-                    min.x = t.position.x;
-                }
-
-                if (t.position.y < min.y) {
-                    min.y = t.position.y;
-                }
-
-                if (t.position.x > max.x) {
-                    max.x = t.position.x;
-                }
-
-                if (t.position.y > max.y) {
-                    max.y = t.position.y;
-                }
+            if (t.position.x < min.x) {
+                min.x = t.position.x;
             }
+
+            if (t.position.y < min.y) {
+                min.y = t.position.y;
+            }
+
+            if (t.position.x > max.x) {
+                max.x = t.position.x;
+            }
+
+            if (t.position.y > max.y) {
+                max.y = t.position.y;
+            }
+
 
         }
         return new Bounds((max + min) / 2f, max - min);

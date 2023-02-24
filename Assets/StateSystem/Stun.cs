@@ -5,6 +5,7 @@ public class Stun : State {
     public bool startedGrounded;
     public float stunTime = 0.3f;
     float stunDrag = 0.97f;
+    public float stunLockSpeed = 4f;
     public override void Enter() {
         base.Enter();
         startedGrounded = core.selfAwareness.grounded && body.velocity.y <= 0;
@@ -19,7 +20,8 @@ public class Stun : State {
             Complete("landed");
         }
 */
-        if (state.complete || time > stunTime) {
+        bool flyingAway = body.velocity.magnitude > stunLockSpeed && body.velocity.y > 0;
+        if (state.complete || (time > stunTime && !flyingAway)) {
             Complete("finished!");
             core.canMove = true;
         }

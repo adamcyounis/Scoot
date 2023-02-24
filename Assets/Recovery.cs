@@ -9,7 +9,9 @@ public class Recovery : State {
     public Jump jump;
     private void Start() {
         core.selfAwareness.gotGrounded.AddListener(RespondToGrounded);
+        core.life.hurtConfirmEvent.AddListener(RespondToHurt);
     }
+
     public override void Enter() {
         base.Enter();
         canRecover = false;
@@ -47,6 +49,9 @@ public class Recovery : State {
         return canRecover;
     }
     public void RespondToGrounded() {
+        canRecover = true;
+    }
+    public void RespondToHurt(CollisionInfo info) {
         canRecover = true;
     }
 }

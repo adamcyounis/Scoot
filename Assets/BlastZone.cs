@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BlastZone : MonoBehaviour {
     public float shakeAmount = 0.3f;
+    public bool isRoof = false;
     // Start is called before the first frame update
     void Start() {
 
@@ -15,17 +16,23 @@ public class BlastZone : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+
         if (other.GetComponent<Retro.ColliderInfo>() is Retro.ColliderInfo c) {
             if (c.GetAnimator().GetComponent<Character>() is Character ch) {
-                //maybe there's a spawn manager that kills and resets the character to a specific spawn point?
-                ch.stocksRemaining -= 1;
-                GameManager.gm.shaker.Shake(shakeAmount, 0.3f);
-                ch.gameObject.SetActive(false);
-
-                if (ch.stocksRemaining > 0) {
-                    StartCoroutine(RespawnWithDelay(ch));
+                if (isRoof && !(ch.state is Stun)) {
+                    return;
                 } else {
-                    Debug.Log("Player Defeated!");
+                    //maybe there's a spawn manager that kills and resets the character to a specific spawn point?
+                    ch.stocksRemaining -= 1;
+                    GameManager.gm.shaker.Shake(shakeAmount, 0.3f);
+                    ch.gameObject.SetActive(false);
+
+                    if (ch.stocksRemaining > 0) {
+                        StartCoroutine(RespawnWithDelay(ch));
+                    } else {
+                        Debug.Log("Player Defeated!");
+                    }
+
                 }
 
             }

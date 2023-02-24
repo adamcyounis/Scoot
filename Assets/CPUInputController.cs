@@ -52,10 +52,10 @@ public class CPUInputController : InputController {
         }
 
         if (Mathf.Abs(v.y) > tolerance.y) {
-            if (v.y > 0) {
+            if (v.y >= 0) {
                 jumpHeld = true;
                 jumpPressed = true;
-
+                movement.y = 1;
             } else {
                 movement.y = -1;
                 timeAtLastAction = Time.time;
@@ -67,12 +67,18 @@ public class CPUInputController : InputController {
     void AttackTarget() {
         if (tolerance.magnitude > VectorToTarget().magnitude) {
             if (timeSinceLastAction > 0.3f) {
-                attackHeld = true;
-                attackPressed = true;
-                timeAtLastAction = Time.time;
-                if (Random.value > 0.6f) {
-                    movement.y = -1;
+                if (Random.value > 0.7f) {
+                    specialHeld = true;
+                    specialPressed = true;
+                } else {
+                    attackHeld = true;
+                    attackPressed = true;
+                    if (Random.value > 0.6f) {
+                        movement.y = -1;
+                    }
+
                 }
+                timeAtLastAction = Time.time;
             }
         }
     }

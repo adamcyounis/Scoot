@@ -142,6 +142,7 @@ MonoBehaviour:
   title: 
   startup: {fileID: 1298277862928102532}
   end: {fileID: 4813163077508080783}
+  jump: {fileID: 4664217564466435322}
 --- !u!114 &1298277862928102532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,6 +261,7 @@ MonoBehaviour:
   airHurt: {fileID: 4664217565597038525}
   startedGrounded: 0
   stunTime: 0.3
+  stunLockSpeed: 4
 --- !u!1 &4664217563760215711
 GameObject:
   m_ObjectHideFlags: 0

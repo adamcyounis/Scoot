@@ -11,6 +11,9 @@ public class FireFoxActive : State {
         base.Enter();
         animator.Play(sheet, 10, true, true);
         direction = core.input.movement.normalized;
+        if (direction == Vector2.zero) {
+            direction = Vector2.up;
+        }
         body.gravityScale = 0;
         fixedFrames = 0;
         core.transform.up = direction;

@@ -22,11 +22,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4664217564621502925, guid: 35e033b771a839c4a920934924a8bef7, type: 3}
       propertyPath: m_Name
-      value: Evil NPC Coots
+      value: Evil NPC Coots Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4664217564621502926, guid: 35e033b771a839c4a920934924a8bef7, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4664217564621502926, guid: 35e033b771a839c4a920934924a8bef7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -110,6 +110,7 @@ MonoBehaviour:
   selectPressed: 0
   movement: {x: 0, y: 0}
   target: {fileID: 0}
-  tolerance: {x: 0.6, y: 0.5}
+  tolerance: {x: 0.6, y: 0.6}
   centreStage: {fileID: 0}
   stageDistanceTolerance: 2
+  dexterity: 0.2
