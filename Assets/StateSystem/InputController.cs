@@ -18,6 +18,8 @@ public class InputController : MonoBehaviour {
 
 
     public Vector2 movement;
+    protected Character character;
+
 
     private void OnEnable() {
     }
@@ -46,5 +48,21 @@ public class InputController : MonoBehaviour {
 
         movement = input.actions["Move"].ReadValue<Vector2>();
 
+    }
+
+    protected void ClearInputs() {
+        movement = default;
+        shieldHeld = default;
+        shieldPressed = default;
+        attackHeld = default;
+        attackPressed = default;
+        specialHeld = default;
+        specialPressed = default;
+        jumpHeld = default;
+        jumpPressed = default;
+    }
+
+    public void AssignCharacter(Character c) {
+        character = c;
     }
 }

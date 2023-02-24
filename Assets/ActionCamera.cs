@@ -17,14 +17,14 @@ public class ActionCamera : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        GameSystem.system.newPlayer.AddListener(AddNewPlayer);
+        GameSystem.system.newCharacter.AddListener(AddNewPlayer);
         foreach (Character c in FindObjectsOfType<Character>()) {
             subjects.Add(c.transform);
         }
     }
 
     private void OnDestroy() {
-        GameSystem.system.newPlayer.RemoveListener(AddNewPlayer);
+        GameSystem.system.newCharacter.RemoveListener(AddNewPlayer);
     }
 
     void AddNewPlayer(Transform t) {

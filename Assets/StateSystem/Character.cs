@@ -50,7 +50,10 @@ public class Character : StateMachine {
         State[] states = GetComponentsInChildren<State>();
         foreach (State s in states) {
             s.SetCore(this);
+        }
 
+        if (input != null) {
+            input.AssignCharacter(this);
         }
     }
 

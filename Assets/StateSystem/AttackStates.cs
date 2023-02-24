@@ -18,7 +18,6 @@ public class AttackStates : State {
         base.Do();
         if (state.complete) {
             Complete("finished");
-            core.canAttack = true;
         }
     }
 
@@ -28,5 +27,7 @@ public class AttackStates : State {
     }
     public override void Exit() {
         base.Exit();
+        core.canAttack = true;
+
     }
 }

@@ -12,7 +12,7 @@ public class GameSystem : MonoBehaviour {
     public Transform nameplateWrapper;
     public GameObject namePlatePrefab;
     public List<PlayerInput> inputModules;
-    public UnityEvent<Transform> newPlayer = new UnityEvent<Transform>();
+    public UnityEvent<Transform> newCharacter = new UnityEvent<Transform>();
     private void Awake() {
         if (system == null) {
             system = this;
@@ -37,8 +37,6 @@ public class GameSystem : MonoBehaviour {
     public void OnPlayerJoined(PlayerInput p) {
         AddInputModule(p);
         Coots c = AddCoots(p, inputModules.Count);
-        newPlayer.Invoke(c.transform);
-
     }
 
     void AddInputModule(PlayerInput p) {
@@ -54,11 +52,18 @@ public class GameSystem : MonoBehaviour {
         newCoots.controllerIndex = index;
         newCoots.life.team = index;
 
+        AddCharacter(newCoots);
+
+        return newCoots;
+    }
+
+    void AddCharacter(Character c) {
         GameObject newNameplate = GameObject.Instantiate(namePlatePrefab);
         CharacterUI nameplateScript = newNameplate.GetComponent<CharacterUI>();
-        nameplateScript.character = newCoots;
+        nameplateScript.character = c;
         newNameplate.transform.SetParent(nameplateWrapper);
-        return newCoots;
+        newCharacter.Invoke(c.transform);
+
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
