@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 9098593482350234073}
   - component: {fileID: 4299952032268642972}
   - component: {fileID: 4571902421600986172}
+  - component: {fileID: 5832618779503946376}
+  - component: {fileID: 1298277862928102532}
+  - component: {fileID: 4813163077508080783}
   m_Layer: 6
   m_Name: Specials
   m_TagString: Untagged
@@ -52,6 +55,7 @@ MonoBehaviour:
   title: 
   sideB: {fileID: 5827839757629512424}
   rest: {fileID: 9098593482350234073}
+  recovery: {fileID: 5832618779503946376}
 --- !u!114 &5827839757629512424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +126,88 @@ MonoBehaviour:
   fps: 10
   loop: 1
   duration: 3
+--- !u!114 &5832618779503946376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3341788037486407286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc57d879b275a54b9be3f45846b2330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: {fileID: 0}
+  title: 
+  startup: {fileID: 1298277862928102532}
+  end: {fileID: 4813163077508080783}
+--- !u!114 &1298277862928102532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3341788037486407286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb8a59793f0ed54b8c2d531b2b66f0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: {fileID: 0}
+  title: 
+  sheet: {fileID: 11400000, guid: 6c7bf980589a54b4fb9d06f1b1fb32d0, type: 2}
+  fps: 10
+  loop: 1
+  duration: 0.7
+--- !u!114 &4813163077508080783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3341788037486407286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0470c7a3fc79de7469c1fab17bc3e77c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: {fileID: 0}
+  title: 
+  sheet: {fileID: 11400000, guid: 5dc5ad1a142d82f4db3f590e5f33b61c, type: 2}
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.005277209
+      value: 4.9443913
+      inSlope: -0.5249192
+      outSlope: -0.5249192
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.57480145
+    - serializedVersion: 3
+      time: 0.34836715
+      value: 4.0330343
+      inSlope: -4.509332
+      outSlope: -3.709539
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.1448456
+      outWeight: 0.8582479
+    - serializedVersion: 3
+      time: 0.49957508
+      value: 0.516821
+      inSlope: -49.09039
+      outSlope: -49.09039
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.1784226
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &4664217563720548697
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,6 +358,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.3
+  animating: 0
+  amount: 0
 --- !u!1 &4664217563823226149
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,7 +567,7 @@ MonoBehaviour:
   jump: {fileID: 4664217564466435322}
   fall: {fileID: 4664217564466435321}
   jumpFall: {fileID: 11400000, guid: d4d2164af545b0a4780f4ac3eefcf79a, type: 2}
-  force: 0.2
+  force: 0.16
   terminalX: 2.5
 --- !u!114 &4664217564466435321
 MonoBehaviour:

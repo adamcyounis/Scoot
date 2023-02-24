@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a74690695c846e4ea0fb1e707b9f4d6, type: 3}
+  m_Name: Coots Recovery End
+  m_EditorClassIdentifier: 
+  version: 1.0
+  spriteList:
+  - {fileID: -1237922613, guid: 4fa5787412c5171408b8309c8a344eeb, type: 3}
+  propertiesList:
+  - frameProperties: []
+  groups:
+  - myBoxType: Physics
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: b071f493-a0a0-45cb-8993-99506a2c0ab1
+        kind: 0
+        dataId: 18c7010b-bb1f-4889-95f6-98236ee756ba
+      frameDataById:
+        m_keys:
+        - 18c7010b-bb1f-4889-95f6-98236ee756ba
+        m_values:
+        - keyFrameId: b071f493-a0a0-45cb-8993-99506a2c0ab1
+          position: {x: 55, y: 54}
+          size: {x: 18, y: 26}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - 18c7010b-bb1f-4889-95f6-98236ee756ba
+    collisionType: 0
+    expanded: 1
+    visible: 1
+  - myBoxType: Hurt
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 56ef034b-684d-4153-9599-12f57085ddc3
+        kind: 0
+        dataId: 01a5da58-4e5c-4260-97d3-b8b738cefd6f
+      frameDataById:
+        m_keys:
+        - 01a5da58-4e5c-4260-97d3-b8b738cefd6f
+        m_values:
+        - keyFrameId: 56ef034b-684d-4153-9599-12f57085ddc3
+          position: {x: 56, y: 41}
+          size: {x: 16, y: 58}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - 01a5da58-4e5c-4260-97d3-b8b738cefd6f
+    collisionType: 1
+    expanded: 1
+    visible: 1
+  - myBoxType: Hit
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 3f520035-ff6e-4cef-b742-3cbcc4aa23d0
+        kind: 0
+        dataId: fc6550dc-8325-40f1-89ad-1414fd016e80
+      frameDataById:
+        m_keys:
+        - fc6550dc-8325-40f1-89ad-1414fd016e80
+        m_values:
+        - keyFrameId: 3f520035-ff6e-4cef-b742-3cbcc4aa23d0
+          position: {x: 50, y: 32}
+          size: {x: 30, y: 38}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys:
+            - Direction
+            - Damage
+            - Knockback
+            m_values:
+            - name: Direction
+              dataType: 4
+              intVal: 0
+              floatVal: 0
+              boolVal: 0
+              stringVal: 
+              vectorVal: {x: 0, y: 1}
+              curveVal:
+                points:
+                - {x: 0, y: 0}
+                - {x: 0.25, y: 0.25}
+                - {x: 0.75, y: 0.75}
+                - {x: 1, y: 1}
+            - name: Damage
+              dataType: 3
+              intVal: 0
+              floatVal: 10
+              boolVal: 0
+              stringVal: 
+              vectorVal: {x: 0, y: 0}
+              curveVal:
+                points:
+                - {x: 0, y: 0}
+                - {x: 0.25, y: 0.25}
+                - {x: 0.75, y: 0.75}
+                - {x: 1, y: 1}
+            - name: Knockback
+              dataType: 3
+              intVal: 0
+              floatVal: 20
+              boolVal: 0
+              stringVal: 
+              vectorVal: {x: 0, y: 0}
+              curveVal:
+                points:
+                - {x: 0, y: 0}
+                - {x: 0.25, y: 0.25}
+                - {x: 0.75, y: 0.75}
+                - {x: 1, y: 1}
+            o_keys:
+            - Direction
+            - Damage
+            - Knockback
+        o_keys:
+        - fc6550dc-8325-40f1-89ad-1414fd016e80
+    collisionType: 1
+    expanded: 1
+    visible: 1

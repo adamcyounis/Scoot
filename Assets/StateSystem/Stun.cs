@@ -9,7 +9,7 @@ public class Stun : State {
         base.Enter();
         startedGrounded = core.selfAwareness.grounded && body.velocity.y <= 0;
         Set(startedGrounded ? hurt : airHurt, true);
-        stunTime = 0.3f + core.life.percent * 0.001f;
+        stunTime = 0.3f + core.life.percent * 0.002f;
         core.canMove = false;
     }
     public override void Do() {

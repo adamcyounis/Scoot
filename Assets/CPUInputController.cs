@@ -8,11 +8,12 @@ public class CPUInputController : InputController {
     public Life target;
     public Vector2 tolerance;
 
-    float timeAtLastAttack;
-    float timeSinceAttack => Time.time - timeAtLastAttack;
+    float timeAtLastAction;
+    float timeSinceLastAction => Time.time - timeAtLastAction;
 
     public Transform centreStage;
     public float stageDistanceTolerance = 3;
+    public float dexterity = 0.2f;
     // Start is called before the first frame update
     void Start() {
         character = GetComponent<Character>();
@@ -26,9 +27,11 @@ public class CPUInputController : InputController {
         if (VectorToCentreStage().magnitude > stageDistanceTolerance) {
             GetBackOnStage();
 
-        } else if (target != null) {
-            NavigateToTarget();
-            AttackTarget();
+        } else if (target != null && character.canAttack) {
+            if (timeSinceLastAction > dexterity) {
+                NavigateToTarget();
+                AttackTarget();
+            }
         }
     }
 
@@ -38,6 +41,7 @@ public class CPUInputController : InputController {
         if (v.y > 0) {
             jumpHeld = true;
             jumpPressed = true;
+            timeAtLastAction = Time.time;
         }
     }
 
@@ -54,6 +58,7 @@ public class CPUInputController : InputController {
 
             } else {
                 movement.y = -1;
+                timeAtLastAction = Time.time;
             }
         }
 
@@ -61,10 +66,10 @@ public class CPUInputController : InputController {
 
     void AttackTarget() {
         if (tolerance.magnitude > VectorToTarget().magnitude) {
-            if (timeSinceAttack > 0.3f) {
+            if (timeSinceLastAction > 0.3f) {
                 attackHeld = true;
                 attackPressed = true;
-
+                timeAtLastAction = Time.time;
                 if (Random.value > 0.6f) {
                     movement.y = -1;
                 }

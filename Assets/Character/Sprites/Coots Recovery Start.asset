@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a74690695c846e4ea0fb1e707b9f4d6, type: 3}
+  m_Name: Coots Recovery Start
+  m_EditorClassIdentifier: 
+  version: 1.0
+  spriteList:
+  - {fileID: -1317391488, guid: 4fa5787412c5171408b8309c8a344eeb, type: 3}
+  propertiesList:
+  - frameProperties: []
+  groups:
+  - myBoxType: Physics
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: ec096fe4-069d-4d77-b245-44d8aa24533a
+        kind: 0
+        dataId: cb38ad46-77a1-43d2-98f2-8f0265f9ab14
+      frameDataById:
+        m_keys:
+        - cb38ad46-77a1-43d2-98f2-8f0265f9ab14
+        m_values:
+        - keyFrameId: ec096fe4-069d-4d77-b245-44d8aa24533a
+          position: {x: 56, y: 58}
+          size: {x: 18, y: 21}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - cb38ad46-77a1-43d2-98f2-8f0265f9ab14
+    collisionType: 0
+    expanded: 1
+    visible: 1
+  - myBoxType: Hurt
+    layerKind: 0
+    layers:
+    - kind: 0
+      frames:
+      - guid: 1e8de516-e8ee-4ba3-9050-2cf121b38cc2
+        kind: 0
+        dataId: f67c0688-e7a2-4887-ae56-c55bbe33f3f1
+      frameDataById:
+        m_keys:
+        - f67c0688-e7a2-4887-ae56-c55bbe33f3f1
+        m_values:
+        - keyFrameId: 1e8de516-e8ee-4ba3-9050-2cf121b38cc2
+          position: {x: 56, y: 45}
+          size: {x: 19, y: 42}
+          forwardHandle: {x: 10, y: 10}
+          backHandle: {x: -10, y: -10}
+          props:
+            m_keys: []
+            m_values: []
+            o_keys: []
+        o_keys:
+        - f67c0688-e7a2-4887-ae56-c55bbe33f3f1
+    collisionType: 1
+    expanded: 1
+    visible: 1

@@ -2,12 +2,16 @@ using UnityEngine;
 public class SpecialStates : State {
     public State sideB;
     public Rest rest;
+    public Recovery recovery;
     public override void Enter() {
         base.Enter();
         core.canAttack = false;
         if (core.input.movement.y < -0.5f) {
             Set(rest, true);
-
+        } else if (core.input.movement.y > 0.5f) {
+            if (recovery.ShouldRecover()) {
+                Set(recovery, true);
+            }
         } else {
             Set(sideB, true);
 

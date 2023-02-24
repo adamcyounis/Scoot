@@ -747,6 +747,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 995387320, guid: eac2b0f9a3d764c408ae8d13b31af47d, type: 3}
+      propertyPath: dexterity
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 995387320, guid: eac2b0f9a3d764c408ae8d13b31af47d, type: 3}
       propertyPath: centreStage
       value: 
       objectReference: {fileID: 330192382}

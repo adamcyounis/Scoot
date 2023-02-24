@@ -21,26 +21,28 @@ public class Coots : Character {
     }
 
     private void Update() {
-        if (canMove || state.complete) {
-            State prevState = state;
-            if (canAttack) {
-                SetAttackStates();
+        if (!animator.IsInHitStop()) {
+            if ((canMove || state.complete)) {
+                State prevState = state;
+                if (canAttack) {
+                    SetAttackStates();
+                }
+
+                if (state == prevState && canMove) { //haven't done an attack..
+                    SetInputStates();
+                }
+                //if (state != prevState) {
+
+                //}
+
             }
 
-            if (state == prevState && canMove) { //haven't done an attack..
-                SetInputStates();
+            if (!state.complete) {
+                state.Do();
+            } else {
+                canAttack = true;
+                canMove = true;
             }
-            //if (state != prevState) {
-
-            //}
-
-        }
-
-        if (!state.complete) {
-            state.Do();
-        } else {
-            canAttack = true;
-            canMove = true;
         }
     }
 
@@ -54,8 +56,7 @@ public class Coots : Character {
     }
 
     void SetInputStates() {
-        //&& inputRef.action.ReadValue<Vector2>("Move").y < -0.5f
-        if (state == shield) {// &&Input.GetAxis("Vertical") < -0.5f
+        if (state == shield && input.movement.y < -0.5f) {
             dodge.startGrounded = true;
             Set(dodge);
             return;
@@ -99,7 +100,7 @@ public class Coots : Character {
     }
 
     private void FixedUpdate() {
-        if (!state.complete) {
+        if (!state.complete && !animator.IsInHitStop()) {
             state.FixedDo();
         }
     }
