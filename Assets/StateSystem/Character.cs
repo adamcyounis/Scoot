@@ -67,6 +67,7 @@ public class Character : StateMachine {
     public void ReturnToDefaultBodyProps() {
 
         body.gravityScale = defaultBodyProps.gravityScale;
+        transform.up = Vector3.up;
     }
 
     void HandleFrameProperty(Retro.Sheet sheet, int frame) {

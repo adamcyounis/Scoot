@@ -5,6 +5,10 @@ using UnityEngine;
 public class MultiBattleScenario : MonoBehaviour {
     GameStateManager m => GameStateManager.manager;
 
+    public int enemies;
+    public float dex;
+    public float knockback;
+    public Color color;
     //set up how many enemies need to spawn in etc...
 
     // Start is called before the first frame update
@@ -13,9 +17,10 @@ public class MultiBattleScenario : MonoBehaviour {
         GameSystem.system.roundOver.AddListener(Finished);
 
         if (m.mode == GameStateManager.GameMode.Arcade) {
-            GameSystem.system.AddEnemyCoots(1, 1f, 3);
-            GameSystem.system.AddEnemyCoots(1, 1f, 3);
-            GameSystem.system.AddEnemyCoots(1, 1f, 3);
+            for (int i = 0; i < enemies; i++) {
+                GameSystem.system.AddEnemyCoots(1, dex, knockback, color);
+
+            }
 
         }
     }

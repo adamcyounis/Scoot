@@ -1429,7 +1429,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 106412096519699634, guid: 12191c5a1fbf8f745b4701b59ce0ba5b, type: 3}
       propertyPath: arcadeScenes.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 106412096519699634, guid: 12191c5a1fbf8f745b4701b59ce0ba5b, type: 3}
       propertyPath: arcadeScenes.Array.data[1].scenePath
@@ -1441,11 +1441,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 106412096519699634, guid: 12191c5a1fbf8f745b4701b59ce0ba5b, type: 3}
       propertyPath: arcadeScenes.Array.data[3].scenePath
-      value: Assets/Scenes/Boss.unity
+      value: Assets/Scenes/Cat Stage 2.unity
       objectReference: {fileID: 0}
     - target: {fileID: 106412096519699634, guid: 12191c5a1fbf8f745b4701b59ce0ba5b, type: 3}
       propertyPath: arcadeScenes.Array.data[4].scenePath
-      value: Assets/Scenes/Thank You.unity
+      value: Assets/Scenes/Boss.unity
       objectReference: {fileID: 0}
     - target: {fileID: 106412096519699634, guid: 12191c5a1fbf8f745b4701b59ce0ba5b, type: 3}
       propertyPath: arcadeScenes.Array.data[1].sceneAsset
@@ -1458,11 +1458,11 @@ PrefabInstance:
     - target: {fileID: 106412096519699634, guid: 12191c5a1fbf8f745b4701b59ce0ba5b, type: 3}
       propertyPath: arcadeScenes.Array.data[3].sceneAsset
       value: 
-      objectReference: {fileID: 102900000, guid: 77c129c52babf61409ce1205da0869cb, type: 3}
+      objectReference: {fileID: 102900000, guid: 71b5bf54a2c940044b9c05c46973430b, type: 3}
     - target: {fileID: 106412096519699634, guid: 12191c5a1fbf8f745b4701b59ce0ba5b, type: 3}
       propertyPath: arcadeScenes.Array.data[4].sceneAsset
       value: 
-      objectReference: {fileID: 102900000, guid: c6b3f712bdb760440a295fdfd2f9715f, type: 3}
+      objectReference: {fileID: 102900000, guid: 77c129c52babf61409ce1205da0869cb, type: 3}
     - target: {fileID: 106412096519699635, guid: 12191c5a1fbf8f745b4701b59ce0ba5b, type: 3}
       propertyPath: m_RootOrder
       value: 2

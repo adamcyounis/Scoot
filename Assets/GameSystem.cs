@@ -66,7 +66,7 @@ public class GameSystem : MonoBehaviour {
         }
     }
 
-    public Character AddEnemyCoots(int team, float reactionTime, float knockbackMod) {
+    public Character AddEnemyCoots(int team, float reactionTime, float knockbackMod, Color color) {
         Coots newCoots = GameObject.Instantiate(enemyCootsPrefab).GetComponent<Coots>();
         newCoots.life.team = team;
 
@@ -78,7 +78,7 @@ public class GameSystem : MonoBehaviour {
         } else {
             newCoots.transform.position = Vector2.up * 1f;
         }
-
+        newCoots.animator.spriteRenderer.color = color;
         newCoots.life.kbFactor = knockbackMod;
         if (newCoots.input is CPUInputController c) {
             c.dexterity = reactionTime;

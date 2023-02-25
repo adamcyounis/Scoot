@@ -379,6 +379,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e6fb2d23dbe4ed42a3a22f6c7da7ed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemies: 3
+  dex: 1
+  knockback: 2
+  color: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
 --- !u!4 &391126919
 Transform:
   m_ObjectHideFlags: 0

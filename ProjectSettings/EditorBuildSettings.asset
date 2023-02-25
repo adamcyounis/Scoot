@@ -26,5 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Arcade Assign.unity
     guid: 051a13f9f442eda40a6ccfaa5a1f8a40
+  - enabled: 1
+    path: Assets/Scenes/Cat Stage 2.unity
+    guid: 71b5bf54a2c940044b9c05c46973430b
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 6efbe6b6a298b7c47b00dade66a29425, type: 2}

@@ -14,6 +14,7 @@ public class CPUInputController : InputController {
     public Transform centreStage;
     public float stageDistanceTolerance = 3;
     public float dexterity = 0.2f;
+    float activeDex;
 
     float timeAtLastTarget = 0;
     // Start is called before the first frame update
@@ -34,7 +35,7 @@ public class CPUInputController : InputController {
             GetBackOnStage();
 
         } else if (target != null && character.canAttack) {
-            if (timeSinceLastAction > dexterity) {
+            if (timeSinceLastAction > activeDex) {
                 NavigateToTarget();
                 AttackTarget();
             }
@@ -85,6 +86,7 @@ public class CPUInputController : InputController {
 
                 }
                 timeAtLastAction = Time.time;
+                activeDex = dexterity + Random.Range(-0.1f, 0.2f);
             }
         }
     }
