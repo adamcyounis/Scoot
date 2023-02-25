@@ -40,12 +40,13 @@ public class PauseMenu : MonoBehaviour {
 
     public void PressRestartButton() {
         GameStateManager.manager.ResetScene();
-        CloseMenu();
+        container.SetActive(false);
 
     }
     public void PressQuitToTitleButton() {
         GameStateManager.manager.GoToTitle();
-        CloseMenu();
+        container.SetActive(false);
+
 
     }
 }

@@ -34,6 +34,7 @@ public class HitEffectPool : MonoBehaviour {
             anim = pool.Dequeue();
         } else {
             GameObject g = GameObject.Instantiate(effectPrefab.gameObject);
+            g.transform.SetParent(transform);
             anim = g.GetComponent<Retro.RetroAnimator>();
             anim.finished.AddListener(RespondToEffectFinished);
         }

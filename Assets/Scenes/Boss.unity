@@ -788,7 +788,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1679277681
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d52152cb566a0a748ac0941dbf55a8e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1130,7 +1130,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1679277681
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 3da5af4b2732618438426dcc56e2c3b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1531,7 +1531,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1679277681
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d52152cb566a0a748ac0941dbf55a8e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2077,7 +2077,7 @@ MonoBehaviour:
   initRotation: {x: 0, y: 0, z: 0, w: 0}
   animator: {fileID: 0}
   timeAtLastSpentEnergy: 0
-  team: -1
+  team: 8
 --- !u!114 &1347891109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2183,6 +2183,7 @@ MonoBehaviour:
   shaker: {fileID: 0}
   controllerIndex: 0
   platform: {fileID: 0}
+  uiTag: {fileID: 0}
   idle: {fileID: 1347891112}
   slam: {fileID: 1347891111}
   sweep: {fileID: 1347891110}
