@@ -16,7 +16,20 @@ MonoBehaviour:
   spriteList:
   - {fileID: -1237922613, guid: 4fa5787412c5171408b8309c8a344eeb, type: 3}
   propertiesList:
-  - frameProperties: []
+  - frameProperties:
+    - name: Event
+      dataType: 1
+      intVal: 0
+      floatVal: 0
+      boolVal: 0
+      stringVal: Sound
+      vectorVal: {x: 0, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
   groups:
   - myBoxType: Physics
     layerKind: 0

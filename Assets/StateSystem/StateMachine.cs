@@ -17,6 +17,7 @@ public class StateMachine : MonoBehaviour {
 
     public State GetDeepState() {
         if (state != null) {
+
             return state.GetDeepState();
         } else {
             return state;

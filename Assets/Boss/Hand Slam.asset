@@ -16,7 +16,9 @@ MonoBehaviour:
   spriteList:
   - {fileID: 21300000, guid: d52152cb566a0a748ac0941dbf55a8e3, type: 3}
   - {fileID: 21300000, guid: b3f5d12a5710c2b4aaf7a2734bce281e, type: 3}
+  - {fileID: 21300000, guid: b3f5d12a5710c2b4aaf7a2734bce281e, type: 3}
   propertiesList:
+  - frameProperties: []
   - frameProperties: []
   - frameProperties: []
   groups:
@@ -29,6 +31,9 @@ MonoBehaviour:
         kind: 0
         dataId: 3a06719b-4832-41f7-aa97-9c637316aa11
       - guid: 0059b1e9-8227-46c2-bf59-2eec2ce7fec2
+        kind: 0
+        dataId: 61c4fd51-b494-4e0b-b60d-1549c2d836db
+      - guid: 8038f794-5b00-4c56-9b98-df0c1a86637c
         kind: 0
         dataId: 61c4fd51-b494-4e0b-b60d-1549c2d836db
       frameDataById:
@@ -69,15 +74,18 @@ MonoBehaviour:
         kind: 1
         dataId: 00000000-0000-0000-0000-000000000000
       - guid: dc00ff2f-d57d-400c-8152-cc2e70282547
+        kind: 1
+        dataId: 00000000-0000-0000-0000-000000000000
+      - guid: e66fc346-cc65-4b0d-9d07-55d7b84690be
         kind: 0
-        dataId: 1ccb35d9-9406-4875-ad81-940a632127fb
+        dataId: 8f58935c-d60f-468d-abfd-0df04a479e33
       frameDataById:
         m_keys:
-        - 1ccb35d9-9406-4875-ad81-940a632127fb
+        - 8f58935c-d60f-468d-abfd-0df04a479e33
         m_values:
-        - keyFrameId: dc00ff2f-d57d-400c-8152-cc2e70282547
-          position: {x: 56, y: 59}
-          size: {x: 71, y: 77}
+        - keyFrameId: e66fc346-cc65-4b0d-9d07-55d7b84690be
+          position: {x: 56, y: 62}
+          size: {x: 72, y: 73}
           forwardHandle: {x: 10, y: 10}
           backHandle: {x: -10, y: -10}
           props:
@@ -130,7 +138,7 @@ MonoBehaviour:
             - Direction
             - Knockback
         o_keys:
-        - 1ccb35d9-9406-4875-ad81-940a632127fb
+        - 8f58935c-d60f-468d-abfd-0df04a479e33
     collisionType: 1
     expanded: 1
     visible: 1

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TitleMenu : MonoBehaviour {
     public AudioClip a_scoot;
+    public AudioClip a_button;
+
     // Start is called before the first frame update
     void Start() {
         SoundSystem.system.PlaySFX(a_scoot);
@@ -15,16 +17,19 @@ public class TitleMenu : MonoBehaviour {
     }
 
     public void EnterArcade() {
+        SoundSystem.system.PlaySFX(a_button);
         Debug.Log("beginning arcade mode");
         GameStateManager.manager.BeginArcadeMode();
     }
 
     public void EnterVersus() {
+        SoundSystem.system.PlaySFX(a_button);
         GameStateManager.manager.BeginVersusMode();
 
     }
 
     public void EnterOptions() {
+        SoundSystem.system.PlaySFX(a_button);
 
     }
 

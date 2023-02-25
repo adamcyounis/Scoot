@@ -2423,6 +2423,9 @@ MonoBehaviour:
   faceAnimator: {fileID: 1123922126}
   anim: {fileID: 1347891114}
   maxHealth: 300
+  a_slap: {fileID: 8300000, guid: 19420eb1315353f4f9bcb2368a8e4b3b, type: 3}
+  a_punch: {fileID: 8300000, guid: 8a83aba98d9344d4aa831d9bf5581304, type: 3}
+  a_crunch: {fileID: 8300000, guid: 6e6c23ec544acbf4f8f66d681f4f3211, type: 3}
 --- !u!95 &1347891114
 Animator:
   serializedVersion: 5

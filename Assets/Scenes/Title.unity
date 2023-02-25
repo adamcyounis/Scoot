@@ -837,6 +837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   a_scoot: {fileID: 8300000, guid: 4faab765dcc6caa4f94390f085ebef06, type: 3}
+  a_button: {fileID: 8300000, guid: 904d20d02fd01bd40bcf734986a4c78d, type: 3}
 --- !u!114 &991687468
 MonoBehaviour:
   m_ObjectHideFlags: 0

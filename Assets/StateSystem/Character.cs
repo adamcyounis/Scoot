@@ -57,7 +57,9 @@ public class Character : StateMachine {
             input.AssignCharacter(this);
         }
     }
-
+    public void Start() {
+        animator.boxManager.frameEvents.AddListener(Sound);
+    }
     public void FaceDirection(Vector2 vector2) {
         transform.localScale = new Vector3(Mathf.Sign(vector2.x), 1);
     }
@@ -108,6 +110,13 @@ public class Character : StateMachine {
             if (!x) vel.x = body.velocity.x;
             if (!y) vel.y = body.velocity.y;
             body.velocity = vel;
+        }
+    }
+
+    public void Sound() {
+        if (GetDeepState() != null) {
+            GetDeepState().Sound();
+
         }
     }
 }

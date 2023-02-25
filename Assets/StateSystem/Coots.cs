@@ -14,7 +14,8 @@ public class Coots : Character {
     public SpecialStates specials;
 
 
-    private void Start() {
+    public new void Start() {
+        base.Start();
         Set(initState);
         GameManager.coots = this;
         life.hurtConfirmEvent.AddListener(GetHurt);

@@ -19,7 +19,20 @@ MonoBehaviour:
   - {fileID: 1664329972, guid: 1d8d18285c848784e8ebb68686d37719, type: 3}
   propertiesList:
   - frameProperties: []
-  - frameProperties: []
+  - frameProperties:
+    - name: Event
+      dataType: 1
+      intVal: 0
+      floatVal: 0
+      boolVal: 0
+      stringVal: Sound
+      vectorVal: {x: 0, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
   - frameProperties: []
   groups:
   - myBoxType: Hit

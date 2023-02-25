@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class State : StateMachine {
+
+    public AudioClip soundClip;
     public string title;
     protected Character core;
     protected Retro.RetroAnimator animator => core.animator;
@@ -54,6 +56,17 @@ public class State : StateMachine {
     protected void Complete(string reason = default) {
         endReason = reason;
         complete = true;
+    }
+
+    public void Sound() {
+
+        if (soundClip != null) {
+            SoundSystem.system.PlaySFX(soundClip);
+        }
+    }
+
+    public new State GetDeepState() {
+        return state != null ? state.GetDeepState() : this;
     }
 }
 

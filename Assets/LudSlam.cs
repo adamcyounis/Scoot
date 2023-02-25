@@ -10,7 +10,6 @@ public class LudSlam : LudState {
 
         rightHandAnimator.Play(s_slamHand);
         rightHandAnimator.Stop();
-
     }
 
 

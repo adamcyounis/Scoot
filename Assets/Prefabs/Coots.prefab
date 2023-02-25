@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   sideB: {fileID: 5827839757629512424}
   rest: {fileID: 9098593482350234073}
@@ -153,6 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 8300000, guid: 8a83aba98d9344d4aa831d9bf5581304, type: 3}
   title: 
   sheet: {fileID: 11400000, guid: 2ac64fc9e86aceb4cae344ed170a2703, type: 2}
   fps: 4
@@ -171,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   restAttack: {fileID: 4299952032268642972}
   restLoop: {fileID: 4571902421600986172}
@@ -187,6 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 8300000, guid: 8a83aba98d9344d4aa831d9bf5581304, type: 3}
   title: Rest Attack
   sheet: {fileID: 11400000, guid: b84e3ed83472db74b8bae246f7857477, type: 2}
   fps: 10
@@ -205,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: Rest Loop
   sheet: {fileID: 11400000, guid: 0c2e3fcbd8ebe1942a3348faaf557520, type: 2}
   fps: 10
@@ -223,6 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   startup: {fileID: 1298277862928102532}
   end: {fileID: 4813163077508080783}
@@ -241,6 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   sheet: {fileID: 11400000, guid: 6c7bf980589a54b4fb9d06f1b1fb32d0, type: 2}
   fps: 10
@@ -259,6 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 8300000, guid: 4e3a77b3125d693429fd8754de047285, type: 3}
   title: 
   sheet: {fileID: 11400000, guid: 5dc5ad1a142d82f4db3f590e5f33b61c, type: 2}
   curve:
@@ -341,6 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   hurt: {fileID: 4664217565831972616}
   airHurt: {fileID: 4664217565597038525}
@@ -492,6 +501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   idle: {fileID: 11400000, guid: 93a38d0e70a52754c8bb7121646fd08a, type: 2}
   walk: {fileID: 11400000, guid: 1ed5e35251eb9b1428db9c12642daa56, type: 2}
@@ -546,6 +556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   idle: {fileID: 11400000, guid: 05b3abbd4e448714785e738c5258fe49, type: 2}
   walk: {fileID: 11400000, guid: 05b3abbd4e448714785e738c5258fe49, type: 2}
@@ -598,6 +609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   shieldSprite: {fileID: 4664217564479287772}
   shieldAmount: 50
@@ -650,6 +662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   jump: {fileID: 4664217564466435322}
   fall: {fileID: 4664217564466435321}
@@ -669,6 +682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: Fall
   sheet: {fileID: 11400000, guid: d4d2164af545b0a4780f4ac3eefcf79a, type: 2}
   fps: 10
@@ -687,6 +701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   fullJumpTime: 0.09
   releaseDecay: 0.95
@@ -706,6 +721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   curve:
     serializedVersion: 2
@@ -1146,6 +1162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   fallThrough: {fileID: 4664217565500359696}
   standing: {fileID: 4664217563823226150}
@@ -1163,6 +1180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   sheet: {fileID: 11400000, guid: c4285aa050b07814aa34e240c16df072, type: 2}
   fps: 6
@@ -1213,6 +1231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   sheet: {fileID: 11400000, guid: 754343704425e8d43b82da43b88ff063, type: 2}
   fps: 10
@@ -1263,6 +1282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   sheet: {fileID: 11400000, guid: 754343704425e8d43b82da43b88ff063, type: 2}
   fps: 10
@@ -1318,6 +1338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   neutralAttack: {fileID: 1230382536071851943}
   downAttack: {fileID: 8062986959424687951}
@@ -1334,6 +1355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 8300000, guid: 6b5c32ee739a3524ba6cfb3d0364d18a, type: 3}
   title: DownAttack
   sheet: {fileID: 11400000, guid: b5c2778d91723d141a37f41247f94a2a, type: 2}
   fps: 10
@@ -1352,6 +1374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   comboStates:
   - {fileID: 2306483709331236919}
@@ -1370,6 +1393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 8300000, guid: 6b5c32ee739a3524ba6cfb3d0364d18a, type: 3}
   title: Combo 1
   sheet: {fileID: 11400000, guid: 2964e65daa827e74e9beb92d9a3b1c14, type: 2}
   fps: 10
@@ -1388,6 +1412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 8300000, guid: 6b5c32ee739a3524ba6cfb3d0364d18a, type: 3}
   title: Combo 2
   sheet: {fileID: 11400000, guid: a58562221f58e264eb90c112fbfe0108, type: 2}
   fps: 10
@@ -1406,6 +1431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 8300000, guid: 6b5c32ee739a3524ba6cfb3d0364d18a, type: 3}
   title: Combo 3
   sheet: {fileID: 11400000, guid: 16465b596a50de04fa2ea87357475690, type: 2}
   fps: 10

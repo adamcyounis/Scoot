@@ -9,7 +9,7 @@ public class FireFoxActive : State {
     int fixedFrames;
     public override void Enter() {
         base.Enter();
-        animator.Play(sheet, 10, true, true);
+        animator.Play(sheet, 1, true, true);
         direction = core.input.movement.normalized;
         if (direction == Vector2.zero) {
             direction = Vector2.up;
