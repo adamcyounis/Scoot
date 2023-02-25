@@ -31,24 +31,34 @@ public class InputController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        ClearInputs();
+        if (!GameSystem.system.pauseMenu.isOpen) {
 
-        shieldHeld = input.actions["Shield"].IsPressed();
-        shieldPressed = input.actions["Shield"].WasPressedThisFrame();
+            shieldHeld = input.actions["Shield"].IsPressed();
+            shieldPressed = input.actions["Shield"].WasPressedThisFrame();
 
-        attackHeld = input.actions["Attack"].IsPressed();
-        attackPressed = input.actions["Attack"].WasPressedThisFrame();
+            attackHeld = input.actions["Attack"].IsPressed();
+            attackPressed = input.actions["Attack"].WasPressedThisFrame();
 
-        specialHeld = input.actions["Special"].IsPressed();
-        specialPressed = input.actions["Special"].WasPressedThisFrame();
+            specialHeld = input.actions["Special"].IsPressed();
+            specialPressed = input.actions["Special"].WasPressedThisFrame();
 
-        jumpHeld = input.actions["Jump"].IsPressed();
-        jumpPressed = input.actions["Jump"].WasPressedThisFrame();
+            jumpHeld = input.actions["Jump"].IsPressed();
+            jumpPressed = input.actions["Jump"].WasPressedThisFrame();
+
+            movement = input.actions["Move"].ReadValue<Vector2>();
+        }
 
         startPressed = input.actions["Start"].WasPressedThisFrame();
         selectPressed = input.actions["Select"].WasPressedThisFrame();
 
-        movement = input.actions["Move"].ReadValue<Vector2>();
+        HandleUIInput();
+    }
 
+    void HandleUIInput() {
+        if (startPressed) {
+            GameSystem.system.pauseMenu.ToggleMenu();
+        }
     }
 
     protected void ClearInputs() {

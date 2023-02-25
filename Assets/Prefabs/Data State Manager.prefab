@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &106412096519699644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 106412096519699635}
+  - component: {fileID: 106412096519699634}
+  m_Layer: 0
+  m_Name: Data State Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &106412096519699635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106412096519699644}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &106412096519699634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106412096519699644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90b430a071d860047801b39d19c8f87f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 0
+  arcadeSceneIndex: 0
+  assignScene:
+    sceneAsset: {fileID: 102900000, guid: 678dd715440de9e4a86a98420b021499, type: 3}
+    scenePath: Assets/Scenes/Player Assign.unity
+  titleScene:
+    sceneAsset: {fileID: 102900000, guid: b6cf8596a9c99c249aad649d0da29f80, type: 3}
+    scenePath: Assets/Scenes/Title.unity
+  arcadeScenes:
+  - sceneAsset: {fileID: 102900000, guid: 678dd715440de9e4a86a98420b021499, type: 3}
+    scenePath: Assets/Scenes/Player Assign.unity
+  - sceneAsset: {fileID: 102900000, guid: e5fd92b779ac05d47aa902897733b45b, type: 3}
+    scenePath: Assets/Scenes/Cat Stage.unity
+  - sceneAsset: {fileID: 102900000, guid: 2aa7d681e003c9e459d9f1a6023091f3, type: 3}
+    scenePath: Assets/Scenes/Board the Platforms.unity
+  - sceneAsset: {fileID: 102900000, guid: e5fd92b779ac05d47aa902897733b45b, type: 3}
+    scenePath: Assets/Scenes/Cat Stage.unity
+  - sceneAsset: {fileID: 102900000, guid: 77c129c52babf61409ce1205da0869cb, type: 3}
+    scenePath: Assets/Scenes/Boss.unity

@@ -22,12 +22,16 @@ public class CharacterUI : MonoBehaviour {
         nameLabel.text = character.characterName;
         percentLabel.text = character.percent.ToString() + "<size=60>%</size>";
 
-        if (character.life.team > 0 && character.life.team < GameSystem.system.teamColours.Count) {
+        if (character.life.team >= 0 && character.life.team < GameSystem.system.teamColours.Count) {
             color = GameSystem.system.teamColours[character.life.team];
             backPlate.color = color;
+            if (character.uiTag != null) {
+                character.uiTag.color = color;
+
+            }
+
         }
 
-        character.uiTag.color = color;
 
     }
 

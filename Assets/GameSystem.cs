@@ -18,6 +18,8 @@ public class GameSystem : MonoBehaviour {
     Level level;
     public List<Color> teamColours;
     public BigWordsManager bwm;
+    public PauseMenu pauseMenu;
+    public SceneReference titleScreen;
     private void Awake() {
         if (system == null) {
             system = this;
@@ -26,11 +28,13 @@ public class GameSystem : MonoBehaviour {
             level = GameObject.FindObjectOfType<Level>();
             DustSpawner.spawner = dust;
             HitEffectPool.p = pool;
+            manager.gameObject.SetActive(true);
         } else {
             Destroy(gameObject);
         }
 
     }
+
     // Start is called before the first frame update
     void Start() {
 
@@ -80,18 +84,32 @@ public class GameSystem : MonoBehaviour {
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
-        LoadPlayers();
-        level = GameObject.FindObjectOfType<Level>();
+        if (scene.path == titleScreen.ScenePath) {
+            Destroy(gameObject);
+        } else {
+            LoadPlayers();
+            level = GameObject.FindObjectOfType<Level>();
+
+        }
     }
 
     void LoadPlayers() {
+
         foreach (Transform child in nameplateWrapper.transform) {
-            GameObject.Destroy(child.gameObject);
+            if (child.gameObject != null) {
+                GameObject.Destroy(child.gameObject);
+
+            }
         }
 
-        for (int i = 0; i < inputModules.Count; i++) {
-            AddCoots(inputModules[i], i);
+        for (int i = inputModules.Count - 1; i >= 0; i--) {
+            if (inputModules[i] != null) {
+                AddCoots(inputModules[i], i);
+            } else {
+                inputModules.Remove(inputModules[i]);
+            }
         }
+
     }
 
 }

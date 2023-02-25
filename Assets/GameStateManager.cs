@@ -14,7 +14,9 @@ public class GameStateManager : MonoBehaviour {
     void Awake() {
         if (manager == null) {
             manager = this;
+            transform.SetParent(null);
             DontDestroyOnLoad(gameObject);
+
         } else {
             Destroy(gameObject);
         }
@@ -28,6 +30,17 @@ public class GameStateManager : MonoBehaviour {
     void Update() {
 
     }
+
+    public void GoToTitle() {
+        StartCoroutine(BeginSceneTransition(titleScene));
+    }
+
+
+    public void ResetScene() {
+        StartCoroutine(BeginSceneTransition(SceneManager.GetActiveScene().name));
+
+    }
+
 
     public void BeginArcadeMode() {
         mode = GameMode.Arcade;
@@ -44,7 +57,7 @@ public class GameStateManager : MonoBehaviour {
     }
 
     public IEnumerator BeginSceneTransition(string nextScene) {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSecondsRealtime(1);
         EndSceneTransition(nextScene);
     }
 
