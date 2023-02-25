@@ -149,8 +149,8 @@ MonoBehaviour:
   pool: {fileID: 8080653382293102833}
   teamColours:
   - {r: 0.3120861, g: 0.7831008, b: 0.8396226, a: 1}
-  - {r: 0.65443933, g: 0.8301887, b: 0.19110003, a: 1}
   - {r: 0.8962264, g: 0.34524623, b: 0.17248127, a: 1}
+  - {r: 0.65443933, g: 0.8301887, b: 0.19110003, a: 1}
   - {r: 0.9056604, g: 0.62935376, b: 0.27682447, a: 1}
   - {r: 0.18796723, g: 0.50740796, b: 0.754717, a: 1}
   - {r: 0.8207547, g: 0.15021354, b: 0.2915353, a: 1}
@@ -187,6 +187,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b8832d5dcb4d3e41bfcaf87315eadd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  a_ready: {fileID: 8300000, guid: 242ba2315f835bc4cb556a5be11986fe, type: 3}
+  a_go: {fileID: 8300000, guid: a6a8571da35d48648a4f40c6aa93f4d6, type: 3}
+  a_gameSet: {fileID: 8300000, guid: 8eb07f9253f6d534286f10f970b4ed35, type: 3}
   ready: {fileID: 21300000, guid: 8da44417a0a7c3849a918c1ea9ed2a88, type: 3}
   go: {fileID: 21300000, guid: 8767c0921123f7a419d021027e9a78be, type: 3}
   gameSet: {fileID: 21300000, guid: c8f97535a051d204a89d27f1f3e7bbed, type: 3}
