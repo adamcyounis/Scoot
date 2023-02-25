@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class InputController : MonoBehaviour {
@@ -64,5 +65,18 @@ public class InputController : MonoBehaviour {
 
     public void AssignCharacter(Character c) {
         character = c;
+    }
+
+    public bool PressedAnything() {
+        return movement != default ||
+        shieldHeld != default ||
+        shieldPressed != default ||
+        attackHeld != default ||
+        attackPressed != default ||
+        specialHeld != default ||
+        specialPressed != default ||
+        jumpHeld != default ||
+        jumpPressed != default;
+
     }
 }

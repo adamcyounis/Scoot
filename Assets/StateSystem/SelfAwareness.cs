@@ -9,8 +9,9 @@ public class SelfAwareness : MonoBehaviour {
     float halfFootWidth => footWidth / 2f;
 
     public float groundDepth = 0.04f;
-    Vector2 footPoint => core.position + (Vector2.down * footDepth);
-
+    public Vector2 footPoint => core.position + (Vector2.down * footDepth);
+    [HideInInspector]
+    public Vector3 inverseFootOffset => Vector2.up * footDepth;
     public bool grounded;
     public LayerMask groundMask;
 

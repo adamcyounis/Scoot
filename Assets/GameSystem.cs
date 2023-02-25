@@ -13,11 +13,14 @@ public class GameSystem : MonoBehaviour {
     public GameObject namePlatePrefab;
     public List<PlayerInput> inputModules;
     public UnityEvent<Transform> newCharacter = new UnityEvent<Transform>();
+    Level level;
     private void Awake() {
         if (system == null) {
             system = this;
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
+            level = GameObject.FindObjectOfType<Level>();
+
 
         } else {
             Destroy(gameObject);
@@ -46,18 +49,24 @@ public class GameSystem : MonoBehaviour {
 
     Coots AddCoots(PlayerInput p, int index) {
         Coots newCoots = GameObject.Instantiate(cootsPrefab).GetComponent<Coots>();
-        newCoots.transform.position = Vector2.up * 1f;
         newCoots.input = p.GetComponent<InputController>();
         newCoots.input.input = p;
         newCoots.controllerIndex = index;
         newCoots.life.team = index;
 
-        AddCharacter(newCoots);
+        AddCharacterUI(newCoots);
+
+        if (level != null) {
+            level.SpawnCharacter(newCoots);
+
+        } else {
+            newCoots.transform.position = Vector2.up * 1f;
+        }
 
         return newCoots;
     }
 
-    void AddCharacter(Character c) {
+    void AddCharacterUI(Character c) {
         GameObject newNameplate = GameObject.Instantiate(namePlatePrefab);
         CharacterUI nameplateScript = newNameplate.GetComponent<CharacterUI>();
         nameplateScript.character = c;
@@ -68,6 +77,7 @@ public class GameSystem : MonoBehaviour {
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         LoadPlayers();
+        level = GameObject.FindObjectOfType<Level>();
     }
 
     void LoadPlayers() {

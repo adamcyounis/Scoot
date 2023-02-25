@@ -45,7 +45,6 @@ public class Life : MonoBehaviour {
     [HideInInspector]
     public Retro.RetroAnimator animator;
 
-    bool hitThisFrame = false;
 
     public List<CollisionInfo> collisions;
     public float timeAtLastSpentEnergy;
@@ -92,7 +91,6 @@ public class Life : MonoBehaviour {
 
 
     public void LateUpdate() {
-        hitThisFrame = false;
         prevPercent = percent;
     }
 

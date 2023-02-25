@@ -1,8 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BlastZone : MonoBehaviour {
+    public Level level;
     public float shakeAmount = 0.3f;
     public bool isRoof = false;
     // Start is called before the first frame update
@@ -44,7 +44,6 @@ public class BlastZone : MonoBehaviour {
         ch.life.percent = 0;
         ch.transform.position = transform.parent.position;
         ch.body.velocity = Vector2.zero;
-        ch.gameObject.SetActive(true);
-
+        level.SpawnCharacter(ch);
     }
 }

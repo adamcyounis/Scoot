@@ -22,7 +22,7 @@ public class Character : StateMachine {
 
     public int controllerIndex;
     public BodyProps defaultBodyProps;
-
+    public LoadingPlatform platform;
     public float velX {
         get {
             return body.velocity.x;

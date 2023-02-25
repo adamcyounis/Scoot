@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class AirDodge : State, AirState {
     public bool locked => time < 0.2f;
+    public bool sliding => core.selfAwareness.grounded && core.velY <= 0;
     Vector2 direction;
     public AnimationCurve curve;
     public float speed = 3;
@@ -44,6 +45,8 @@ public class AirDodge : State, AirState {
         if (direction.y < 0 && core.selfAwareness.grounded) {
             animator.Play(s_crouch, 10, true, true);
         }
+
+
     }
 
     public override void FixedDo() {

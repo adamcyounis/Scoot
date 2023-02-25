@@ -7,7 +7,7 @@ public class Jump : State, AirState {
     public float fullJumpTime = 0.2f;
     public float releaseDecay = 0.75f;
 
-    public float shortHopTime = 0.1f;
+    public float minJumpTime = 0.05f;
     public float jumpSpeed;
     public int remainingJumps = 2;
 
@@ -39,13 +39,16 @@ public class Jump : State, AirState {
     }
 
     public override void Do() {
-        if (time > shortHopTime && time < fullJumpTime) {
+
+        if (time < minJumpTime) {
+            core.velY = jumpSpeed;
+
+        } else if (time > minJumpTime && time < fullJumpTime) {
             if (holdingJump && !released) {
                 core.velY = jumpSpeed;
             } else {
                 released = true;
                 core.velY *= releaseDecay;
-
             }
         }
 

@@ -69,13 +69,15 @@ public class Coots : Character {
             }
         }
 
-        if (!(state == dodge && dodge.locked)) {
-            if (shield.ShouldShield()) {
+        if (shield.ShouldShield()) {
+            if (!(state == dodge && dodge.locked)) {
                 Set(shield);
             }
+        }
 
+        if (airControl.jump.ShouldJump()) {
+            if (!(state == dodge) || dodge.sliding) {
 
-            if (airControl.jump.ShouldJump()) {
                 Set(airControl, true);
                 airControl.Jump();
                 return;
