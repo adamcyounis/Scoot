@@ -10,7 +10,7 @@ public class Jump : State, AirState {
     public float minJumpTime = 0.05f;
     public float jumpSpeed;
     public int remainingJumps = 2;
-
+    Vector2 foot => core.selfAwareness.footPoint;
     bool released;
 
     void Start() {
@@ -35,6 +35,12 @@ public class Jump : State, AirState {
         float h = core.input.movement.x;
         if (Mathf.Abs(h) > 0.1f) {
             core.velX = Mathf.Sign(h);
+        }
+        if (core.selfAwareness.grounded) {
+            DustSpawner.spawner.BurstParticles(foot, Vector2.right * 2, 3);
+            DustSpawner.spawner.BurstParticles(foot, Vector2.left * 2, 3);
+        } else {
+            DustSpawner.spawner.BurstParticles(foot, -body.velocity * 0.4f, 3);
         }
     }
 

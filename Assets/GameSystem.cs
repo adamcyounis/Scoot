@@ -13,6 +13,7 @@ public class GameSystem : MonoBehaviour {
     public GameObject namePlatePrefab;
     public List<PlayerInput> inputModules;
     public UnityEvent<Transform> newCharacter = new UnityEvent<Transform>();
+    public DustSpawner dust;
     Level level;
     private void Awake() {
         if (system == null) {
@@ -20,8 +21,7 @@ public class GameSystem : MonoBehaviour {
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
             level = GameObject.FindObjectOfType<Level>();
-
-
+            DustSpawner.spawner = dust;
         } else {
             Destroy(gameObject);
         }
@@ -89,8 +89,5 @@ public class GameSystem : MonoBehaviour {
             AddCoots(inputModules[i], i);
         }
     }
-
-
-
 
 }

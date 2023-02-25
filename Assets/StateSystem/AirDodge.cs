@@ -21,6 +21,7 @@ public class AirDodge : State, AirState {
     }
 
     public override void Enter() {
+
         animator.Play(s_airDodge, 10, true, true);
         base.Enter();
         usedDodge = true;
@@ -32,6 +33,8 @@ public class AirDodge : State, AirState {
 
         if (inputDirection.magnitude > 0.1f) {
             direction = inputDirection.normalized;
+            DustSpawner.spawner.BurstParticles(core.selfAwareness.footPoint, -direction * 2f, 8);
+
         } else {
             direction = Vector2.zero;
         }

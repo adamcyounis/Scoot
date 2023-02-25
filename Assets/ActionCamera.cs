@@ -70,7 +70,6 @@ public class ActionCamera : MonoBehaviour {
 
         foreach (Transform t in subjects) {
 
-
             if (t.position.x < min.x) {
                 min.x = t.position.x;
             }
