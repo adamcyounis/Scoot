@@ -48,15 +48,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mode: 0
   arcadeSceneIndex: 0
-  assignScene:
+  arcadeAssign:
+    sceneAsset: {fileID: 102900000, guid: 051a13f9f442eda40a6ccfaa5a1f8a40, type: 3}
+    scenePath: Assets/Scenes/Arcade Assign.unity
+  versusAssign:
     sceneAsset: {fileID: 102900000, guid: 678dd715440de9e4a86a98420b021499, type: 3}
-    scenePath: Assets/Scenes/Player Assign.unity
+    scenePath: Assets/Scenes/Player Assign Versus.unity
   titleScene:
     sceneAsset: {fileID: 102900000, guid: b6cf8596a9c99c249aad649d0da29f80, type: 3}
     scenePath: Assets/Scenes/Title.unity
+  battleScene:
+    sceneAsset: {fileID: 102900000, guid: e5fd92b779ac05d47aa902897733b45b, type: 3}
+    scenePath: Assets/Scenes/Cat Stage.unity
   arcadeScenes:
-  - sceneAsset: {fileID: 102900000, guid: 678dd715440de9e4a86a98420b021499, type: 3}
-    scenePath: Assets/Scenes/Player Assign.unity
+  - sceneAsset: {fileID: 102900000, guid: 051a13f9f442eda40a6ccfaa5a1f8a40, type: 3}
+    scenePath: Assets/Scenes/Arcade Assign.unity
   - sceneAsset: {fileID: 102900000, guid: e5fd92b779ac05d47aa902897733b45b, type: 3}
     scenePath: Assets/Scenes/Cat Stage.unity
   - sceneAsset: {fileID: 102900000, guid: 2aa7d681e003c9e459d9f1a6023091f3, type: 3}

@@ -3,23 +3,49 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MultiBattleScenario : MonoBehaviour {
+    GameStateManager m => GameStateManager.manager;
 
     //set up how many enemies need to spawn in etc...
 
-    public bool gameFinished;
     // Start is called before the first frame update
     void Start() {
         GameSystem.system.bwm.StartMatch();
+        GameSystem.system.roundOver.AddListener(Finished);
+
+        if (m.mode == GameStateManager.GameMode.Arcade) {
+            GameSystem.system.AddEnemyCoots(1, 1f, 3);
+            GameSystem.system.AddEnemyCoots(1, 1f, 3);
+            GameSystem.system.AddEnemyCoots(1, 1f, 3);
+
+        }
     }
 
     // Update is called once per frame
     void Update() {
-        bool prevGameFinished = gameFinished;
 
-        //check whether the game should end. will set gameFinished to true
+    }
 
-        if (gameFinished && !prevGameFinished) {
-            GameSystem.system.bwm.EndMatch();
+    void Finished(Character c) {
+
+        GameSystem.system.bwm.EndMatch(c.life.team == 0);
+        /*
+        if (m != null) {
+            if (m.mode == GameStateManager.GameMode.Arcade) {
+                if (c.life.team == 0) {
+                    m.GoToNextArcadeLevel();
+                } else {
+                    m.GoToTitle();
+                }
+            } else {
+                m.GoToTitle();
+            }
+        }
+        */
+    }
+
+    private void OnDestroy() {
+        if (GameSystem.system != null && GameSystem.system.roundOver != null) {
+            GameSystem.system.roundOver.RemoveListener(Finished);
         }
     }
 }

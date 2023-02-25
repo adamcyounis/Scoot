@@ -139,6 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 6381074396750539592}
   cootsPrefab: {fileID: 4664217564621502925, guid: 35e033b771a839c4a920934924a8bef7, type: 3}
+  enemyCootsPrefab: {fileID: 506892271657827140, guid: eac2b0f9a3d764c408ae8d13b31af47d, type: 3}
   nameplateWrapper: {fileID: 7345006732141485463}
   namePlatePrefab: {fileID: 4226490939860136807, guid: 324a9cec5b170d14a884ef8177e24ed6, type: 3}
   inputModules: []
@@ -162,6 +163,11 @@ MonoBehaviour:
   titleScreen:
     sceneAsset: {fileID: 102900000, guid: b6cf8596a9c99c249aad649d0da29f80, type: 3}
     scenePath: Assets/Scenes/Title.unity
+  characters: []
+  s_playerDefeated: {fileID: 8300000, guid: 57230a6799dd95d4fb9eaddd999de0e7, type: 3}
+  roundOver:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2505129101097359854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,7 +346,7 @@ MonoBehaviour:
   m_NotificationBehavior: 2
   m_MaxPlayerCount: -1
   m_AllowJoining: 1
-  m_JoinBehavior: 0
+  m_JoinBehavior: 1
   m_PlayerJoinedEvent:
     m_PersistentCalls:
       m_Calls:
@@ -360,7 +366,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_JoinAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Join
       m_Type: 0
@@ -368,9 +374,17 @@ MonoBehaviour:
       m_Id: 96d34a29-8541-468d-aab4-d4d73ad294fa
       m_Processors: 
       m_Interactions: 
-      m_SingletonActionBindings: []
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: acd1edef-0ada-4e67-b9c9-43256a9c2be8
+        m_Path: 
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: -5058384374328380131, guid: 34310a195f4da33458d402415fc63279, type: 3}
   m_PlayerPrefab: {fileID: 2004889559700113272, guid: 9b1c35e56a2bafc42884fbd60ca95181, type: 3}
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0

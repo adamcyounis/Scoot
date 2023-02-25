@@ -84,11 +84,13 @@ MonoBehaviour:
     - velX
     - velY
     - Gravity
-    m_values: 04000000000000000000000003000000
+    - Event
+    m_values: 0400000000000000000000000300000001000000
     o_keys:
     - Velocity
     - velX
     - velY
     - Gravity
+    - Event
   cachedZoomSetting: 0
   cachedGridSetting: 1

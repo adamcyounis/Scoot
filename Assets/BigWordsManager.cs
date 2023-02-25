@@ -42,11 +42,19 @@ public class BigWordsManager : MonoBehaviour {
 
     }
 
-    public void EndMatch() {
+    public void EndMatch(bool won = true) {
         image.enabled = true;
         image.sprite = gameSet;
         SoundSystem.system.PlaySFX(a_gameSet);
-
         Time.timeScale = 0.1f;
+        StartCoroutine(GoToNext(won));
+    }
+
+    public IEnumerator GoToNext(bool won) {
+        yield return new WaitForSecondsRealtime(1.5f);
+        image.enabled = false;
+
+        GameStateManager.manager.GoToNextScene(won);
+
     }
 }

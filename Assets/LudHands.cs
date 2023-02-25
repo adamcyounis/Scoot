@@ -92,8 +92,7 @@ public class LudHands : Character {
     }
 
     void Win() {
-        GameSystem.system.bwm.EndMatch();
-        GameStateManager.manager.GoToNextArcadeLevel();
+        GameSystem.system.bwm.EndMatch(true);
     }
 
     void SlamSound() {

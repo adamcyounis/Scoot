@@ -30,11 +30,12 @@ public class BlastZone : MonoBehaviour {
                     if (ch.stocksRemaining > 0) {
                         StartCoroutine(RespawnWithDelay(ch));
                     } else {
-                        Debug.Log("Player Defeated!");
+                        if (GameManager.gm.cam.subjects.Contains(ch.transform)) {
+                            GameManager.gm.cam.subjects.Remove(ch.transform);
+                        }
+                        GameSystem.system.PlayerDefeated(ch);
                     }
-
                 }
-
             }
         }
     }

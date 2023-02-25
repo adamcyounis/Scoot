@@ -116,7 +116,6 @@ public class Character : StateMachine {
     public void Sound() {
         if (GetDeepState() != null) {
             GetDeepState().Sound();
-
         }
     }
 }

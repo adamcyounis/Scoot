@@ -51,6 +51,8 @@ public class Life : MonoBehaviour {
 
     public static float knockbackFloor = 70;
     public int team;
+
+    public float kbFactor = 1;
     // Use this for initialization
     void Awake() {
         spawnPos = transform.position;
@@ -203,8 +205,8 @@ public class Life : MonoBehaviour {
 
         //Add velocity to our rigidbody equal to the damagevector * knockback;
         //this happens only when we aren't resolving this with Stun Behaviour
-        animator.rigidBody.velocity = (direction * info.knockback * ((knockbackFloor + percent) * 0.003f));
-        animator.rigidBody.velocity += Vector2.up * ((knockbackFloor + percent) * 0.007f);
+        animator.rigidBody.velocity = (direction * info.knockback * ((knockbackFloor + percent) * 0.003f) * kbFactor);
+        animator.rigidBody.velocity += Vector2.up * ((knockbackFloor + percent) * 0.007f) * kbFactor;
 
     }
     void ApplyHitEffect(CollisionInfo col) {

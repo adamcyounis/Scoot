@@ -1427,6 +1427,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 106412096519699634, guid: 12191c5a1fbf8f745b4701b59ce0ba5b, type: 3}
+      propertyPath: arcadeScenes.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 106412096519699634, guid: 12191c5a1fbf8f745b4701b59ce0ba5b, type: 3}
+      propertyPath: arcadeScenes.Array.data[1].scenePath
+      value: Assets/Scenes/Cat Stage.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 106412096519699634, guid: 12191c5a1fbf8f745b4701b59ce0ba5b, type: 3}
+      propertyPath: arcadeScenes.Array.data[2].scenePath
+      value: Assets/Scenes/Board the Platforms.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 106412096519699634, guid: 12191c5a1fbf8f745b4701b59ce0ba5b, type: 3}
+      propertyPath: arcadeScenes.Array.data[3].scenePath
+      value: Assets/Scenes/Boss.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 106412096519699634, guid: 12191c5a1fbf8f745b4701b59ce0ba5b, type: 3}
+      propertyPath: arcadeScenes.Array.data[4].scenePath
+      value: Assets/Scenes/Thank You.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 106412096519699634, guid: 12191c5a1fbf8f745b4701b59ce0ba5b, type: 3}
+      propertyPath: arcadeScenes.Array.data[1].sceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: e5fd92b779ac05d47aa902897733b45b, type: 3}
+    - target: {fileID: 106412096519699634, guid: 12191c5a1fbf8f745b4701b59ce0ba5b, type: 3}
+      propertyPath: arcadeScenes.Array.data[2].sceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 2aa7d681e003c9e459d9f1a6023091f3, type: 3}
+    - target: {fileID: 106412096519699634, guid: 12191c5a1fbf8f745b4701b59ce0ba5b, type: 3}
+      propertyPath: arcadeScenes.Array.data[3].sceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 77c129c52babf61409ce1205da0869cb, type: 3}
+    - target: {fileID: 106412096519699634, guid: 12191c5a1fbf8f745b4701b59ce0ba5b, type: 3}
+      propertyPath: arcadeScenes.Array.data[4].sceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: c6b3f712bdb760440a295fdfd2f9715f, type: 3}
     - target: {fileID: 106412096519699635, guid: 12191c5a1fbf8f745b4701b59ce0ba5b, type: 3}
       propertyPath: m_RootOrder
       value: 2

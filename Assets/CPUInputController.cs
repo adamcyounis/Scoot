@@ -14,9 +14,15 @@ public class CPUInputController : InputController {
     public Transform centreStage;
     public float stageDistanceTolerance = 3;
     public float dexterity = 0.2f;
+
+    float timeAtLastTarget = 0;
     // Start is called before the first frame update
     void Start() {
         character = GetComponent<Character>();
+
+        if (centreStage == null) {
+            centreStage = FindObjectOfType<Level>().transform;
+        }
     }
 
     // Update is called once per frame
@@ -92,11 +98,12 @@ public class CPUInputController : InputController {
     }
 
     void ManageTargets() {
-        if (target == null) {
-            Life[] lives = FindObjectsOfType<Life>().Where(x => x.team != character.life.team).ToArray();
+        if (target == null || Time.time - timeAtLastTarget > 7) {
+            Life[] livingThings = FindObjectsOfType<Life>().Where(x => x.team != character.life.team).ToArray();
 
-            if (lives.Length > 0) {
-                target = lives[Random.Range(0, lives.Length)];
+            if (livingThings.Length > 0) {
+                target = livingThings[Random.Range(0, livingThings.Length)];
+                timeAtLastTarget = Time.time;
             }
         }
     }

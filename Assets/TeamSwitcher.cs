@@ -18,6 +18,7 @@ public class TeamSwitcher : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.transform.root.GetComponentInChildren<Life>() is Life l) {
             l.team = team;
+            GameSystem.system.playerInputTeams[l.character.input.input] = team;
         }
     }
 }

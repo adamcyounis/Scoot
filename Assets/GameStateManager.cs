@@ -9,12 +9,16 @@ public class GameStateManager : MonoBehaviour {
     public enum GameMode { Arcade, Versus }
     public GameMode mode;
     public int arcadeSceneIndex = 0;
-    public SceneReference assignScene;
+    public SceneReference arcadeAssign;
+
+    public SceneReference versusAssign;
     public SceneReference titleScene;
+    public SceneReference battleScene;
     public List<SceneReference> arcadeScenes;
     public List<Sprite> transitionSprites;
     public Image transitionWipeImage;
     SimpleAnimation flipBook;
+    public bool addingPlayersLocked => SceneManager.GetActiveScene().path != arcadeAssign.ScenePath && SceneManager.GetActiveScene().path != versusAssign.ScenePath;
     void Awake() {
         if (manager == null) {
             manager = this;
@@ -64,9 +68,22 @@ public class GameStateManager : MonoBehaviour {
         StartCoroutine(BeginSceneTransition(arcadeScenes[arcadeSceneIndex]));
     }
 
+    public void GoToNextScene(bool won) {
+
+        if (mode == GameMode.Arcade && won) {
+            GoToNextArcadeLevel();
+        } else {
+            GoToTitle();
+        }
+    }
+
+    public void GoToBattleScene() {
+        StartCoroutine(BeginSceneTransition(battleScene));
+    }
+
     public void BeginVersusMode() {
         mode = GameMode.Versus;
-        BeginSceneTransition(assignScene);
+        BeginSceneTransition(arcadeAssign);
     }
 
     public IEnumerator BeginSceneTransition(string nextScene) {

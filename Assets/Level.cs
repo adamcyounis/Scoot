@@ -17,7 +17,6 @@ public class Level : MonoBehaviour {
             Vector2 pos = airSpawnPoints[airSpawnIndex % airSpawnPoints.Count].position;
             ch.platform.SpawnIn(pos);
             airSpawnIndex++;
-
         }
 
     }

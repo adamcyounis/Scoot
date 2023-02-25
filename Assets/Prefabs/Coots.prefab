@@ -900,7 +900,7 @@ MonoBehaviour:
   animator: {fileID: 4664217564621502920}
   selfAwareness: {fileID: 4664217564621502923}
   life: {fileID: 0}
-  stocksRemaining: 9
+  stocksRemaining: 3
   characterName: Coots
   shaker: {fileID: 4664217563760215706}
   controllerIndex: 0
@@ -1303,6 +1303,7 @@ GameObject:
   - component: {fileID: 2306483709331236919}
   - component: {fileID: 3966278473620826304}
   - component: {fileID: 1537927672166206334}
+  - component: {fileID: 3776695062099044348}
   m_Layer: 6
   m_Name: Normals
   m_TagString: Untagged
@@ -1342,6 +1343,7 @@ MonoBehaviour:
   title: 
   neutralAttack: {fileID: 1230382536071851943}
   downAttack: {fileID: 8062986959424687951}
+  upAttack: {fileID: 3776695062099044348}
 --- !u!114 &8062986959424687951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1434,6 +1436,25 @@ MonoBehaviour:
   soundClip: {fileID: 8300000, guid: 6b5c32ee739a3524ba6cfb3d0364d18a, type: 3}
   title: Combo 3
   sheet: {fileID: 11400000, guid: 16465b596a50de04fa2ea87357475690, type: 2}
+  fps: 10
+  loop: 0
+  duration: 0
+--- !u!114 &3776695062099044348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6252602138726265118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb8a59793f0ed54b8c2d531b2b66f0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: {fileID: 0}
+  soundClip: {fileID: 8300000, guid: 6b5c32ee739a3524ba6cfb3d0364d18a, type: 3}
+  title: 
+  sheet: {fileID: 11400000, guid: d2b6b98d492885042ab3a03451665879, type: 2}
   fps: 10
   loop: 0
   duration: 0
