@@ -127,7 +127,7 @@ public class Life : MonoBehaviour {
                 }
             }
             ApplyHitstop(col);
-
+            ApplyHitEffect(col);
             //ban the collider
             col.collision.collider.Ban(animator);
             if (percent < 0) percent = 0;
@@ -201,7 +201,9 @@ public class Life : MonoBehaviour {
         animator.rigidBody.velocity += Vector2.up * ((knockbackFloor + percent) * 0.007f);
 
     }
-
+    void ApplyHitEffect(CollisionInfo col) {
+        HitEffectPool.p.SpawnEffect(character.transform.position, col.damageVector, col.damage);
+    }
 
     public void SetInvulnerable(float t) {
         invulnerableStartTime = Time.time;

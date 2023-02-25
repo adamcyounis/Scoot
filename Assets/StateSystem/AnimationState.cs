@@ -24,7 +24,7 @@ public class AnimationState : State {
         base.Exit();
     }
 
-    void RespondToFinished(Retro.Sheet s) {
+    void RespondToFinished(Retro.RetroAnimator animator, Retro.Sheet s) {
         if (s == sheet) {
             Complete("finished animation!");
         }

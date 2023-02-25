@@ -58,7 +58,7 @@ namespace Retro {
         //used to offset sprite and hitboxes when there is a velocity curve changing their positions;
         public Vector2 spatialOffset;
 
-        public UnityEvent<Retro.Sheet> finished = new UnityEvent<Retro.Sheet>();
+        public UnityEvent<Retro.RetroAnimator, Retro.Sheet> finished = new UnityEvent<Retro.RetroAnimator, Retro.Sheet>();
         public UnityEvent<Retro.Sheet, int> frameSet = new UnityEvent<Sheet, int>();
         public Life life;
         // Use this for initialization
@@ -207,7 +207,7 @@ namespace Retro {
                     Play(nextSheet, nextFrameRate, nextLooping);
                 } else {
                     isPlaying = false; //otherwise finish up.
-                    finished.Invoke(mySheet);
+                    finished.Invoke(this, mySheet);
                 }
 
             } else { //"puppeteer mode"

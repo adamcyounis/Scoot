@@ -14,6 +14,7 @@ public class GameSystem : MonoBehaviour {
     public List<PlayerInput> inputModules;
     public UnityEvent<Transform> newCharacter = new UnityEvent<Transform>();
     public DustSpawner dust;
+    public HitEffectPool pool;
     Level level;
     private void Awake() {
         if (system == null) {
@@ -22,6 +23,7 @@ public class GameSystem : MonoBehaviour {
             SceneManager.sceneLoaded += OnSceneLoaded;
             level = GameObject.FindObjectOfType<Level>();
             DustSpawner.spawner = dust;
+            HitEffectPool.p = pool;
         } else {
             Destroy(gameObject);
         }
