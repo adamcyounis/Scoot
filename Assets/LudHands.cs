@@ -30,7 +30,8 @@ public class LudHands : Character {
     public Retro.RetroAnimator faceAnimator;
     public Animator anim;
     State previousAttack;
-
+    public float maxHealth;
+    bool defeated = false;
     public override void Awake() {
         base.Awake();
         LudState[] ludStates = GetComponentsInChildren<LudState>();
@@ -44,7 +45,11 @@ public class LudHands : Character {
 
     // Start is called before the first frame update
     void Start() {
+        leftHandAnimator.boxManager.collisionEvent.AddListener(life.HandleCollisionEvent);
+        rightHandAnimator.boxManager.collisionEvent.AddListener(life.HandleCollisionEvent);
+
         Set(idle);
+        GameSystem.system.bwm.StartMatch();
     }
 
     // Update is called once per frame
@@ -64,6 +69,11 @@ public class LudHands : Character {
                 Set(idle);
             }
         }
+
+        if (life.percent > maxHealth && !defeated) {
+            defeated = true;
+            Win();
+        }
     }
     public void FixedUpdate() {
         if (!state.complete) {
@@ -73,6 +83,11 @@ public class LudHands : Character {
 
     public void Shake() {
         GameManager.gm.shaker.Shake();
+    }
+
+    void Win() {
+        GameSystem.system.bwm.EndMatch();
+        GameStateManager.manager.GoToNextArcadeLevel();
     }
 
 }

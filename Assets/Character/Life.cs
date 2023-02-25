@@ -119,15 +119,19 @@ public class Life : MonoBehaviour {
         if (IsVulnerable() && !banned) {
             if (character.state is ShieldState s) {
                 s.Hit(col.damage);
+
             } else {
+                ApplyHitEffect(col);
+
                 ApplyDamage(col);
-                ApplyKnockback(col);
+                if (character.body != null) {
+                    ApplyKnockback(col);
+                }
                 if (!col.ignoreHurt) {
                     hurtConfirmEvent.Invoke(col);
                 }
             }
             ApplyHitstop(col);
-            ApplyHitEffect(col);
             //ban the collider
             col.collision.collider.Ban(animator);
             if (percent < 0) percent = 0;
@@ -181,7 +185,9 @@ public class Life : MonoBehaviour {
         animator.HitStop(0.12f * mod);
 
         info.collision.collider.GetAnimator().HitStop(0.08f * mod);
-        character.shaker.Shake(0.1f * (mod / 2f), 0.12f * mod);
+        if (character.shaker != null) {
+            character.shaker.Shake(0.1f * (mod / 2f), 0.12f * mod);
+        }
 
     }
 
@@ -202,7 +208,8 @@ public class Life : MonoBehaviour {
 
     }
     void ApplyHitEffect(CollisionInfo col) {
-        HitEffectPool.p.SpawnEffect(character.transform.position, col.damageVector, col.damage, col.collision.collider.GetAnimator().life.character);
+        Retro.RetroAnimator anim = col.collision.collider.GetAnimator();
+        HitEffectPool.p.SpawnEffect(anim.transform.position, col.damageVector, col.damage, anim.life.character);
     }
 
     public void SetInvulnerable(float t) {
@@ -239,8 +246,7 @@ public class Life : MonoBehaviour {
         return (Time.time - invulnerableStartTime > invulnerableDuration) ? true : false;
     }
 
-    void HandleCollisionEvent(Retro.Collision c) {
-
+    public void HandleCollisionEvent(Retro.Collision c) {
         string ce = LayerMask.LayerToName(c.collidee.GetPhysicsLayer());
         string cr = LayerMask.LayerToName(c.collider.GetPhysicsLayer());
         bool oneHitTwo = ce.Equals("Hit") && cr.Equals("Hurt");

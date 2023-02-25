@@ -59,6 +59,10 @@ public class GameStateManager : MonoBehaviour {
         StartCoroutine(BeginSceneTransition(arcadeScenes[arcadeSceneIndex]));
     }
 
+    public void GoToNextArcadeLevel() {
+        arcadeSceneIndex++;
+        StartCoroutine(BeginSceneTransition(arcadeScenes[arcadeSceneIndex]));
+    }
 
     public void BeginVersusMode() {
         mode = GameMode.Versus;

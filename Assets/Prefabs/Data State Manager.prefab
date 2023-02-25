@@ -65,6 +65,8 @@ MonoBehaviour:
     scenePath: Assets/Scenes/Cat Stage.unity
   - sceneAsset: {fileID: 102900000, guid: 77c129c52babf61409ce1205da0869cb, type: 3}
     scenePath: Assets/Scenes/Boss.unity
+  - sceneAsset: {fileID: 102900000, guid: c6b3f712bdb760440a295fdfd2f9715f, type: 3}
+    scenePath: Assets/Scenes/Thank You.unity
   transitionSprites:
   - {fileID: 2050629780, guid: b72ff256919d835419782f8428a520a3, type: 3}
   - {fileID: 570524447, guid: b72ff256919d835419782f8428a520a3, type: 3}

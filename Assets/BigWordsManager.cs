@@ -20,16 +20,17 @@ public class BigWordsManager : MonoBehaviour {
     }
 
     public void StartMatch() {
+        Time.timeScale = 0;
         image.enabled = true;
         image.sprite = ready;
         StartCoroutine(PrepareToGo());
     }
 
     IEnumerator PrepareToGo() {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSecondsRealtime(1);
         image.sprite = go;
-
-        yield return new WaitForSeconds(1);
+        Time.timeScale = 1;
+        yield return new WaitForSecondsRealtime(1);
         image.sprite = null;
         image.enabled = false;
 
@@ -37,7 +38,7 @@ public class BigWordsManager : MonoBehaviour {
 
     public void EndMatch() {
         image.enabled = true;
-
         image.sprite = gameSet;
+        Time.timeScale = 0.1f;
     }
 }
