@@ -12,12 +12,12 @@ public class GameManager : MonoBehaviour {
     float hitStopTime;
     float hitStopDuration;
     bool hitStopping;
+
     private void Awake() {
         gm = this;
     }
     // Start is called before the first frame update
     void Start() {
-
     }
 
     // Update is called once per frame

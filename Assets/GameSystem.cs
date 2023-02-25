@@ -17,6 +17,7 @@ public class GameSystem : MonoBehaviour {
     public HitEffectPool pool;
     Level level;
     public List<Color> teamColours;
+    public BigWordsManager bwm;
     private void Awake() {
         if (system == null) {
             system = this;
