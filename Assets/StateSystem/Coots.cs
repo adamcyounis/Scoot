@@ -31,10 +31,6 @@ public class Coots : Character {
                 if (state == prevState && canMove) { //haven't done an attack..
                     SetInputStates();
                 }
-                //if (state != prevState) {
-
-                //}
-
             }
 
             if (!state.complete) {
@@ -52,7 +48,6 @@ public class Coots : Character {
         } else if (input.specialPressed) {
             Set(specials);
         }
-
     }
 
     void SetInputStates() {
