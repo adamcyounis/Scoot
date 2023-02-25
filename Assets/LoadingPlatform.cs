@@ -22,7 +22,10 @@ public class LoadingPlatform : MonoBehaviour {
             descend.Update();
             transform.position = Vector2.Lerp(startPos, destinationPos, descend.value);
         } else {
-            if (character.input.PressedAnything()) {
+            Vector2 characterFootPoint = character.selfAwareness.footPoint;
+            float characterDistanceToPlatform = Vector2.Distance(transform.position, characterFootPoint);
+            bool characterMovedFromPlatform = characterDistanceToPlatform > 0.1f;
+            if (character.input.PressedAnything() || characterMovedFromPlatform) {
                 DeSpawn();
             }
         }
