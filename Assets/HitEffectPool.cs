@@ -8,10 +8,10 @@ public class HitEffectPool : MonoBehaviour {
     public List<Retro.Sheet> sheets;
     Queue<Retro.RetroAnimator> pool = new Queue<Retro.RetroAnimator>();
     public static HitEffectPool p;
-
+    Color defaultColor;
     // Start is called before the first frame update
     void Start() {
-
+        defaultColor = effectPrefab.spriteRenderer.color;
     }
 
     // Update is called once per frame
@@ -19,7 +19,16 @@ public class HitEffectPool : MonoBehaviour {
 
     }
 
-    public void SpawnEffect(Vector2 position, Vector2 angle, float scaleFactor) {
+    public void SpawnEffect(Vector2 position, Vector2 angle, float scaleFactor, Character character = default) {
+
+        Color col = defaultColor;
+
+        if (character != null) {
+            if (character.life.team > 0 && character.life.team < GameSystem.system.teamColours.Count) {
+                col = GameSystem.system.teamColours[character.life.team];
+            }
+        }
+
         Retro.RetroAnimator anim;
         if (pool.Count > 0) {
             anim = pool.Dequeue();
@@ -37,6 +46,8 @@ public class HitEffectPool : MonoBehaviour {
         anim.spriteRenderer.flipX = angle.x < 0;
         anim.spriteRenderer.flipY = angle.y < 0;
         anim.transform.position = position;
+
+        anim.spriteRenderer.color = col;
     }
 
     public void RespondToEffectFinished(Retro.RetroAnimator anim, Retro.Sheet sheet) {

@@ -16,6 +16,7 @@ public class GameSystem : MonoBehaviour {
     public DustSpawner dust;
     public HitEffectPool pool;
     Level level;
+    public List<Color> teamColours;
     private void Awake() {
         if (system == null) {
             system = this;

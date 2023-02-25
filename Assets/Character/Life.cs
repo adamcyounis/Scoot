@@ -202,7 +202,7 @@ public class Life : MonoBehaviour {
 
     }
     void ApplyHitEffect(CollisionInfo col) {
-        HitEffectPool.p.SpawnEffect(character.transform.position, col.damageVector, col.damage);
+        HitEffectPool.p.SpawnEffect(character.transform.position, col.damageVector, col.damage, col.collision.collider.GetAnimator().life.character);
     }
 
     public void SetInvulnerable(float t) {
