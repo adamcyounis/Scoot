@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TitleMenu : MonoBehaviour {
-
+    public AudioClip a_scoot;
     // Start is called before the first frame update
     void Start() {
-
+        SoundSystem.system.PlaySFX(a_scoot);
     }
 
     // Update is called once per frame
