@@ -7,6 +7,7 @@ public class Recovery : State {
     public FireFoxActive end;
     bool canRecover;
     public Jump jump;
+    public AirControl airControl;
     private void Start() {
         core.selfAwareness.gotGrounded.AddListener(RespondToGrounded);
         core.life.hurtConfirmEvent.AddListener(RespondToHurt);
@@ -31,8 +32,11 @@ public class Recovery : State {
         if (state.complete) {
             if (state == startup) {
                 Set(end);
+            } else if (state == end) {
+                Set(airControl);
+                core.canAttack = false;
             } else {
-                Complete("finished!");
+                Complete("Landed!");
             }
         }
     }

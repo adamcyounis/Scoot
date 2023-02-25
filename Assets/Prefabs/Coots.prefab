@@ -227,6 +227,7 @@ MonoBehaviour:
   startup: {fileID: 1298277862928102532}
   end: {fileID: 4813163077508080783}
   jump: {fileID: 4664217564466435322}
+  airControl: {fileID: 4664217564466435327}
 --- !u!114 &1298277862928102532
 MonoBehaviour:
   m_ObjectHideFlags: 0
