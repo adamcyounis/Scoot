@@ -18,14 +18,12 @@ public class TitleMenu : MonoBehaviour {
 
     public void EnterArcade() {
         SoundSystem.system.PlaySFX(a_button);
-        Debug.Log("beginning arcade mode");
         GameStateManager.manager.BeginArcadeMode();
     }
 
     public void EnterVersus() {
         SoundSystem.system.PlaySFX(a_button);
         GameStateManager.manager.BeginVersusMode();
-
     }
 
     public void EnterOptions() {

@@ -128,6 +128,7 @@ public class GameSystem : MonoBehaviour {
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         if (scene.path == titleScreen.ScenePath) {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
             Destroy(gameObject);
         } else {
             LoadPlayers();
@@ -158,6 +159,7 @@ public class GameSystem : MonoBehaviour {
     }
 
     public void PlayerDefeated(Character ch) {
+
         List<int> teamsRemaining = new List<int>();
         foreach (Character c in characters) {
             if (!teamsRemaining.Contains(c.life.team) && c.stocksRemaining > 0) {
@@ -168,7 +170,7 @@ public class GameSystem : MonoBehaviour {
         if (teamsRemaining.Count > 1) {
             SoundSystem.system.PlaySFX(s_playerDefeated);
         } else {
-            roundOver.Invoke(characters.First(x => x.stocksRemaining > 0));
+            roundOver.Invoke(characters.FirstOrDefault(x => x.stocksRemaining > 0));
         }
     }
 

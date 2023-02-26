@@ -20,7 +20,7 @@ public class CharacterUI : MonoBehaviour {
     void Update() {
         UpdateStocks();
         nameLabel.text = character.characterName;
-        percentLabel.text = character.percent.ToString() + "<size=60>%</size>";
+        percentLabel.text = character.percent.ToString() + "<size=20>%</size>";
 
         if (character.life.team >= 0 && character.life.team < GameSystem.system.teamColours.Count) {
             color = GameSystem.system.teamColours[character.life.team];

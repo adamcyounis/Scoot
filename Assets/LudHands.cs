@@ -56,6 +56,7 @@ public class LudHands : Character {
 
         Set(idle);
         GameSystem.system.bwm.StartMatch();
+        GameSystem.system.roundOver.AddListener(Finished);
     }
 
     // Update is called once per frame
@@ -113,5 +114,21 @@ public class LudHands : Character {
         }
 
     }
+    void Finished(Character c) {
 
+        GameSystem.system.bwm.EndMatch(c != null);
+        /*
+        if (m != null) {
+            if (m.mode == GameStateManager.GameMode.Arcade) {
+                if (c.life.team == 0) {
+                    m.GoToNextArcadeLevel();
+                } else {
+                    m.GoToTitle();
+                }
+            } else {
+                m.GoToTitle();
+            }
+        }
+        */
+    }
 }

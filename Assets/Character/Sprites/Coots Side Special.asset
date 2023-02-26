@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1.0
   spriteList:
-  - {fileID: -1586215867, guid: 206bb992cf1ed154fb7ed1bcc60a195a, type: 3}
-  - {fileID: -655182891, guid: 206bb992cf1ed154fb7ed1bcc60a195a, type: 3}
-  - {fileID: 1695016919, guid: 206bb992cf1ed154fb7ed1bcc60a195a, type: 3}
+  - {fileID: -718057707, guid: 2e005e52cd59c0d4a8bd910461d87be3, type: 3}
+  - {fileID: 1906584576, guid: 2e005e52cd59c0d4a8bd910461d87be3, type: 3}
+  - {fileID: -1638301100, guid: 2e005e52cd59c0d4a8bd910461d87be3, type: 3}
+  - {fileID: -1902828222, guid: 2e005e52cd59c0d4a8bd910461d87be3, type: 3}
   propertiesList:
   - frameProperties:
     - name: Gravity
@@ -164,6 +165,46 @@ MonoBehaviour:
         - {x: 0.25, y: 0.25}
         - {x: 0.75, y: 0.75}
         - {x: 1, y: 1}
+  - frameProperties:
+    - name: Velocity
+      dataType: 4
+      intVal: 0
+      floatVal: 0
+      boolVal: 0
+      stringVal: 
+      vectorVal: {x: 0.5, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
+    - name: velX
+      dataType: 0
+      intVal: 0
+      floatVal: 0
+      boolVal: 1
+      stringVal: 
+      vectorVal: {x: 0, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
+    - name: velY
+      dataType: 0
+      intVal: 0
+      floatVal: 0
+      boolVal: 0
+      stringVal: 
+      vectorVal: {x: 0, y: 0}
+      curveVal:
+        points:
+        - {x: 0, y: 0}
+        - {x: 0.25, y: 0.25}
+        - {x: 0.75, y: 0.75}
+        - {x: 1, y: 1}
   groups:
   - myBoxType: Physics
     layerKind: 0
@@ -177,6 +218,9 @@ MonoBehaviour:
         kind: 1
         dataId: a094ecd5-c061-44ab-b70b-eae0e68764e2
       - guid: 10ea264a-7d30-4930-bd7d-c03479f42dc0
+        kind: 1
+        dataId: a094ecd5-c061-44ab-b70b-eae0e68764e2
+      - guid: 704ab534-05f0-4b97-9fa4-50c0a9aa9ef2
         kind: 1
         dataId: a094ecd5-c061-44ab-b70b-eae0e68764e2
       frameDataById:
@@ -210,6 +254,9 @@ MonoBehaviour:
         dataId: 9df52cb2-b92a-4c8b-af02-0a7527f414ea
       - guid: 3f922207-95a4-4fd0-8dd3-3b2bd4c6a3ca
         kind: 0
+        dataId: 9df52cb2-b92a-4c8b-af02-0a7527f414ea
+      - guid: 0c235737-1275-4b63-9da2-3cd972eb076e
+        kind: 1
         dataId: 9df52cb2-b92a-4c8b-af02-0a7527f414ea
       frameDataById:
         m_keys:
@@ -253,6 +300,9 @@ MonoBehaviour:
         dataId: d0beba07-6ee7-4278-a1f4-cdb6b5a092b3
       - guid: 8af9458f-4fbd-448d-b262-f7abc8457835
         kind: 2
+        dataId: 00000000-0000-0000-0000-000000000000
+      - guid: 75b63623-0e20-47c5-b531-251988c84699
+        kind: 1
         dataId: 00000000-0000-0000-0000-000000000000
       frameDataById:
         m_keys:

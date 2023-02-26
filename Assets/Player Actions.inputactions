@@ -422,6 +422,28 @@
                 },
                 {
                     "name": "",
+                    "id": "79ed090d-a026-461b-9f95-cbe1ddc4448d",
+                    "path": "<Keyboard>/leftCtrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Shield",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d6e77f2e-0e31-4acf-8326-85f2ba81b8f8",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Shield",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "91ead027-5cd4-4d8f-bfa8-9a462655384f",
                     "path": "<Gamepad>/start",
                     "interactions": "",

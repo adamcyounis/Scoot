@@ -2308,6 +2308,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   timeAtLastSpentEnergy: 0
   team: 8
+  kbFactor: 1
 --- !u!114 &1347891109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2321,6 +2322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   leftHandAnimator: {fileID: 0}
   rightHandAnimator: {fileID: 0}
@@ -2341,6 +2343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   leftHandAnimator: {fileID: 0}
   rightHandAnimator: {fileID: 0}
@@ -2361,6 +2364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   leftHandAnimator: {fileID: 0}
   rightHandAnimator: {fileID: 0}
@@ -2380,6 +2384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  soundClip: {fileID: 0}
   title: 
   leftHandAnimator: {fileID: 0}
   rightHandAnimator: {fileID: 0}
@@ -2408,7 +2413,7 @@ MonoBehaviour:
   animator: {fileID: 1123922126}
   selfAwareness: {fileID: 0}
   life: {fileID: 0}
-  stocksRemaining: 9
+  stocksRemaining: 0
   characterName: 
   shaker: {fileID: 0}
   controllerIndex: 0
