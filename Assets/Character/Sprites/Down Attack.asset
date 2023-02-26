@@ -54,8 +54,8 @@ MonoBehaviour:
         - c0b08e80-9b96-45e6-ab97-a13189cad178
         m_values:
         - keyFrameId: b3e08fea-d4dc-40fd-ab20-b9b82715fdb5
-          position: {x: 65, y: 52}
-          size: {x: 57, y: 39}
+          position: {x: 40, y: 62}
+          size: {x: 71, y: 38}
           forwardHandle: {x: 10, y: 10}
           backHandle: {x: -10, y: -10}
           props:
