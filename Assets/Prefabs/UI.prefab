@@ -142,7 +142,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -307,7 +307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4226490939163740651, guid: 324a9cec5b170d14a884ef8177e24ed6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 137.5
+      value: 137.85
       objectReference: {fileID: 0}
     - target: {fileID: 4226490939163740651, guid: 324a9cec5b170d14a884ef8177e24ed6, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -422,14 +422,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4226490939860136806, guid: 324a9cec5b170d14a884ef8177e24ed6, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 275
-      objectReference: {fileID: 0}
-    - target: {fileID: 4226490939860136806, guid: 324a9cec5b170d14a884ef8177e24ed6, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 4226490939860136806, guid: 324a9cec5b170d14a884ef8177e24ed6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -459,7 +451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4226490939860136806, guid: 324a9cec5b170d14a884ef8177e24ed6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1097.5
+      value: 457.85
       objectReference: {fileID: 0}
     - target: {fileID: 4226490939860136806, guid: 324a9cec5b170d14a884ef8177e24ed6, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -495,7 +487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4226490939887796873, guid: 324a9cec5b170d14a884ef8177e24ed6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 240.75
+      value: 241.1
       objectReference: {fileID: 0}
     - target: {fileID: 4226490939887796873, guid: 324a9cec5b170d14a884ef8177e24ed6, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -511,7 +503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4226490939895599934, guid: 324a9cec5b170d14a884ef8177e24ed6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 137.5
+      value: 137.85
       objectReference: {fileID: 0}
     - target: {fileID: 4226490939895599934, guid: 324a9cec5b170d14a884ef8177e24ed6, type: 3}
       propertyPath: m_AnchoredPosition.y

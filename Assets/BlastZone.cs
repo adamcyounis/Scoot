@@ -1,10 +1,12 @@
 using System.Collections;
 using UnityEngine;
-
+using System.Collections.Generic;
 public class BlastZone : MonoBehaviour {
     public Level level;
     public float shakeAmount = 0.3f;
     public bool isRoof = false;
+
+    public List<AudioClip> callouts => GameSystem.system.callouts;
     // Start is called before the first frame update
     void Start() {
 
@@ -29,6 +31,8 @@ public class BlastZone : MonoBehaviour {
 
                     if (ch.stocksRemaining > 0) {
                         StartCoroutine(RespawnWithDelay(ch));
+                        SoundSystem.system.PlaySFX(callouts[Random.Range(0, callouts.Count)]);
+
                     } else {
                         if (GameManager.gm.cam.subjects.Contains(ch.transform)) {
                             GameManager.gm.cam.subjects.Remove(ch.transform);

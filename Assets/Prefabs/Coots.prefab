@@ -1030,6 +1030,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   timeAtLastSpentEnergy: 0
   team: 0
+  kbFactor: 1
 --- !u!1 &4664217564927008365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,7 +1303,6 @@ GameObject:
   - component: {fileID: 1230382536071851943}
   - component: {fileID: 2306483709331236919}
   - component: {fileID: 3966278473620826304}
-  - component: {fileID: 1537927672166206334}
   - component: {fileID: 3776695062099044348}
   m_Layer: 6
   m_Name: Normals
@@ -1381,7 +1381,6 @@ MonoBehaviour:
   comboStates:
   - {fileID: 2306483709331236919}
   - {fileID: 3966278473620826304}
-  - {fileID: 1537927672166206334}
 --- !u!114 &2306483709331236919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1417,25 +1416,6 @@ MonoBehaviour:
   soundClip: {fileID: 8300000, guid: 6b5c32ee739a3524ba6cfb3d0364d18a, type: 3}
   title: Combo 2
   sheet: {fileID: 11400000, guid: a58562221f58e264eb90c112fbfe0108, type: 2}
-  fps: 10
-  loop: 0
-  duration: 0
---- !u!114 &1537927672166206334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6252602138726265118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbb8a59793f0ed54b8c2d531b2b66f0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: {fileID: 0}
-  soundClip: {fileID: 8300000, guid: 6b5c32ee739a3524ba6cfb3d0364d18a, type: 3}
-  title: Combo 3
-  sheet: {fileID: 11400000, guid: 16465b596a50de04fa2ea87357475690, type: 2}
   fps: 10
   loop: 0
   duration: 0

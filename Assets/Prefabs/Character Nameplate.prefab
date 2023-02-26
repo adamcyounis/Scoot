@@ -1009,7 +1009,6 @@ MonoBehaviour:
   backPlate: {fileID: 4226490939862722644}
   character: {fileID: 0}
   color: {r: 0, g: 0, b: 0, a: 0}
-  shaker: {fileID: 0}
 --- !u!1 &4226490939862722647
 GameObject:
   m_ObjectHideFlags: 0

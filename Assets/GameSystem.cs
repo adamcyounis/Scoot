@@ -33,6 +33,8 @@ public class GameSystem : MonoBehaviour {
 
     [HideInInspector]
     public UnityEvent<Character> roundOver = new UnityEvent<Character>();
+
+    public List<AudioClip> callouts;
     private void Awake() {
         if (system == null) {
             system = this;

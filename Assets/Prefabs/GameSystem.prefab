@@ -168,6 +168,14 @@ MonoBehaviour:
   roundOver:
     m_PersistentCalls:
       m_Calls: []
+  callouts:
+  - {fileID: 8300000, guid: 36b2a67fcb6b533459f50b2289f4a518, type: 3}
+  - {fileID: 8300000, guid: 83d3b82035f101c4dac56c8dbc433906, type: 3}
+  - {fileID: 8300000, guid: 9ff2292ed67b640478f38771d3db2eaa, type: 3}
+  - {fileID: 8300000, guid: 61889f5cc895ed04691598bf27305e52, type: 3}
+  - {fileID: 8300000, guid: a82e3e706724b4b459b24f9827fdb61b, type: 3}
+  - {fileID: 8300000, guid: 951185e0b867c904d9c88642cfb24a09, type: 3}
+  - {fileID: 8300000, guid: 6009cfb913dc6bb4c9e3c80075081bf9, type: 3}
 --- !u!114 &2505129101097359854
 MonoBehaviour:
   m_ObjectHideFlags: 0
