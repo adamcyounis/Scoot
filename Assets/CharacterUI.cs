@@ -38,7 +38,9 @@ public class CharacterUI : MonoBehaviour {
 
     void UpdateStocks() {
         for (int i = 0; i < stockImages.Count; i++) {
-            stockImages[i].SetActive(character.stocksRemaining > i);
+            if (stockImages[i] != null) {
+                stockImages[i].SetActive(character.stocksRemaining > i);
+            }
         }
 
     }

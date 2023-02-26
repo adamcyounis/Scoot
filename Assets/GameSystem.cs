@@ -119,10 +119,9 @@ public class GameSystem : MonoBehaviour {
     }
 
     void AddCharacterUI(Character c) {
-        GameObject newNameplate = GameObject.Instantiate(namePlatePrefab);
+        GameObject newNameplate = GameObject.Instantiate(namePlatePrefab, Vector2.zero, Quaternion.identity, nameplateWrapper);
         CharacterUI nameplateScript = newNameplate.GetComponent<CharacterUI>();
         nameplateScript.character = c;
-        newNameplate.transform.SetParent(nameplateWrapper);
         newCharacter.Invoke(c.transform);
 
     }

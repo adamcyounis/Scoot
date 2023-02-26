@@ -409,7 +409,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 991687467}
-        m_TargetAssemblyTypeName: TItleMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: TitleMenu, Assembly-CSharp
         m_MethodName: EnterVersus
         m_Mode: 1
         m_Arguments:

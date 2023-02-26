@@ -83,7 +83,7 @@ public class GameStateManager : MonoBehaviour {
 
     public void BeginVersusMode() {
         mode = GameMode.Versus;
-        BeginSceneTransition(arcadeAssign);
+        StartCoroutine(BeginSceneTransition(versusAssign));
     }
 
     public IEnumerator BeginSceneTransition(string nextScene) {
