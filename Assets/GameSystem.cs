@@ -109,7 +109,7 @@ public class GameSystem : MonoBehaviour {
         }
 
         if (level != null) {
-            level.SpawnCharacter(newCoots);
+            level.SpawnCharacter(newCoots, true);
 
         } else {
             newCoots.transform.position = Vector2.up * 1f;
@@ -129,10 +129,12 @@ public class GameSystem : MonoBehaviour {
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         if (scene.path == titleScreen.ScenePath) {
             SceneManager.sceneLoaded -= OnSceneLoaded;
-            Destroy(gameObject);
+            if (this != null && gameObject != null) {
+                Destroy(gameObject);
+            }
         } else {
+            level = FindObjectOfType<Level>();
             LoadPlayers();
-            level = GameObject.FindObjectOfType<Level>();
 
         }
     }

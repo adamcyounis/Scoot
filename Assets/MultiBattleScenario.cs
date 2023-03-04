@@ -19,7 +19,6 @@ public class MultiBattleScenario : MonoBehaviour {
         if (m.mode == GameStateManager.GameMode.Arcade) {
             for (int i = 0; i < enemies; i++) {
                 GameSystem.system.AddEnemyCoots(1, dex, knockback, color);
-
             }
 
         }

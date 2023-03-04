@@ -1279,7 +1279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 108468282855142002, guid: a147195ed05cfe245ac0616b82493923, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.97
       objectReference: {fileID: 0}
     - target: {fileID: 108468282855142002, guid: a147195ed05cfe245ac0616b82493923, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2748,14 +2748,14 @@ MonoBehaviour:
   - {fileID: 442493125}
   - {fileID: 750961044}
   groundedSpawnPoints:
+  - {fileID: 281425853}
+  - {fileID: 2041696542}
+  - {fileID: 1684220396}
+  - {fileID: 238337425}
   - {fileID: 612173315}
   - {fileID: 913449261}
   - {fileID: 275788440}
   - {fileID: 824875226}
-  - {fileID: 281425853}
-  - {fileID: 1684220396}
-  - {fileID: 238337425}
-  - {fileID: 2041696542}
 --- !u!1 &2002647130
 GameObject:
   m_ObjectHideFlags: 0

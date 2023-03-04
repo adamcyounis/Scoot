@@ -997,7 +997,7 @@ MonoBehaviour:
   grounded: 0
   groundMask:
     serializedVersion: 2
-    m_Bits: 823
+    m_Bits: 791
   groundLayer: 
 --- !u!114 &4664217564621502916
 MonoBehaviour:
